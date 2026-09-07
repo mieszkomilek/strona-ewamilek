@@ -431,7 +431,7 @@ footer{
 
 /* Homepage photographic parallax hero */
 .hero-photo{position:relative;isolation:isolate;min-height:min(900px,calc(100svh - 76px));overflow:hidden;display:flex;align-items:center;background:#2b1d3e}
-.hero-photo-bg{position:absolute;z-index:-3;inset:-70px 0;background-image:url('assets/ewa-milek-vedic-art.jpg');background-size:cover;background-position:center 42%;transform:translate3d(0,var(--parallax-y,0),0) scale(1.07);will-change:transform}
+.hero-photo-bg{position:absolute;z-index:-3;top:0;right:0;bottom:-150px;left:0;background-image:url('assets/ewa-milek-vedic-art.jpg');background-size:cover;background-position:center top;transform-origin:center top;transform:translate3d(0,var(--parallax-shift,0),0) scale(var(--parallax-scale,1.055));will-change:transform}
 .hero-photo-overlay{position:absolute;z-index:-2;inset:0;background:linear-gradient(90deg,rgba(250,246,253,.96) 0%,rgba(250,245,252,.91) 34%,rgba(245,232,246,.57) 54%,rgba(49,28,68,.12) 78%,rgba(35,21,48,.20) 100%)}
 .hero-photo:after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(61,32,78,.08))}
 .hero-photo .hero-grid{width:100%;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr)}
@@ -442,7 +442,7 @@ footer{
 .hero-photo .art-note{color:rgba(255,255,255,.92);text-shadow:0 2px 18px rgba(34,20,48,.55);letter-spacing:.18em}
 @media(max-width:760px){
  .hero-photo{min-height:calc(100svh - 68px);align-items:flex-end}
- .hero-photo-bg{inset:-45px -26%;background-position:56% center;transform:translate3d(0,var(--parallax-y,0),0) scale(1.08)}
+ .hero-photo-bg{top:0;right:-26%;bottom:-170px;left:-26%;background-position:56% top;transform-origin:center top;transform:translate3d(0,var(--parallax-shift,0),0) scale(var(--parallax-scale,1.055))}
  .hero-photo-overlay{background:linear-gradient(180deg,rgba(40,22,54,.06) 0%,rgba(47,25,60,.12) 32%,rgba(251,245,251,.78) 61%,rgba(253,248,252,.97) 100%)}
  .hero-photo .hero-grid{display:block}
  .hero-photo .hero-copy{padding:48vh 0 44px;max-width:none}
