@@ -4,34 +4,24 @@ const btn=document.querySelector('.menu-btn');const menu=document.querySelector(
   const reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
   if(reduced||document.querySelector('.magic-layer'))return;
   const layer=document.createElement('div');
-  layer.className='magic-layer';
-  layer.setAttribute('aria-hidden','true');
-  document.body.appendChild(layer);
-  const items=[
-    {char:'🦋',type:'butterfly'},
-    {char:'🦋',type:'butterfly'},
-    {char:'✿',type:'flower'},
-    {char:'❀',type:'flower'}
-  ];
-  const spawn=()=>{
+  layer.className='magic-layer'; layer.setAttribute('aria-hidden','true'); document.body.appendChild(layer);
+  const items=[{char:'🦋',type:'butterfly'},{char:'✿',type:'flower'},{char:'❀',type:'flower'},{char:'✦',type:'flower'}];
+  const palette=['#6f4bc2','#a86ad2','#d67da9','#e8a6c5','#8b70d6'];
+  const spawn=(initial=false)=>{
     if(document.hidden)return;
-    const pick=items[Math.floor(Math.random()*items.length)];
-    const el=document.createElement('span');
-    el.className='magic-fly '+pick.type;
-    el.textContent=pick.char;
-    const y=12+Math.random()*70;
-    const dur=12+Math.random()*8;
-    const size=pick.type==='butterfly'?(18+Math.random()*12):(15+Math.random()*10);
-    const rot=(-20+Math.random()*40)+'deg';
-    el.style.setProperty('--y',y+'vh');
-    el.style.setProperty('--dur',dur+'s');
-    el.style.setProperty('--size',size+'px');
-    el.style.setProperty('--rot',rot);
-    layer.appendChild(el);
-    el.addEventListener('animationend',()=>el.remove(),{once:true});
+    const pick=items[Math.floor(Math.random()*items.length)], el=document.createElement('span');
+    el.className='magic-fly '+pick.type; el.textContent=pick.char;
+    const y=5+Math.random()*86, dur=9+Math.random()*8;
+    const size=pick.type==='butterfly'?(38+Math.random()*22):(32+Math.random()*20);
+    const rot=(-25+Math.random()*50)+'deg';
+    const c1=palette[Math.floor(Math.random()*palette.length)], c2=palette[Math.floor(Math.random()*palette.length)];
+    el.style.setProperty('--y',y+'vh');el.style.setProperty('--dur',dur+'s');el.style.setProperty('--size',size+'px');el.style.setProperty('--rot',rot);
+    el.style.setProperty('--c1',c1);el.style.setProperty('--c2',c2);
+    if(initial)el.style.animationDelay=(-Math.random()*dur*.72)+'s';
+    layer.appendChild(el);el.addEventListener('animationend',()=>el.remove(),{once:true});
   };
-  setTimeout(spawn,3500);
-  setInterval(()=>{if(Math.random()>.25)spawn()},9000);
+  for(let i=0;i<8;i++)spawn(true);
+  setInterval(()=>{for(let i=0;i<2;i++)spawn(false)},2600);
 })();
 ;(()=>{
   const root=document.querySelector('#wibracja-imienia-nazwiska');
