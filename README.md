@@ -15,5 +15,5 @@ Następnie otwórz `http://localhost:8080`.
 Repozytorium: `mieszkomilek/strona-ewamilek`.
 W Settings → Pages wybierz: Deploy from a branch → `main` → `/ (root)`.
 
-## Zdjęcia
-Dwa obrazy są obecnie ładowane z istniejącego CDN Shopify. Przed wyłączeniem Shopify warto przenieść je do `assets/`.
+## Media
+Wszystkie media używane przez stronę znajdują się lokalnie w katalogu `assets/`. Strona nie pobiera obrazów, fontów ani innych zasobów z zewnętrznego sklepu/CDN.
