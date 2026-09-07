@@ -9,3 +9,15 @@
 .subpage-content{padding:4rem 0 7rem}
 .migration-placeholder{max-width:860px;padding:2rem;border:1px dashed rgba(90,70,55,.3);border-radius:24px;background:rgba(255,255,255,.55)}
 .migration-placeholder p:last-child{margin-bottom:0}
+
+.source-content{max-width:1040px;margin:0 auto;font-size:1rem;line-height:1.8}
+.source-content>section,.source-content article,.source-content aside{margin:0 0 2rem}
+.source-content h2{margin-top:.25rem}
+.source-content h3{margin-top:2.4rem;font-size:clamp(1.5rem,3vw,2.1rem)}
+.source-content p{max-width:880px;color:var(--muted)}
+.source-content ul{max-width:880px;padding-left:1.25rem}
+.source-content li{margin:.45rem 0}
+.source-content details{max-width:900px;margin:.75rem 0;border:1px solid var(--line);border-radius:16px;padding:1rem 1.15rem;background:rgba(255,255,255,.55)}
+.source-content summary{cursor:pointer;font-weight:600}
+.source-content img{display:block;max-width:min(100%,620px);max-height:760px;object-fit:cover;border-radius:28px;box-shadow:var(--shadow);margin:1.5rem 0 2rem}
+.source-content a{color:var(--accent);overflow-wrap:anywhere}
