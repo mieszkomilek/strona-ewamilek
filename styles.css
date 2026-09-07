@@ -351,3 +351,26 @@ footer{
   .page-about .source-about ul{grid-template-columns:1fr}
   .page-kontakt .source-kontakt>section>*{text-align:left}
 }
+
+/* Numerology calculator */
+.name-vibration-calculator{grid-column:1/-1!important;margin-top:56px!important;padding-top:52px!important;border-top:1px solid rgba(105,72,176,.12)!important}
+.calc-shell{padding:clamp(22px,4vw,44px);border-radius:30px;background:radial-gradient(600px 300px at 100% 0%,rgba(222,137,190,.17),transparent 68%),linear-gradient(145deg,rgba(255,255,255,.88),rgba(244,239,255,.72));border:1px solid rgba(105,72,176,.12);box-shadow:var(--glow)}
+.calc-head{max-width:760px;margin-bottom:30px}.calc-head h2{margin:.35em 0 .25em}.calc-head p{color:var(--muted)}
+.calc-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:26px;align-items:start}
+.calc-form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.calc-form label{font-size:.82rem;font-weight:750;color:#44345b}.calc-form label span{font-weight:500;color:var(--muted)}
+.calc-form input{width:100%;margin-top:7px;padding:14px 15px;border:1px solid rgba(105,72,176,.16);border-radius:14px;background:rgba(255,255,255,.78);font:inherit;color:var(--ink);outline:none;box-sizing:border-box;transition:.2s}
+.calc-form input:focus{border-color:#8159c7;box-shadow:0 0 0 4px rgba(119,78,191,.10);background:#fff}
+.calc-actions{grid-column:1/-1;display:flex;gap:10px;margin-top:6px}.calc-actions .btn{border:0;cursor:pointer}
+.calc-summary{display:grid;gap:12px}
+.calc-result{padding:19px 20px;border-radius:20px;border:1px solid rgba(105,72,176,.10);box-shadow:0 10px 30px rgba(76,46,117,.06)}
+.calc-result span,.calc-result small{display:block}.calc-result span{font-size:.8rem;font-weight:750}.calc-result strong{display:block;font-size:2.25rem;line-height:1;margin:8px 0}.calc-result small{color:#675a75}
+.calc-result.soul{background:linear-gradient(135deg,rgba(211,93,231,.15),rgba(238,188,235,.26))}
+.calc-result.personality{background:linear-gradient(135deg,rgba(115,235,78,.16),rgba(212,249,193,.30))}
+.calc-result.goals{background:linear-gradient(135deg,rgba(255,228,75,.28),rgba(255,244,189,.45))}
+.calc-breakdown-wrap{margin-top:30px}.calc-breakdown-wrap h3{margin-bottom:14px}
+.calc-breakdown{display:grid;gap:10px}.calc-empty{padding:22px;border:1px dashed rgba(105,72,176,.18);border-radius:16px;color:var(--muted);text-align:center}
+.calc-row{display:grid!important;grid-template-columns:1.25fr repeat(3,1fr)!important;gap:8px!important;padding:10px!important;background:rgba(255,255,255,.66)!important;border-radius:18px!important}
+.calc-row>div{padding:12px;border-radius:12px;background:rgba(248,245,251,.82)}.calc-row small,.calc-row span{display:block;font-size:.72rem;color:var(--muted)}.calc-row strong{display:block;font-size:1.15rem;margin:3px 0}.calc-word strong{letter-spacing:.08em}
+.calc-method{margin-top:24px!important}.calc-method summary{cursor:pointer;font-weight:750;color:#54378a}
+@media(max-width:760px){.calc-grid,.calc-form{grid-template-columns:1fr}.calc-actions{grid-column:1}.calc-row{grid-template-columns:1fr 1fr!important}.calc-word{grid-column:1/-1}.calc-result strong{font-size:1.9rem}}
