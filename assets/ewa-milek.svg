@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#efe4d6"/><stop offset="1" stop-color="#d9c2b4"/></linearGradient></defs>
+<rect width="800" height="1000" fill="url(#g)"/>
+<circle cx="400" cy="330" r="135" fill="#b77d6e" opacity=".36"/>
+<path d="M210 870c20-225 120-355 190-355s170 130 190 355" fill="#7f8d7d" opacity=".62"/>
+<circle cx="400" cy="325" r="98" fill="#f3ddd0"/>
+<path d="M305 325c15-120 175-125 190 0-45-30-145-30-190 0z" fill="#6f5548"/>
+<g fill="none" stroke="#c6a86a" stroke-width="5" opacity=".8">
+<circle cx="400" cy="330" r="190"/><circle cx="400" cy="330" r="220"/>
+</g>
+<text x="400" y="935" text-anchor="middle" font-family="Georgia,serif" font-size="34" fill="#5b5148">Ewa Miłek</text>
+</svg>
