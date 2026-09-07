@@ -89,3 +89,60 @@ const btn=document.querySelector('.menu-btn');const menu=document.querySelector(
   });
   root.querySelectorAll('input').forEach(el=>el.addEventListener('keydown',e=>{if(e.key==='Enter')calculate()}));
 })();
+;(()=>{
+  const hero=document.querySelector('.hero-photo-bg');
+  if(hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    let ticking=false;
+    const move=()=>{
+      const section=hero.closest('.hero');
+      if(section){
+        const r=section.getBoundingClientRect();
+        const progress=Math.max(-1,Math.min(1,-r.top/Math.max(r.height,1)));
+        hero.style.setProperty('--parallax-y',(progress*46)+'px');
+      }
+      ticking=false;
+    };
+    window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(move);ticking=true}},{passive:true});
+    move();
+  }
+
+  const root=document.querySelector('#wibracja-imienia-nazwiska');
+  const modal=document.querySelector('#nv-password-modal');
+  if(!root||!modal)return;
+  const openBtn=document.querySelector('#nv-unlock');
+  const form=document.querySelector('#nv-password-form');
+  const input=document.querySelector('#nv-password');
+  const error=document.querySelector('#nv-password-error');
+  const currentPassword=()=>{
+    const d=new Date();
+    return String(d.getFullYear())+String(d.getMonth()+1).padStart(2,'0');
+  };
+  const open=()=>{
+    modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');
+    document.body.classList.add('modal-open');error.textContent='';input.value='';
+    setTimeout(()=>input.focus(),80);
+  };
+  const close=()=>{
+    modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');
+    document.body.classList.remove('modal-open');
+  };
+  const unlock=()=>{
+    root.classList.remove('calc-locked');root.classList.add('calc-unlocked');
+    sessionStorage.setItem('ewaNumerologyUnlocked','1');close();
+    setTimeout(()=>root.scrollIntoView({behavior:'smooth',block:'start'}),100);
+  };
+  if(sessionStorage.getItem('ewaNumerologyUnlocked')==='1'){
+    root.classList.remove('calc-locked');root.classList.add('calc-unlocked');
+  }
+  openBtn?.addEventListener('click',open);
+  root.addEventListener('click',e=>{
+    if(root.classList.contains('calc-locked') && !e.target.closest('#nv-unlock')){e.preventDefault();open();}
+  });
+  form?.addEventListener('submit',e=>{
+    e.preventDefault();
+    if(input.value.trim()===currentPassword())unlock();
+    else{error.textContent='Nieprawidłowe hasło. Spróbuj ponownie.';input.select();}
+  });
+  modal.querySelectorAll('[data-close-password]').forEach(el=>el.addEventListener('click',close));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('is-open'))close()});
+})();
