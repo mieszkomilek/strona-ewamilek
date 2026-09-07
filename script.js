@@ -97,12 +97,16 @@ const btn=document.querySelector('.menu-btn');const menu=document.querySelector(
       const section=hero.closest('.hero');
       if(section){
         const r=section.getBoundingClientRect();
-        const progress=Math.max(-1,Math.min(1,-r.top/Math.max(r.height,1)));
-        hero.style.setProperty('--parallax-y',(progress*46)+'px');
+        const vh=window.innerHeight||1;
+        const progress=Math.max(0,Math.min(1,(0-r.top)/(Math.max(r.height,vh))));
+        hero.style.setProperty('--parallax-shift',(-progress*86)+'px');
+        hero.style.setProperty('--parallax-scale',String(1.055+(progress*.045)));
       }
       ticking=false;
     };
-    window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(move);ticking=true}},{passive:true});
+    const requestMove=()=>{if(!ticking){requestAnimationFrame(move);ticking=true}};
+    window.addEventListener('scroll',requestMove,{passive:true});
+    window.addEventListener('resize',requestMove,{passive:true});
     move();
   }
 
