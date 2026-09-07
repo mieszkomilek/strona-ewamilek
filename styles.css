@@ -252,3 +252,102 @@ footer{
   .magic-layer{display:none!important}
   *,*:before,*:after{scroll-behavior:auto!important}
 }
+
+
+/* ===== Subpage editorial layouts ===== */
+.page .page-hero{padding:86px 0 58px}
+.page .page-hero .container{position:relative;z-index:1}
+.page .page-hero h1{font-size:clamp(3rem,7vw,6.4rem);letter-spacing:-.055em;line-height:.92;margin:.18em 0 0}
+.page .subpage-content{padding:34px 0 100px}
+.page .source-layout{max-width:1180px}
+.page .source-layout>section{position:relative}
+.page .source-layout>section+section{padding-top:38px;margin-top:44px;border-top:1px solid rgba(105,72,176,.10)}
+.page .source-layout article,.page .source-layout aside{border-radius:24px}
+.page .source-layout article{padding:clamp(20px,3vw,34px);background:rgba(255,255,255,.46);border:1px solid rgba(105,72,176,.08)}
+.page .source-layout aside{padding:clamp(20px,3vw,32px);background:linear-gradient(145deg,rgba(241,234,255,.88),rgba(255,238,248,.84));border:1px solid rgba(105,72,176,.11);box-shadow:var(--glow)}
+.page .source-layout aside h3{margin-top:0}
+.page .source-layout h2{font-size:clamp(2rem,4vw,3.6rem);line-height:1.05;letter-spacing:-.035em}
+.page .source-layout h3{letter-spacing:-.02em}
+.page .source-layout strong{color:#3e2a61}
+
+/* Vedic Art — long-form editorial */
+.page-vedic .page-hero{background:radial-gradient(680px 400px at 82% 5%,rgba(224,137,187,.22),transparent 68%),radial-gradient(620px 360px at 5% 20%,rgba(99,71,187,.18),transparent 68%),linear-gradient(180deg,#fff9fd,#f8f5ff)}
+.page-vedic .source-vedic>section:first-child{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(270px,.75fr);gap:28px;align-items:start}
+.page-vedic .source-vedic>section:first-child>h2,.page-vedic .source-vedic>section:first-child>p{grid-column:1/-1}
+.page-vedic .source-vedic article{grid-column:1}
+.page-vedic .source-vedic aside{grid-column:2;position:sticky;top:100px}
+.page-vedic .source-vedic>section:not(:first-child){max-width:850px;margin-left:auto;margin-right:auto}
+
+/* Mandala — circular, gallery-like rhythm */
+.page-mandala .page-hero:before{content:"";position:absolute;width:380px;height:380px;border:1px solid rgba(109,75,181,.16);border-radius:50%;right:8%;top:-190px;box-shadow:0 0 0 42px rgba(219,137,184,.045),0 0 0 86px rgba(112,78,187,.035)}
+.page-mandala .source-mandala>section:first-child{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,.72fr);gap:30px}
+.page-mandala .source-mandala>section:first-child>h2,.page-mandala .source-mandala>section:first-child>p{grid-column:1/-1}
+.page-mandala .source-mandala article{grid-column:1}
+.page-mandala .source-mandala aside{grid-column:2;position:sticky;top:100px}
+.page-mandala .source-mandala details{border-radius:22px;padding:18px 20px}
+.page-mandala .source-mandala>section:not(:first-child){max-width:920px;margin-inline:auto}
+
+/* Angels — airy immersive composition */
+.page-anioly .page-hero{min-height:330px;display:flex;align-items:center;background:radial-gradient(500px 320px at 75% 45%,rgba(255,214,236,.48),transparent 66%),radial-gradient(520px 360px at 20% 10%,rgba(138,103,210,.18),transparent 67%),linear-gradient(145deg,#faf7ff,#fff8fc)}
+.page-anioly .source-anioly{background:linear-gradient(145deg,rgba(255,255,255,.68),rgba(253,244,251,.60))}
+.page-anioly .source-anioly>section{max-width:940px;margin-inline:auto}
+.page-anioly .source-anioly article{background:linear-gradient(145deg,rgba(255,255,255,.72),rgba(255,243,250,.66))}
+.page-anioly .source-anioly aside{margin:28px 0}
+
+/* Numerology — information dashboard */
+.page-numerologia .page-hero{background:radial-gradient(620px 360px at 82% 15%,rgba(112,78,190,.20),transparent 68%),radial-gradient(600px 360px at 15% 10%,rgba(223,138,188,.18),transparent 68%),linear-gradient(180deg,#fbf8ff,#fff9fc)}
+.page-numerologia .source-numerologia>section:first-child{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,.72fr);gap:28px}
+.page-numerologia .source-numerologia>section:first-child>h2,.page-numerologia .source-numerologia>section:first-child>p{grid-column:1/-1}
+.page-numerologia .source-numerologia article{grid-column:1}
+.page-numerologia .source-numerologia aside{grid-column:2;position:sticky;top:100px}
+.page-numerologia .source-numerologia details{background:linear-gradient(135deg,rgba(255,255,255,.88),rgba(244,239,255,.72))}
+.page-numerologia .source-numerologia>section:not(:first-child){max-width:960px;margin-inline:auto}
+
+/* Silk — atelier */
+.page-jedwab .page-hero{background:radial-gradient(640px 360px at 85% 5%,rgba(235,157,199,.28),transparent 67%),radial-gradient(560px 340px at 5% 15%,rgba(118,86,196,.13),transparent 68%),linear-gradient(160deg,#fff9fc,#faf7ff)}
+.page-jedwab .source-jedwab>section:first-child{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,.72fr);gap:30px}
+.page-jedwab .source-jedwab>section:first-child>h2,.page-jedwab .source-jedwab>section:first-child>p{grid-column:1/-1}
+.page-jedwab .source-jedwab article{grid-column:1}
+.page-jedwab .source-jedwab aside{grid-column:2}
+.page-jedwab .source-jedwab>section:not(:first-child){max-width:820px;margin-inline:auto}
+
+/* About — biography / timeline */
+.page-about .source-about{max-width:1040px}
+.page-about .source-about>section{max-width:880px;margin-inline:auto}
+.page-about .source-about>section>p{font-size:1.06rem}
+.page-about .source-about h3{margin-top:42px}
+.page-about .source-about ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 16px}
+.page-about .source-about li{margin:0;padding:13px 16px;border-radius:14px;background:rgba(255,255,255,.70);border:1px solid rgba(105,72,176,.09);box-shadow:0 8px 24px rgba(78,49,118,.05)}
+
+/* Contact — dashboard inspired by supplied reference */
+.page-kontakt .page-hero{text-align:center;padding-bottom:34px}
+.page-kontakt .page-hero .eyebrow{margin-inline:auto}
+.page-kontakt .source-kontakt{max-width:1080px}
+.page-kontakt .source-kontakt>section{display:grid;grid-template-columns:1.15fr 1fr;gap:16px 28px}
+.page-kontakt .source-kontakt>section>h2,.page-kontakt .source-kontakt>section>p{grid-column:1/-1;text-align:center;max-width:820px;margin-left:auto;margin-right:auto}
+.page-kontakt .source-kontakt>section>h3:first-of-type{grid-column:1}
+.page-kontakt .source-kontakt ul{grid-column:1;list-style:none;padding:0;margin:0}
+.page-kontakt .source-kontakt li{margin:0 0 10px}
+.page-kontakt .source-kontakt li a{display:block;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.72);border:1px solid rgba(105,72,176,.08);text-decoration:none;font-weight:650;white-space:pre-line;box-shadow:0 10px 28px rgba(79,50,119,.05)}
+.page-kontakt .source-kontakt li a:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(79,50,119,.10)}
+.page-kontakt .source-kontakt>h3:last-of-type{grid-column:2;grid-row:3;margin-top:0}
+.page-kontakt .source-kontakt>h3:last-of-type~p,.page-kontakt .source-kontakt>h3:last-of-type~a{grid-column:2}
+.page-kontakt .source-kontakt>h3:last-of-type~a[href^="mailto"]{display:block;font-size:clamp(1.35rem,3vw,2rem);font-weight:750;padding:24px;border-radius:22px;background:linear-gradient(135deg,rgba(239,231,255,.94),rgba(255,231,245,.94));box-shadow:var(--glow);text-decoration:none}
+
+/* Creation — intentional minimal state */
+.page-tworczosc .source-tworczosc{min-height:340px;display:grid;place-items:center;text-align:center}
+.page-tworczosc .source-tworczosc>p{font-family:Fraunces,serif;font-size:clamp(1.8rem,4vw,3rem);color:#5a3b83}
+
+@media(max-width:860px){
+  .page .page-hero{padding:62px 0 42px}
+  .page .subpage-content{padding-top:20px}
+  .page .source-layout{padding:24px 20px}
+  .page-vedic .source-vedic>section:first-child,
+  .page-mandala .source-mandala>section:first-child,
+  .page-numerologia .source-numerologia>section:first-child,
+  .page-jedwab .source-jedwab>section:first-child,
+  .page-kontakt .source-kontakt>section{display:block}
+  .page-vedic .source-vedic aside,.page-mandala .source-mandala aside,.page-numerologia .source-numerologia aside{position:static}
+  .page-about .source-about ul{grid-template-columns:1fr}
+  .page-kontakt .source-kontakt>section>*{text-align:left}
+}
