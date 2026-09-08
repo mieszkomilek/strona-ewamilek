@@ -94,19 +94,24 @@ const btn=document.querySelector('.menu-btn,.menu-toggle');const menu=document.q
   if(hero && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
     let ticking=false;
     const move=()=>{
-      const section=hero.closest('.hero');
+      const section=hero.closest('.hero-photo');
       if(section){
-        const r=section.getBoundingClientRect();
-        const vh=window.innerHeight||1;
-        const progress=Math.max(0,Math.min(1,(0-r.top)/(Math.max(r.height,vh))));
-        hero.style.setProperty('--parallax-shift',(-progress*86)+'px');
-        hero.style.setProperty('--parallax-scale',String(1.055+(progress*.045)));
+        const rect=section.getBoundingClientRect();
+        const travelled=Math.max(0,-rect.top);
+        const mobile=window.matchMedia('(max-width:760px)').matches;
+        const maxShift=mobile?190:145;
+        const speed=mobile?.34:.25;
+        const shift=-Math.min(maxShift,travelled*speed);
+        const scale=mobile?1.14:1.09;
+        hero.style.setProperty('--parallax-shift',shift.toFixed(1)+'px');
+        hero.style.setProperty('--parallax-scale',String(scale));
       }
       ticking=false;
     };
-    const requestMove=()=>{if(!ticking){requestAnimationFrame(move);ticking=true}};
+    const requestMove=()=>{if(!ticking){ticking=true;requestAnimationFrame(move)}};
     window.addEventListener('scroll',requestMove,{passive:true});
     window.addEventListener('resize',requestMove,{passive:true});
+    window.addEventListener('orientationchange',requestMove,{passive:true});
     move();
   }
 
