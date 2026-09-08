@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Uwagi |
 |---|---|---|---|
+| 1.30 | `5efd24a5e16cac64524f82f94ead7e1b2afe1cf2` | 2026-09-08 13:05:21 | Automatyczny punkt przywracania |
 | 1.29 | `295bf3aa10609d36ca37ffc28c88a50e1130569f` | 2026-09-08 13:04:22 | Automatyczny punkt przywracania |
 | 1.28 | `1230d551910005f1a7ffe04cf0e671e2beb110ee` | 2026-09-08 13:03:58 | Automatyczny punkt przywracania |
 | 1.27 | `8842a99559dd5e70891e8e8adf210084b12d0205` | 2026-09-08 13:03:16 | Automatyczny punkt przywracania |
