@@ -38,17 +38,22 @@ jobs:
           p.write_text(new_version + '\n', encoding='utf-8')
 
           source_commit = subprocess.check_output(['git','rev-parse','HEAD'], text=True).strip()
+          subject = subprocess.check_output(['git','log','-1','--pretty=%s'], text=True).strip()
+          subject = subject.replace('|', '/').replace('\n', ' ').strip()
+          if len(subject) > 110:
+              subject = subject[:107].rstrip() + '...'
           now = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S')
           hist = Path('VERSION_HISTORY.md')
           if not hist.exists():
-              hist.write_text('# Historia wersji strony EwaMiłek\n\n| Wersja | Commit | Data UTC | Uwagi |\n|---|---|---|---|\n', encoding='utf-8')
+              hist.write_text('# Historia wersji strony EwaMiłek\n\n| Wersja | Commit | Data UTC | Opis zmian |\n|---|---|---|---|\n', encoding='utf-8')
           text = hist.read_text(encoding='utf-8')
-          row = f'| {new_version} | `{source_commit}` | {now} | Automatyczny punkt przywracania |\n'
+          text = text.replace('| Wersja | Commit | Data UTC | Uwagi |', '| Wersja | Commit | Data UTC | Opis zmian |')
+          row = f'| {new_version} | `{source_commit}` | {now} | {subject or "Automatyczny punkt przywracania"} |\n'
           marker='|---|---|---|---|\n'
           if row not in text:
               text = text.replace(marker, marker+row, 1) if marker in text else text+'\n'+row
           hist.write_text(text, encoding='utf-8')
-          print(f'{raw} -> {new_version} @ {source_commit}')
+          print(f'{raw} -> {new_version} @ {source_commit}: {subject}')
           PY
 
           git config user.name "github-actions[bot]"
