@@ -17,6 +17,12 @@ def ensure_script(s,src):
         s=s.replace('</body>',marker+'\n</body>',1)
     return s
 
+def ensure_css(s,href):
+    marker=f'<link href="{href}" rel="stylesheet"/>'
+    if marker not in s:
+        s=s.replace('</head>',marker+'\n</head>',1)
+    return s
+
 for p in R.glob('*.html'):
     s=p.read_text(encoding='utf-8').replace('https://mieszkomilek.github.io/strona-ewamilek/',base)
 
@@ -36,8 +42,14 @@ for p in R.glob('*.html'):
         s
     )
 
-    # Common artistic header + shared YYYYMMDD access helper on every page.
+    # Common shell and layout guard. photo-parallax.css also prevents any page
+    # from becoming horizontally draggable because of decorative/off-canvas UI.
+    s=ensure_css(s,'assets/css/photo-parallax.css')
     s=ensure_script(s,'assets/js/site-shell.js')
+
+    # Photo storytelling is only needed on the homepage and O mnie.
+    if p.name in ('index.html','o-mnie.html'):
+        s=ensure_script(s,'assets/js/photo-parallax.js')
 
     # Admin and Oferta 2026 receive their specialist modules and knowledge links.
     if p.name in ('admin.html','oferta-2026.html'):
