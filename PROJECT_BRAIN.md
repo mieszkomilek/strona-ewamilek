@@ -30,7 +30,8 @@ Stylistyka:
 - indygo,
 - delikatny glassmorphism,
 - subtelne motywy: motyle, kwiaty, anioły, liczby numerologiczne, pędzle i znaki twórcze,
-- animacje mają być spokojne i respektować `prefers-reduced-motion`.
+- animacje mają być spokojne i respektować `prefers-reduced-motion`,
+- obiekty w dynamicznym headerze mają być wyraźnie widoczne: większe niż pierwotnie i w mocniejszym, ale nadal eleganckim różowo-śliwkowym tonie, aby nie ginęły na płowym tle.
 
 Nie zmieniać oryginalnych treści Ewy bez wyraźnej zgody. Można zmieniać układ, prezentację i technologię.
 
@@ -234,7 +235,7 @@ Przy rozpoczęciu nowej sesji:
 
 - Wszystkie bramki dostępu przechodzą na `YYYYMMDD`.
 - Branding nagłówka: **Ewa Miłek — Sztuka, która prowadzi do wnętrza**.
-- Desktopowy header ma otrzymać delikatne, dynamiczne, płowo-różowe tło z subtelnymi motywami sztuki, motyli, aniołów i numerologii.
+- Desktopowy header ma dynamiczne płowo-różowe tło z motywami sztuki, motyli, aniołów i numerologii; symbole mają być większe i bardziej kontrastowe niż w pierwszej wersji, ale nadal subtelne i premium.
 - Górny indeks Admin ma zawsze pokazywać komplet 13 modułów.
 - Nie dotykamy PayPal przy tych zmianach.
 
