@@ -6,6 +6,8 @@ def url(n): return base if n=='index.html' else base+n
 for p in R.glob('*.html'):
     s=p.read_text(encoding='utf-8').replace('https://mieszkomilek.github.io/strona-ewamilek/',base)
     if 'manifest.webmanifest' not in s:s=s.replace('</head>','<link href="manifest.webmanifest" rel="manifest"/>\n</head>',1)
+    if p.name in ('admin.html','oferta-2026.html') and 'assets/js/offer-admin-knowledge.js' not in s:
+        s=s.replace('</body>','<script src="assets/js/offer-admin-knowledge.js"></script>\n</body>',1)
     if p.name in c['indexablePages']:
         u=url(p.name)
         s=re.sub(r'<link\s+href="[^"]*"\s+rel="canonical"\s*/?>',f'<link href="{u}" rel="canonical"/>',s,count=1)
