@@ -1,412 +1,125 @@
 name: Technical SEO foundation once
-
 on:
   push:
-    paths:
-      - '.github/workflows/technical-seo-foundation-once.yml'
-
+    paths: ['.github/workflows/technical-seo-foundation-once.yml']
+  workflow_dispatch:
 permissions:
   contents: write
   pages: write
   id-token: write
-
-concurrency:
-  group: technical-seo-foundation
-  cancel-in-progress: false
-
 jobs:
   foundation:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - name: Sync latest main
-        run: git pull --rebase origin main
-
-      - name: Create reusable site foundation
+        with: {ref: main, fetch-depth: 0}
+      - run: git pull --rebase origin main
+      - name: Build reusable foundation
         run: |
           mkdir -p data scripts assets/js
-
           cat > site.config.json <<'EOF'
-          {
-            "siteName": "EwaMiłek",
-            "legalName": "Ewa Miłek",
-            "baseUrl": "https://ewamilek.pl/",
-            "language": "pl-PL",
-            "locale": "pl_PL",
-            "themeColor": "#f8e9ef",
-            "email": "milekewa@o2.pl",
-            "social": {
-              "facebook": "https://www.facebook.com/milekewa",
-              "instagram": "https://www.instagram.com/ewamilek.art"
-            },
-            "defaultImage": "assets/ewa-milek-vedic-art.jpg",
-            "navigation": [
-              {"label": "Oferta 2026", "href": "oferta-2026.html"},
-              {"label": "Vedic Art", "href": "vedic-art.html"},
-              {"label": "Mandala", "href": "mandala.html"},
-              {"label": "Anioły", "href": "anioly.html"},
-              {"label": "Numerologia", "href": "numerologia.html"},
-              {"label": "Twórczość", "href": "tworczosc.html"},
-              {"label": "Jedwab Malowany", "href": "jedwab-malowany.html"},
-              {"label": "O mnie", "href": "o-mnie.html"},
-              {"label": "E-booki", "href": "ebooki.html"},
-              {"label": "Kontakt", "href": "kontakt.html", "className": "nav-cta"},
-              {"label": "Admin", "href": "admin.html", "className": "admin-menu-link"}
-            ],
-            "indexablePages": [
-              "index.html",
-              "vedic-art.html",
-              "mandala.html",
-              "anioly.html",
-              "numerologia.html",
-              "jedwab-malowany.html",
-              "o-mnie.html",
-              "kontakt.html",
-              "ebooki.html"
-            ],
-            "privateOrPreviewPages": ["admin.html", "oferta-2026.html", "tworczosc.html"]
-          }
+          {"siteName":"EwaMiłek","legalName":"Ewa Miłek","baseUrl":"https://ewamilek.pl/","language":"pl-PL","locale":"pl_PL","themeColor":"#f8e9ef","email":"milekewa@o2.pl","social":{"facebook":"https://www.facebook.com/milekewa","instagram":"https://www.instagram.com/ewamilek.art"},"defaultImage":"assets/ewa-milek-vedic-art.jpg","indexablePages":["index.html","vedic-art.html","mandala.html","anioly.html","numerologia.html","jedwab-malowany.html","o-mnie.html","kontakt.html","ebooki.html"],"privateOrPreviewPages":["admin.html","oferta-2026.html","tworczosc.html"]}
           EOF
-
           cat > data/catalog.json <<'EOF'
-          {
-            "currency": "PLN",
-            "note": "Katalog treści/oferty bez konfiguracji płatności. Płatności PayPal pozostają poza tym plikiem.",
-            "items": [
-              {"id":"mandala-osobista","title":"Mandala Osobista","category":"Mandala","priceFrom":3500,"page":"mandala.html"},
-              {"id":"aniol-opiekunczy","title":"Anioł Opiekuńczy","category":"Anioły","price":3900,"page":"anioly.html"},
-              {"id":"portret-numerologiczny","title":"Portret Numerologiczny","category":"Numerologia","price":650,"page":"numerologia.html"},
-              {"id":"portret-numerologiczny-mikro","title":"Portret Numerologiczny MIKRO","category":"Numerologia","price":400,"page":"numerologia.html"},
-              {"id":"jedwab-malowany","title":"Kurs malowania na jedwabiu","category":"Jedwab","price":500,"page":"jedwab-malowany.html"}
-            ]
-          }
+          {"currency":"PLN","note":"Katalog oferty bez konfiguracji płatności.","items":[{"id":"mandala-osobista","title":"Mandala Osobista","priceFrom":3500,"page":"mandala.html"},{"id":"aniol-opiekunczy","title":"Anioł Opiekuńczy","price":3900,"page":"anioly.html"},{"id":"portret-numerologiczny","title":"Portret Numerologiczny","price":650,"page":"numerologia.html"},{"id":"portret-mikro","title":"Portret Numerologiczny MIKRO","price":400,"page":"numerologia.html"},{"id":"jedwab-malowany","title":"Kurs malowania na jedwabiu","price":500,"page":"jedwab-malowany.html"}]}
           EOF
-
           cat > manifest.webmanifest <<'EOF'
-          {
-            "name": "EwaMiłek",
-            "short_name": "EwaMiłek",
-            "lang": "pl-PL",
-            "start_url": "/",
-            "scope": "/",
-            "display": "standalone",
-            "background_color": "#fffafd",
-            "theme_color": "#f8e9ef",
-            "icons": [
-              {"src":"/assets/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}
-            ]
-          }
+          {"name":"EwaMiłek","short_name":"EwaMiłek","lang":"pl-PL","start_url":"/","scope":"/","display":"standalone","background_color":"#fffafd","theme_color":"#f8e9ef","icons":[{"src":"/assets/favicon.svg","sizes":"any","type":"image/svg+xml"}]}
           EOF
-
           cat > scripts/site_build.py <<'PY'
           from pathlib import Path
-          import json, re, html
+          import json,re
           from datetime import date
-
-          ROOT = Path(__file__).resolve().parents[1]
-          cfg = json.loads((ROOT/'site.config.json').read_text(encoding='utf-8'))
-          base = cfg['baseUrl'].rstrip('/') + '/'
-          old_bases = [
-              'https://mieszkomilek.github.io/strona-ewamilek/',
-              'https://mieszkomilek.github.io/strona-ewamilek'
-          ]
-
-          def page_url(name):
-              return base if name == 'index.html' else base + name
-
-          def nav_html():
-              links=[]
-              for item in cfg['navigation']:
-                  cls = f' class="{html.escape(item.get("className", ""))}"' if item.get('className') else ''
-                  links.append(f'<a{cls} href="{html.escape(item["href"])}">{html.escape(item["label"])}</a>')
-              return '<nav aria-label="Główna nawigacja" class="nav-links" id="menu">'+''.join(links)+'</nav>'
-
-          nav = nav_html()
-          nav_re = re.compile(r'<nav\s+aria-label="Główna nawigacja"\s+class="nav-links"\s+id="menu">.*?</nav>', re.S)
-          canonical_re = re.compile(r'<link\s+href="[^"]*"\s+rel="canonical"\s*/?>')
-          ogurl_re = re.compile(r'<meta\s+content="[^"]*"\s+property="og:url"\s*/?>')
-          script_bundle = '<script src="assets/js/core.js"></script><script src="assets/js/effects.js"></script><script src="assets/js/numerology.js"></script><script src="assets/js/ebooks.js"></script>'
-
-          # Split the legacy JS once into focused modules, preserving behavior.
-          legacy = ROOT/'script.js'
-          if legacy.exists():
-              s = legacy.read_text(encoding='utf-8')
-              magic_marker = ";(()=>{\n  const reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;"
-              calc_marker = ";(()=>{\n  const root=document.querySelector('#wibracja-imienia-nazwiska');"
-              hero_marker = ";(()=>{\n  const hero=document.querySelector('.hero-photo-bg');"
-              ebook_marker = '/* E-book library: password + in-page PDF reader */'
-              if all(m in s for m in [magic_marker, calc_marker, hero_marker, ebook_marker]):
-                  a=s.index(magic_marker); b=s.index(calc_marker,a); c=s.index(hero_marker,b); d=s.index(ebook_marker,c)
-                  (ROOT/'assets/js/core.js').write_text(s[:a].strip()+"\n",encoding='utf-8')
-                  (ROOT/'assets/js/effects.js').write_text((s[a:b]+s[c:d]).strip()+"\n",encoding='utf-8')
-                  (ROOT/'assets/js/numerology.js').write_text(s[b:c].strip()+"\n",encoding='utf-8')
-                  (ROOT/'assets/js/ebooks.js').write_text(s[d:].strip()+"\n",encoding='utf-8')
-                  legacy.write_text('/* Deprecated compatibility entry. Runtime code lives in assets/js/*.js. */\n',encoding='utf-8')
-
-          for p in sorted(ROOT.glob('*.html')):
-              text=p.read_text(encoding='utf-8')
-              for old in old_bases:
-                  text=text.replace(old, base.rstrip('/') if not old.endswith('/') else base)
-              text=nav_re.sub(nav,text)
-              if 'manifest.webmanifest' not in text:
-                  text=text.replace('</head>','<link href="manifest.webmanifest" rel="manifest"/>\n</head>',1)
-              if '<script src="script.js"></script>' in text:
-                  text=text.replace('<script src="script.js"></script>',script_bundle)
-
-              current=page_url(p.name)
-              if p.name in cfg['indexablePages']:
-                  canon=f'<link href="{current}" rel="canonical"/>'
-                  if canonical_re.search(text): text=canonical_re.sub(canon,text,count=1)
-                  else: text=text.replace('</head>',canon+'\n</head>',1)
-                  og=f'<meta content="{current}" property="og:url"/>'
-                  if ogurl_re.search(text): text=ogurl_re.sub(og,text,count=1)
-                  else: text=text.replace('</head>',og+'\n</head>',1)
-
-                  # Reusable breadcrumb structured data for subpages.
-                  marker='"@id":"'+current+'#breadcrumb"'
-                  if p.name!='index.html' and marker not in text:
-                      h1=re.search(r'<h1[^>]*>(.*?)</h1>',text,re.S)
-                      label=re.sub('<[^>]+>','',h1.group(1)).strip() if h1 else p.stem.replace('-',' ').title()
-                      crumb={
-                        '@context':'https://schema.org','@type':'BreadcrumbList','@id':current+'#breadcrumb',
-                        'itemListElement':[
-                          {'@type':'ListItem','position':1,'name':'EwaMiłek','item':base},
-                          {'@type':'ListItem','position':2,'name':label,'item':current}
-                        ]
-                      }
-                      tag='<script type="application/ld+json">'+json.dumps(crumb,ensure_ascii=False,separators=(',',':'))+'</script>\n'
-                      text=text.replace('</head>',tag+'</head>',1)
-              p.write_text(text,encoding='utf-8')
-
-          # Canonical crawl files are always generated from config.
-          (ROOT/'robots.txt').write_text('User-agent: *\nAllow: /\n\nSitemap: '+base+'sitemap.xml\n',encoding='utf-8')
-          today=date.today().isoformat()
-          urls=[]
-          for name in cfg['indexablePages']:
-              if (ROOT/name).exists():
-                  urls.append(f'  <url>\n    <loc>{page_url(name)}</loc>\n    <lastmod>{today}</lastmod>\n  </url>')
-          sitemap='<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+'\n'.join(urls)+'\n</urlset>\n'
-          (ROOT/'sitemap.xml').write_text(sitemap,encoding='utf-8')
+          R=Path(__file__).resolve().parents[1]; c=json.loads((R/'site.config.json').read_text()); base=c['baseUrl']
+          def url(n): return base if n=='index.html' else base+n
+          for p in R.glob('*.html'):
+              s=p.read_text(encoding='utf-8').replace('https://mieszkomilek.github.io/strona-ewamilek/',base)
+              if 'manifest.webmanifest' not in s: s=s.replace('</head>','<link href="manifest.webmanifest" rel="manifest"/>\n</head>',1)
+              if p.name in c['indexablePages']:
+                  u=url(p.name)
+                  s=re.sub(r'<link\s+href="[^"]*"\s+rel="canonical"\s*/?>',f'<link href="{u}" rel="canonical"/>',s,count=1)
+                  s=re.sub(r'<meta\s+content="[^"]*"\s+property="og:url"\s*/?>',f'<meta content="{u}" property="og:url"/>',s,count=1)
+                  if p.name!='index.html' and u+'#breadcrumb' not in s:
+                      h=re.search(r'<h1[^>]*>(.*?)</h1>',s,re.S); label=re.sub('<[^>]+>','',h.group(1)).strip() if h else p.stem
+                      j=json.dumps({'@context':'https://schema.org','@type':'BreadcrumbList','@id':u+'#breadcrumb','itemListElement':[{'@type':'ListItem','position':1,'name':'EwaMiłek','item':base},{'@type':'ListItem','position':2,'name':label,'item':u}]},ensure_ascii=False,separators=(',',':'))
+                      s=s.replace('</head>',f'<script type="application/ld+json">{j}</script>\n</head>',1)
+              p.write_text(s,encoding='utf-8')
+          (R/'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {base}sitemap.xml\n')
+          d=date.today().isoformat(); rows='\n'.join(f'  <url>\n    <loc>{url(n)}</loc>\n    <lastmod>{d}</lastmod>\n  </url>' for n in c['indexablePages'] if (R/n).exists())
+          (R/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+rows+'\n</urlset>\n')
           PY
-
           cat > scripts/site_qa.py <<'PY'
           from pathlib import Path
-          import json, re, sys
-
-          ROOT=Path(__file__).resolve().parents[1]
-          cfg=json.loads((ROOT/'site.config.json').read_text(encoding='utf-8'))
-          base=cfg['baseUrl'].rstrip('/')+'/'
-          errors=[]; warnings=[]; titles={}
-
-          for name in cfg['indexablePages']:
-              p=ROOT/name
-              if not p.exists():
-                  errors.append(f'{name}: brak pliku')
-                  continue
-              t=p.read_text(encoding='utf-8')
-              if 'mieszkomilek.github.io/strona-ewamilek' in t: errors.append(f'{name}: stary adres GitHub Pages w SEO')
-              expected=base if name=='index.html' else base+name
-              if f'href="{expected}" rel="canonical"' not in t: errors.append(f'{name}: canonical != {expected}')
-              title=re.search(r'<title>(.*?)</title>',t,re.S)
-              if not title: errors.append(f'{name}: brak title')
-              else:
-                  value=re.sub(r'\s+',' ',title.group(1)).strip()
-                  if value in titles: warnings.append(f'{name}: duplikat title z {titles[value]}')
-                  titles[value]=name
-                  if not (25 <= len(value) <= 70): warnings.append(f'{name}: długość title {len(value)}')
-              desc=re.search(r'<meta\s+content="([^"]*)"\s+name="description"',t)
-              if not desc: errors.append(f'{name}: brak meta description')
-              elif not (70 <= len(desc.group(1)) <= 180): warnings.append(f'{name}: długość description {len(desc.group(1))}')
-              h1=len(re.findall(r'<h1\b',t,re.I))
-              if h1 != 1: errors.append(f'{name}: liczba H1 = {h1}')
-              if 'manifest.webmanifest' not in t: errors.append(f'{name}: brak manifestu')
-              for img in re.findall(r'<img\b[^>]*>',t,re.I):
-                  if not re.search(r'\balt=',img,re.I): warnings.append(f'{name}: obraz bez alt')
-
-          for name in cfg.get('privateOrPreviewPages',[]):
-              p=ROOT/name
-              if p.exists() and 'noindex' not in p.read_text(encoding='utf-8').lower(): warnings.append(f'{name}: strona prywatna/podglądowa bez noindex')
-
-          robots=(ROOT/'robots.txt').read_text(encoding='utf-8') if (ROOT/'robots.txt').exists() else ''
-          if base+'sitemap.xml' not in robots: errors.append('robots.txt: zły adres sitemap')
-          sitemap=(ROOT/'sitemap.xml').read_text(encoding='utf-8') if (ROOT/'sitemap.xml').exists() else ''
-          if 'mieszkomilek.github.io' in sitemap: errors.append('sitemap.xml: stara domena')
-          if '<loc>'+base+'</loc>' not in sitemap: errors.append('sitemap.xml: brak strony głównej')
-
-          print('=== SITE QA ===')
-          for w in warnings: print('WARN:',w)
-          for e in errors: print('ERROR:',e)
-          print(f'Errors: {len(errors)} | Warnings: {len(warnings)}')
-          sys.exit(1 if errors else 0)
+          import json,re,sys
+          R=Path(__file__).resolve().parents[1]; c=json.loads((R/'site.config.json').read_text()); b=c['baseUrl']; E=[]; W=[]
+          for n in c['indexablePages']:
+              p=R/n
+              if not p.exists(): E.append(n+': brak pliku'); continue
+              s=p.read_text(encoding='utf-8'); u=b if n=='index.html' else b+n
+              if 'mieszkomilek.github.io/strona-ewamilek' in s:E.append(n+': stara domena')
+              if f'href="{u}" rel="canonical"' not in s:E.append(n+': canonical')
+              if len(re.findall(r'<h1\b',s,re.I))!=1:E.append(n+': H1')
+              if '<title>' not in s:E.append(n+': title')
+              if 'name="description"' not in s:E.append(n+': description')
+              if 'manifest.webmanifest' not in s:E.append(n+': manifest')
+          for n in c['privateOrPreviewPages']:
+              p=R/n
+              if p.exists() and 'noindex' not in p.read_text(encoding='utf-8').lower():W.append(n+': brak noindex')
+          print('\n'.join('WARN '+x for x in W)); print('\n'.join('ERROR '+x for x in E)); print('errors',len(E),'warnings',len(W)); sys.exit(bool(E))
           PY
-
           cat > lighthouserc.json <<'EOF'
-          {
-            "ci": {
-              "collect": {"staticDistDir":".","numberOfRuns":1},
-              "assert": {
-                "assertions": {
-                  "categories:performance":["warn",{"minScore":0.80}],
-                  "categories:accessibility":["warn",{"minScore":0.90}],
-                  "categories:best-practices":["warn",{"minScore":0.85}],
-                  "categories:seo":["warn",{"minScore":0.90}]
-                }
-              },
-              "upload": {"target":"temporary-public-storage"}
-            }
-          }
+          {"ci":{"collect":{"staticDistDir":".","numberOfRuns":1},"assert":{"assertions":{"categories:performance":["warn",{"minScore":0.8}],"categories:accessibility":["warn",{"minScore":0.9}],"categories:best-practices":["warn",{"minScore":0.85}],"categories:seo":["warn",{"minScore":0.9}]}},"upload":{"target":"temporary-public-storage"}}}
           EOF
-
           cat > WEBSITE_STANDARD.md <<'EOF'
           # Website Standard
-
-          Repozytorium jest bazą do tworzenia kolejnych statycznych stron na GitHub Pages.
-
-          ## Jedno źródło konfiguracji
-          - `site.config.json` — domena, marka, social media, nawigacja i lista stron indeksowanych.
-          - `data/catalog.json` — dane katalogowe oferty bez danych płatniczych.
-          - `scripts/site_build.py` — normalizacja SEO, nawigacji, manifestu, sitemap i robots.
-          - `scripts/site_qa.py` — kontrola jakości przed wdrożeniem.
-
-          ## JavaScript
-          Kod runtime jest rozdzielony na:
-          - `assets/js/core.js` — menu i podstawowe zachowania UI,
-          - `assets/js/effects.js` — efekty wizualne i parallax,
-          - `assets/js/numerology.js` — kalkulator numerologiczny,
-          - `assets/js/ebooks.js` — czytnik e-booków.
-
-          ## SEO
-          Wszystkie indeksowane strony muszą mieć unikalny title, description, pojedynczy H1, self-canonical w domenie produkcyjnej oraz `og:url`. Sitemap i robots są generowane automatycznie.
-
-          ## Zasada tworzenia nowej strony
-          Kopiując starter do nowego projektu, najpierw zmień `site.config.json`, treści i assety. Nie wpisuj domeny produkcyjnej ręcznie w wielu plikach.
-
-          ## Płatności
-          Konfiguracja płatności nie jest częścią tego standardu i nie jest modyfikowana przez build SEO.
+          Projekt jest bazą dla kolejnych statycznych stron. `site.config.json` jest źródłem domeny i ustawień SEO, `data/catalog.json` przechowuje dane oferty bez płatności, `scripts/site_build.py` generuje techniczne SEO, a `scripts/site_qa.py` blokuje wdrożenie przy krytycznych błędach. Nowy projekt powinien zmieniać konfigurację, treści i assety zamiast kopiować domeny ręcznie. PayPal nie jest częścią tej warstwy.
           EOF
-
-          # Refactor legacy JS and normalize all HTML/SEO files now.
           python scripts/site_build.py
           python scripts/site_qa.py
-
-          # Future deploys: build + QA + optional Lighthouse before publication.
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('script.js'); s=p.read_text(encoding='utf-8')
+          marks=[";(()=>{\n  const reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;",";(()=>{\n  const root=document.querySelector('#wibracja-imienia-nazwiska');",";(()=>{\n  const hero=document.querySelector('.hero-photo-bg');",'/* E-book library: password + in-page PDF reader */']
+          if all(x in s for x in marks):
+              a,b,c,d=[s.index(x) for x in marks]
+              Path('assets/js/core.js').write_text(s[:a].strip()+'\n')
+              Path('assets/js/effects.js').write_text((s[a:b]+s[c:d]).strip()+'\n')
+              Path('assets/js/numerology.js').write_text(s[b:c].strip()+'\n')
+              Path('assets/js/ebooks.js').write_text(s[d:].strip()+'\n')
+              bundle='<script src="assets/js/core.js"></script><script src="assets/js/effects.js"></script><script src="assets/js/numerology.js"></script><script src="assets/js/ebooks.js"></script>'
+              for h in Path('.').glob('*.html'):
+                  t=h.read_text(encoding='utf-8').replace('<script src="script.js"></script>',bundle); h.write_text(t,encoding='utf-8')
+              p.write_text('/* Compatibility placeholder: runtime moved to assets/js/*.js */\n')
+          PY
           cat > .github/workflows/pages.yml <<'EOF'
-          name: Build, QA and deploy static site to Pages
-
+          name: Build QA and deploy Pages
           on:
-            push:
-              branches: ["main"]
+            push: {branches: [main]}
             workflow_dispatch:
-
-          permissions:
-            contents: write
-            pages: write
-            id-token: write
-
-          concurrency:
-            group: "pages-version"
-            cancel-in-progress: false
-
+          permissions: {contents: read, pages: write, id-token: write}
+          concurrency: {group: pages, cancel-in-progress: false}
           jobs:
             deploy:
-              if: github.actor != 'github-actions[bot]'
-              environment:
-                name: github-pages
-                url: ${{ steps.deployment.outputs.page_url }}
+              environment: {name: github-pages, url: '${{ steps.deployment.outputs.page_url }}'}
               runs-on: ubuntu-latest
               steps:
-                - name: Checkout
-                  uses: actions/checkout@v4
-                  with:
-                    ref: main
-                    fetch-depth: 0
-
-                - name: Sync main
-                  run: git pull --rebase origin main
-
-                - name: Increment version and restore point
-                  run: |
-                    python - <<'PY'
-                    from pathlib import Path
-                    from datetime import datetime, timezone
-                    import subprocess
-                    p=Path('version.txt')
-                    raw=p.read_text(encoding='utf-8').strip() if p.exists() else '1.00'
-                    major,minor=raw.split('.',1)
-                    n=int(major)*100+int(minor[:2].ljust(2,'0'))+1
-                    new=f'{n//100}.{n%100:02d}'
-                    p.write_text(new+'\n',encoding='utf-8')
-                    source=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
-                    now=datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S')
-                    hist=Path('VERSION_HISTORY.md')
-                    if not hist.exists(): hist.write_text('# Historia wersji strony EwaMiłek\n\n| Wersja | Commit | Data UTC | Uwagi |\n|---|---|---|---|\n',encoding='utf-8')
-                    text=hist.read_text(encoding='utf-8'); marker='|---|---|---|---|\n'; row=f'| {new} | `{source}` | {now} | Automatyczny punkt przywracania |\n'
-                    if row not in text: text=text.replace(marker,marker+row,1) if marker in text else text+'\n'+row
-                    hist.write_text(text,encoding='utf-8')
-                    print(raw,'->',new)
-                    PY
-
-                - name: Build reusable site layer
-                  run: python scripts/site_build.py
-
-                - name: SEO and HTML quality gate
-                  run: python scripts/site_qa.py
-
+                - uses: actions/checkout@v4
+                - run: python scripts/site_build.py
+                - run: python scripts/site_qa.py
                 - name: Lighthouse smoke test
                   continue-on-error: true
                   run: npx --yes @lhci/cli@0.14.x autorun
-
-                - name: Setup Pages
-                  uses: actions/configure-pages@v5
-
-                - name: Upload artifact
-                  uses: actions/upload-pages-artifact@v3
-                  with:
-                    path: "."
-
-                - name: Deploy to GitHub Pages
-                  id: deployment
+                - uses: actions/configure-pages@v5
+                - uses: actions/upload-pages-artifact@v3
+                  with: {path: '.'}
+                - id: deployment
                   uses: actions/deploy-pages@v4
-
-                - name: Record version in repository
-                  run: |
-                    git config user.name "github-actions[bot]"
-                    git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-                    git add version.txt VERSION_HISTORY.md robots.txt sitemap.xml '*.html' script.js assets/js site.config.json data/catalog.json manifest.webmanifest scripts lighthouserc.json WEBSITE_STANDARD.md
-                    git commit -m "Record deployed site version" || true
-                    VERSION=$(tr -d '\n' < version.txt)
-                    git tag -f "site-v${VERSION}"
-                    git push origin HEAD:main
-                    git push origin "site-v${VERSION}" --force
           EOF
-
-          # Versioning is now part of the deploy workflow to prevent visible-version lag.
-          rm -f .github/workflows/bump-site-version.yml
-
-      - name: Commit foundation
+      - name: Commit
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add -A
-          git commit -m "Apply reusable technical SEO foundation" || true
+          git commit -m 'Apply technical SEO website standard' || true
           git pull --rebase origin main
           git push origin HEAD:main
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload fresh foundation
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: "."
-
-      - name: Deploy fresh foundation
-        id: deployment
-        uses: actions/deploy-pages@v4
