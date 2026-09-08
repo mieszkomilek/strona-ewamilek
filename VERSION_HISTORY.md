@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.39 | `64519b3576b5cbdfc39759b5b5314acb02953d2d` | 2026-09-08 19:39:58 | Add homepage and About photo parallax sections |
 | 1.38 | `b492803be1f571282445f15e40752f4e858fcc5f` | 2026-09-08 19:39:25 | Add parallax photo layout and horizontal overflow fix |
 | 1.37 | `9fa0997cc4fc221c6b914a32ce9dca8abbf0f52d` | 2026-09-08 15:17:03 | Document optimized photo assets |
 | 1.36 | `3ed48b60898b0223e9cec08107f9925534b766b6` | 2026-09-08 15:08:36 | Prepare photo assets directory |
