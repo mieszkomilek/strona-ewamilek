@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Add Oferta 2026 to all hamburger menus
+      - name: Add Oferta 2026 and version renderer to all pages
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -29,11 +29,15 @@ jobs:
                   if old in s:
                       s=s.replace(old,new,1)
 
+              version_tag='<script src="version.js"></script>'
+              if version_tag not in s and '</body>' in s:
+                  s=s.replace('</body>',version_tag+'\n</body>',1)
+
               p.write_text(s,encoding='utf-8')
           PY
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add '*.html'
-          git commit -m "Add Oferta 2026 to site navigation" || true
+          git commit -m "Add site version footer renderer" || true
           git pull --rebase origin main
           git push origin HEAD:main
