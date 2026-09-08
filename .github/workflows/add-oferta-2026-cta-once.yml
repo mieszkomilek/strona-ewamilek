@@ -1,0 +1,33 @@
+name: Add Oferta 2026 CTA once
+on:
+  push:
+    paths:
+      - '.github/workflows/add-oferta-2026-cta-once.yml'
+permissions:
+  contents: write
+jobs:
+  update:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add Oferta 2026 links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('index.html')
+          s=p.read_text(encoding='utf-8')
+          if 'href="oferta-2026.html">Oferta 2026</a>' not in s:
+              s=s.replace('<nav aria-label="Główna nawigacja" class="nav-links" id="menu">', '<nav aria-label="Główna nawigacja" class="nav-links" id="menu"><a href="oferta-2026.html">Oferta 2026</a>',1)
+          old='<div class="hero-actions"><a class="btn btn-primary" href="#oferta">Poznaj moją ofertę</a><a class="btn btn-ghost" href="mailto:milekewa@o2.pl">Napisz do mnie</a></div>'
+          new='<div class="hero-actions"><a class="btn btn-primary" href="oferta-2026.html">Zobacz Ofertę 2026 →</a><a class="btn btn-ghost" href="#oferta">Poznaj moje obszary</a><a class="btn btn-ghost" href="mailto:milekewa@o2.pl">Napisz do mnie</a></div>'
+          if old in s:
+              s=s.replace(old,new,1)
+          p.write_text(s,encoding='utf-8')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Link Oferta 2026 from homepage" || true
+          git pull --rebase origin main
+          git push origin HEAD:main
