@@ -1,0 +1,13 @@
+# Historia wersji strony EwaMiłek
+
+Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czemu można łatwo wskazać wersję do przywrócenia.
+
+| Wersja | Commit | Data UTC | Uwagi |
+|---|---|---|---|
+| 1.03 | `8aa60bce1236476ccac99152d73449ecad40c593` | 2026-09-08 09:31:18 | Punkt startowy mechanizmu historii wersji |
+
+## Przywracanie
+
+Dla kolejnych wersji workflow tworzy również tag Git `site-vX.XX`. Przykład: `site-v1.04`.
+
+Jeśli poprosisz: **„przywróć wersję 1.04”**, wersję można jednoznacznie odnaleźć po tym pliku i tagu Git.
