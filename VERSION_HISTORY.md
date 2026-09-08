@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.37 | `9fa0997cc4fc221c6b914a32ce9dca8abbf0f52d` | 2026-09-08 15:17:03 | Document optimized photo assets |
 | 1.36 | `3ed48b60898b0223e9cec08107f9925534b766b6` | 2026-09-08 15:08:36 | Prepare photo assets directory |
 | 1.35 | `0a32b6fc8e92b378a6b675be07a8631bfaee691d` | 2026-09-08 14:08:20 | Document human-readable version history rule |
 | 1.34 | `385fab4b14d4327ca216677ead04fcd3fd0ec90f` | 2026-09-08 13:50:41 | Remove temporary marker file |
