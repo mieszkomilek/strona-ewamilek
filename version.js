@@ -2,7 +2,7 @@
 (()=>{
   const footer=document.querySelector('.site-footer')||document.querySelector('footer');
   if(!footer)return;
-  fetch('version.txt',{cache:'no-store'})
+  fetch(`version.txt?v=${Date.now()}`,{cache:'no-store'})
     .then(r=>r.ok?r.text():Promise.reject())
     .then(v=>{
       const version=v.trim();
