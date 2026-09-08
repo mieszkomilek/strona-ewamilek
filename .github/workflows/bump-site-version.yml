@@ -1,0 +1,45 @@
+name: Bump site version
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+concurrency:
+  group: site-version-main
+  cancel-in-progress: false
+
+jobs:
+  bump:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Increment version by 0.01
+        run: |
+          git pull --rebase origin main
+          python - <<'PY'
+          from pathlib import Path
+
+          p = Path('version.txt')
+          raw = p.read_text(encoding='utf-8').strip() if p.exists() else '1.00'
+          major, minor = raw.split('.', 1)
+          hundredths = int(major) * 100 + int(minor[:2].ljust(2, '0'))
+          hundredths += 1
+          new_version = f'{hundredths // 100}.{hundredths % 100:02d}'
+          p.write_text(new_version + '\n', encoding='utf-8')
+          print(f'{raw} -> {new_version}')
+          PY
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add version.txt
+          git commit -m "Bump site version [skip ci]" || exit 0
+          git push origin HEAD:main
