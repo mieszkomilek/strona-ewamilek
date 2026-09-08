@@ -99,6 +99,8 @@ Po każdej zmianie strony w odpowiedzi dla użytkownika należy podać:
 
 Nie zgadywać numeru po deployu — jeśli to możliwe, sprawdzić `version.txt`.
 
+Każdy nowy wpis w `VERSION_HISTORY.md` ma zawierać również **krótki, zrozumiały opis słowny zmiany**, a nie wyłącznie techniczny punkt przywracania. Workflow `.github/workflows/bump-site-version.yml` pobiera opis z tytułu commita źródłowego i zapisuje go w kolumnie `Opis zmian`. Opisy commitów przy zmianach strony powinny więc być krótkie, konkretne i czytelne dla człowieka.
+
 ## 6. SEO
 
 Domena produkcyjna i wszystkie canonicale mają wskazywać:
@@ -237,6 +239,7 @@ Przy rozpoczęciu nowej sesji:
 - Branding nagłówka: **Ewa Miłek — Sztuka, która prowadzi do wnętrza**.
 - Desktopowy header ma dynamiczne płowo-różowe tło z motywami sztuki, motyli, aniołów i numerologii; symbole mają być większe i bardziej kontrastowe niż w pierwszej wersji, ale nadal subtelne i premium.
 - Górny indeks Admin ma zawsze pokazywać komplet 13 modułów.
+- `VERSION_HISTORY.md` ma zawierać przy każdej nowej wersji krótki opis słowny tego, co zostało zmienione.
 - Nie dotykamy PayPal przy tych zmianach.
 
 ---
