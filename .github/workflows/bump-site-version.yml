@@ -33,8 +33,7 @@ jobs:
           p = Path('version.txt')
           raw = p.read_text(encoding='utf-8').strip() if p.exists() else '1.00'
           major, minor = raw.split('.', 1)
-          hundredths = int(major) * 100 + int(minor[:2].ljust(2, '0'))
-          hundredths += 1
+          hundredths = int(major) * 100 + int(minor[:2].ljust(2, '0')) + 1
           new_version = f'{hundredths // 100}.{hundredths % 100:02d}'
           p.write_text(new_version + '\n', encoding='utf-8')
 
@@ -47,10 +46,7 @@ jobs:
           row = f'| {new_version} | `{source_commit}` | {now} | Automatyczny punkt przywracania |\n'
           marker='|---|---|---|---|\n'
           if row not in text:
-              if marker in text:
-                  text=text.replace(marker, marker+row, 1)
-              else:
-                  text += '\n'+row
+              text = text.replace(marker, marker+row, 1) if marker in text else text+'\n'+row
           hist.write_text(text, encoding='utf-8')
           print(f'{raw} -> {new_version} @ {source_commit}')
           PY
@@ -58,8 +54,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add version.txt VERSION_HISTORY.md
-          git commit -m "Bump site version [skip ci]" || exit 0
-          NEW_VERSION=$(cat version.txt | tr -d '\n')
+          git commit -m "Bump site version" || exit 0
+          NEW_VERSION=$(tr -d '\n' < version.txt)
           git tag -f "site-v${NEW_VERSION}"
           git push origin HEAD:main
           git push origin "site-v${NEW_VERSION}" --force
