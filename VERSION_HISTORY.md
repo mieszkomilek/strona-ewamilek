@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.47 | `b487af94f7b376a153aeeabc95617ecf65e206bf` | 2026-09-09 19:47:49 | Odświeżaj paralaksę i galerię w pamięci przeglądarki po wdrożeniu |
 | 1.46 | `08e609c8ed7121dc26bf84eb11386201c80a4218` | 2026-09-09 19:42:46 | Wzmocnij paralaksę O mnie i napraw widoczność zdjęć galerii |
 | 1.45 | `00bd71153df46d7195e5b2f8b4945e3e7da6ad12` | 2026-09-09 19:31:21 | Przywróć 9 oryginalnych JPG i napraw publikację wersji po incydencie testowym |
 | 1.44 | `06bf7e0d13059912653f35d3c8cb1d89093296ee` | 2026-09-09 19:13:09 | Przypadkowy plik testowy (incydent; usunięty w kolejnej wersji) |
