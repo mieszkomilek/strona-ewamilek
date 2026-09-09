@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.52 | `395f6e7ea64c68dedff9efeb82f56668b23de07e` | 2026-09-09 21:36:04 | Center O mnie photo and surface Contact in menu |
 | 1.51 | `48bd4a958400e1ed744cb04a91681d19713b764d` | 2026-09-09 21:25:13 | Zaktualizuj QA po usunięciu zdjęcia z niedozwolonym tłem |
 | 1.50 | `3b14034a667a18dbb27f8625588cb2adcabbd6b7` | 2026-09-09 21:21:42 | Usuń zdjęcie z Czesławem i zastąp je portretem Ewy |
 | 1.49 | `92350fd45af00084ea83f0b6688e3a281164da72` | 2026-09-09 21:17:44 | Uporządkuj stronę Kontakt i wyróżnij oficjalny e-mail |
