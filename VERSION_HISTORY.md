@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.43 | `888a8dbec0d18933bdb1629c1f60054b51bb722a` | 2026-09-09 18:43:51 | Add prepared parallax photos |
 | 1.42 | `1a3b4e957bd430a4671bdab1a2fad1012069cf0c` | 2026-09-08 19:47:10 | Add optimized photo bundle part 2 |
 | 1.41 | `bca5cf4e5d8a87f6f093fcd3236e0ce294b2bb29` | 2026-09-08 19:44:37 | Add optimized photo bundle part 1 |
 | 1.40 | `c1d94b7ceb26ec4b710c69a1d978a7717b65253c` | 2026-09-08 19:40:37 | Wire photo parallax assets into build |
