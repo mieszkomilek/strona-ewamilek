@@ -243,6 +243,7 @@ Przy rozpoczęciu nowej sesji:
 - `VERSION_HISTORY.md` ma zawierać przy każdej nowej wersji krótki opis słowny tego, co zostało zmienione.
 - Zdjęcia paralaksy na stronie głównej i „O mnie” używają 9 oryginalnych JPG w `assets/photos/`, bez rekompresji; mapowanie utrzymuje `assets/js/photo-parallax.js`.
 - Incydent testowy 1.44 pozostaje w historii z czytelnym opisem; kolejna wersja usuwa plik testowy, bez cofania numerów i przepisywania tagów.
+- Pierwsze zdjęcie „O mnie” ma mocną paralaksę (również na telefonie), kadr wyrównany do góry i nieruchomy wariant dla `prefers-reduced-motion`. Dynamicznie dodane zdjęcia rejestrujemy we własnym obserwatorze ujawniania, po wstawieniu do DOM.
 - Nie dotykamy PayPal przy tych zmianach.
 
 ---

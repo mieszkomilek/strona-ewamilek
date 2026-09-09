@@ -5,7 +5,7 @@
   const make=(html)=>{const t=document.createElement('template');t.innerHTML=html.trim();return t.content.firstElementChild};
 
   const setupParallax=()=>{
-    if(reduced || window.innerWidth<621) return;
+    if(reduced) return;
     const items=[...document.querySelectorAll('[data-photo-parallax]')];
     if(!items.length) return;
     let ticking=false;
@@ -13,11 +13,15 @@
       ticking=false;
       const vh=window.innerHeight||1;
       for(const el of items){
-        const r=el.getBoundingClientRect();
+        const strong=el.dataset.photoParallax==='strong';
+        if(window.innerWidth<621 && !strong) continue;
+        const r=el.parentElement.getBoundingClientRect();
         if(r.bottom<0||r.top>vh) continue;
         const center=r.top+r.height/2;
         const progress=(center-vh/2)/(vh+r.height);
-        const shift=Math.max(-48,Math.min(48,-progress*88));
+        const shift=strong
+          ? -Math.min(r.height*.6,Math.max(0,-r.top*.75))
+          : Math.max(-48,Math.min(48,-progress*88));
         el.style.setProperty('--photo-shift',`${shift.toFixed(1)}px`);
       }
     };
@@ -56,7 +60,7 @@
     if(hero){
       hero.insertAdjacentElement('afterend',make(`
         <section class="photo-parallax about-gallery" id="about-photo-parallax" aria-label="Ewa Miłek na wystawie swoich prac">
-          <img class="photo-parallax-media" data-photo-parallax src="assets/photos/ewa-milek-wystawa-malarstwo.jpg" loading="eager" fetchpriority="high" decoding="async" alt="Ewa Miłek na wystawie przy swoich obrazach">
+          <img class="photo-parallax-media" data-photo-parallax="strong" src="assets/photos/ewa-milek-wystawa-malarstwo.jpg" loading="eager" fetchpriority="high" decoding="async" alt="Ewa Miłek na wystawie przy swoich obrazach">
           <div class="container photo-parallax-content"><div class="photo-parallax-copy reveal"><p class="eyebrow">Moja droga</p><h2>Tworzę, uczę i pokazuję sztukę, która wyrasta z doświadczenia.</h2><p>Pracownia, warsztaty i wystawy są różnymi odsłonami tej samej potrzeby — tworzenia w zgodzie ze sobą.</p></div></div>
         </section>`));
     }
@@ -76,6 +80,20 @@
     }
   };
 
-  const boot=()=>{addHome();addAbout();setupParallax();setTimeout(setupParallax,250)};
+  // These sections are inserted after core.js has collected its reveal elements.
+  const revealPhotos=()=>{
+    const elements=document.querySelectorAll('#home-photo-parallax .reveal,#home-photo-story .reveal,#about-photo-parallax .reveal,#about-photo-gallery .reveal');
+    if(reduced || !('IntersectionObserver' in window)){
+      elements.forEach(el=>el.classList.add('visible'));
+      return;
+    }
+    const observer=new IntersectionObserver(entries=>{
+      for(const entry of entries){
+        if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}
+      }
+    },{threshold:.05});
+    elements.forEach(el=>observer.observe(el));
+  };
+  const boot=()=>{addHome();addAbout();revealPhotos();setupParallax()};
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot,{once:true}); else boot();
 })();
