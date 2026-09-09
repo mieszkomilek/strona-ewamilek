@@ -5,6 +5,7 @@ from datetime import date
 R=Path(__file__).resolve().parents[1]
 c=json.loads((R/'site.config.json').read_text(encoding='utf-8'))
 base=c['baseUrl']
+VERSION=(R/'version.txt').read_text().strip()
 BRAND_NAME='Ewa Miłek'
 BRAND_TAGLINE='Sztuka, która prowadzi do wnętrza'
 
@@ -44,12 +45,14 @@ for p in R.glob('*.html'):
 
     # Common shell and layout guard. photo-parallax.css also prevents any page
     # from becoming horizontally draggable because of decorative/off-canvas UI.
-    s=ensure_css(s,'assets/css/photo-parallax.css')
+    s=re.sub(r'<link\s+href="assets/css/photo-parallax\.css(?:\?[^"]*)?"\s+rel="stylesheet"\s*/?>','',s)
+    s=ensure_css(s,f'assets/css/photo-parallax.css?v={VERSION}')
     s=ensure_script(s,'assets/js/site-shell.js')
 
     # Photo storytelling is only needed on the homepage and O mnie.
     if p.name in ('index.html','o-mnie.html'):
-        s=ensure_script(s,'assets/js/photo-parallax.js')
+        s=re.sub(r'<script src="assets/js/photo-parallax\.js(?:\?[^"]*)?"></script>','',s)
+        s=ensure_script(s,f'assets/js/photo-parallax.js?v={VERSION}')
 
     # Admin and Oferta 2026 receive their specialist modules and knowledge links.
     if p.name in ('admin.html','oferta-2026.html'):

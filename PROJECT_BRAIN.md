@@ -244,6 +244,7 @@ Przy rozpoczęciu nowej sesji:
 - Zdjęcia paralaksy na stronie głównej i „O mnie” używają 9 oryginalnych JPG w `assets/photos/`, bez rekompresji; mapowanie utrzymuje `assets/js/photo-parallax.js`.
 - Incydent testowy 1.44 pozostaje w historii z czytelnym opisem; kolejna wersja usuwa plik testowy, bez cofania numerów i przepisywania tagów.
 - Pierwsze zdjęcie „O mnie” ma mocną paralaksę (również na telefonie), kadr wyrównany do góry i nieruchomy wariant dla `prefers-reduced-motion`. Dynamicznie dodane zdjęcia rejestrujemy we własnym obserwatorze ujawniania, po wstawieniu do DOM.
+- Build dodaje numer wersji do adresów CSS i JS zdjęć, aby po wdrożeniu przeglądarka pobierała aktualną paralaksę i poprawki galerii.
 - Nie dotykamy PayPal przy tych zmianach.
 
 ---

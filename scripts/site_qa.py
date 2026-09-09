@@ -51,7 +51,7 @@ if admin.exists():
 # Both built pages must load the photo runtime and all original photos must exist.
 for n in ('index.html', 'o-mnie.html'):
     s=(R/n).read_text(encoding='utf-8')
-    if s.count('<script src="assets/js/photo-parallax.js"></script>') != 1:
+    if s.count(f'<script src="assets/js/photo-parallax.js?v={(R / "version.txt").read_text().strip()}"></script>') != 1:
         E.append(n+': wymagany dokładnie jeden skrypt photo-parallax.js')
 photos=re.findall(r'src="(assets/photos/[^" ]+)"', (R/'assets/js/photo-parallax.js').read_text())
 if len(set(photos)) != 9:
