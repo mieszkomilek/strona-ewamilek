@@ -42,3 +42,12 @@ img,svg,video,canvas{max-width:100%}
 @media(prefers-reduced-motion:reduce){.photo-parallax .photo-parallax-media,.photo-story-frame img{transform:none!important;will-change:auto}.about-photo-card img{transition:none}}
 
 @media(prefers-reduced-motion:reduce){.photo-parallax.about-gallery .photo-parallax-media{height:100%;transform:none!important}}
+
+/* Keep Ewa and Czesław unobstructed; their introduction follows the photo. */
+.photo-parallax.about-gallery{min-height:clamp(520px,75vw,1000px)}
+.photo-parallax.about-gallery:after{display:none}
+.photo-parallax.about-gallery .photo-parallax-media{filter:none}
+.about-photo-intro{padding:60px 0;background:linear-gradient(180deg,#fffafd,#f9edf3)}
+.about-photo-intro-copy{max-width:960px;margin:auto}
+.about-photo-intro h2{font-size:clamp(2rem,4vw,3.5rem)}
+.about-photo-intro p:last-child{color:var(--muted);margin-bottom:0}

@@ -20,7 +20,7 @@
         const center=r.top+r.height/2;
         const progress=(center-vh/2)/(vh+r.height);
         const shift=strong
-          ? -Math.min(r.height*.6,Math.max(0,-r.top*.75))
+          ? -Math.min(r.height*.6,Math.max(0,-r.top*1.15))
           : Math.max(-48,Math.min(48,-progress*88));
         el.style.setProperty('--photo-shift',`${shift.toFixed(1)}px`);
       }
@@ -58,11 +58,12 @@
     const hero=document.querySelector('.subpage-hero,.page-hero');
     const content=document.querySelector('.subpage-content');
     if(hero){
-      hero.insertAdjacentElement('afterend',make(`
-        <section class="photo-parallax about-gallery" id="about-photo-parallax" aria-label="Ewa Miłek na wystawie swoich prac">
-          <img class="photo-parallax-media" data-photo-parallax="strong" src="assets/photos/ewa-milek-wystawa-malarstwo.jpg" loading="eager" fetchpriority="high" decoding="async" alt="Ewa Miłek na wystawie przy swoich obrazach">
-          <div class="container photo-parallax-content"><div class="photo-parallax-copy reveal"><p class="eyebrow">Moja droga</p><h2>Tworzę, uczę i pokazuję sztukę, która wyrasta z doświadczenia.</h2><p>Pracownia, warsztaty i wystawy są różnymi odsłonami tej samej potrzeby — tworzenia w zgodzie ze sobą.</p></div></div>
-        </section>`));
+      hero.insertAdjacentHTML('afterend',`
+        <section class="photo-parallax about-gallery" id="about-photo-parallax" aria-label="Ewa Miłek z mężem Czesławem na wystawie">
+          <img class="photo-parallax-media" data-photo-parallax="strong" src="assets/photos/ewa-milek-wystawa-malarstwo.jpg" loading="eager" fetchpriority="high" decoding="async" alt="Ewa Miłek z mężem Czesławem na wystawie przy swoich obrazach">
+          </section>
+        <section class="about-photo-intro" aria-label="Moja droga"><div class="container"><div class="about-photo-intro-copy"><p class="eyebrow">Moja droga</p><h2>Tworzę, uczę i pokazuję sztukę, która wyrasta z doświadczenia.</h2><p>Pracownia, warsztaty i wystawy są różnymi odsłonami tej samej potrzeby — tworzenia w zgodzie ze sobą.</p></div></div>
+        </section>`);
     }
     if(content){
       content.insertAdjacentElement('afterend',make(`
