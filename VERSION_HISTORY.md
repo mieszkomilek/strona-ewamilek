@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.45 | `00bd71153df46d7195e5b2f8b4945e3e7da6ad12` | 2026-09-09 19:31:21 | Przywróć 9 oryginalnych JPG i napraw publikację wersji po incydencie testowym |
 | 1.44 | `06bf7e0d13059912653f35d3c8cb1d89093296ee` | 2026-09-09 19:13:09 | Przypadkowy plik testowy (incydent; usunięty w kolejnej wersji) |
 | 1.43 | `888a8dbec0d18933bdb1629c1f60054b51bb722a` | 2026-09-09 18:43:51 | Add prepared parallax photos |
 | 1.42 | `1a3b4e957bd430a4671bdab1a2fad1012069cf0c` | 2026-09-08 19:47:10 | Add optimized photo bundle part 2 |
