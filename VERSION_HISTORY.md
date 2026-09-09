@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.51 | `48bd4a958400e1ed744cb04a91681d19713b764d` | 2026-09-09 21:25:13 | Zaktualizuj QA po usunięciu zdjęcia z niedozwolonym tłem |
 | 1.50 | `3b14034a667a18dbb27f8625588cb2adcabbd6b7` | 2026-09-09 21:21:42 | Usuń zdjęcie z Czesławem i zastąp je portretem Ewy |
 | 1.49 | `92350fd45af00084ea83f0b6688e3a281164da72` | 2026-09-09 21:17:44 | Uporządkuj stronę Kontakt i wyróżnij oficjalny e-mail |
 | 1.48 | `4ca9d034af4e9de37a545a7271a83a06f6ab765d` | 2026-09-09 20:15:56 | Odsłoń Ewę i Czesława: przenieś tekst pod zdjęcie i wzmocnij paralaksę |
