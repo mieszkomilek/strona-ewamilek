@@ -54,8 +54,8 @@ for n in ('index.html', 'o-mnie.html'):
     if s.count(f'<script src="assets/js/photo-parallax.js?v={(R / "version.txt").read_text().strip()}"></script>') != 1:
         E.append(n+': wymagany dokładnie jeden skrypt photo-parallax.js')
 photos=re.findall(r'src="(assets/photos/[^" ]+)"', (R/'assets/js/photo-parallax.js').read_text())
-if len(set(photos)) != 9:
-    E.append('photo-parallax.js: wymagane 9 zdjęć')
+if len(set(photos)) != 8:
+    E.append('photo-parallax.js: wymagane 8 zdjęć opublikowanych w galerii')
 for photo in photos:
     p=R/photo
     if p.suffix != '.jpg' or not p.is_file() or not p.read_bytes().startswith(b'\xff\xd8\xff'):
