@@ -68,10 +68,11 @@ Historycznie jednorazowe workflowy powodowały błędy YAML i czerwone powiadomi
 Aktualny standard:
 
 1. zmiana w `main`,
-2. `scripts/site_build.py`,
-3. `scripts/site_qa.py`,
-4. upload artefaktu,
-5. deploy GitHub Pages.
+2. zakończenie `Bump site version` (numer, historia i tag), następnie główny Pages uruchamiany przez `workflow_run`,
+3. `scripts/site_build.py`,
+4. `scripts/site_qa.py`,
+5. upload artefaktu,
+6. deploy GitHub Pages.
 
 Główny workflow: `.github/workflows/pages.yml`.
 
@@ -240,6 +241,8 @@ Przy rozpoczęciu nowej sesji:
 - Desktopowy header ma dynamiczne płowo-różowe tło z motywami sztuki, motyli, aniołów i numerologii; symbole mają być większe i bardziej kontrastowe niż w pierwszej wersji, ale nadal subtelne i premium.
 - Górny indeks Admin ma zawsze pokazywać komplet 13 modułów.
 - `VERSION_HISTORY.md` ma zawierać przy każdej nowej wersji krótki opis słowny tego, co zostało zmienione.
+- Zdjęcia paralaksy na stronie głównej i „O mnie” używają 9 oryginalnych JPG w `assets/photos/`, bez rekompresji; mapowanie utrzymuje `assets/js/photo-parallax.js`.
+- Incydent testowy 1.44 pozostaje w historii z czytelnym opisem; kolejna wersja usuwa plik testowy, bez cofania numerów i przepisywania tagów.
 - Nie dotykamy PayPal przy tych zmianach.
 
 ---

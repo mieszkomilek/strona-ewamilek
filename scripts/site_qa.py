@@ -48,6 +48,21 @@ if admin.exists():
     if 'assets/js/offer-admin-knowledge.js' not in s:E.append('admin.html: brak rozszerzeń Admin')
     if 'assets/js/admin-offer-complete.js' not in s:E.append('admin.html: brak kontroli kompletności Admin')
 
+# Both built pages must load the photo runtime and all original photos must exist.
+for n in ('index.html', 'o-mnie.html'):
+    s=(R/n).read_text(encoding='utf-8')
+    if s.count('<script src="assets/js/photo-parallax.js"></script>') != 1:
+        E.append(n+': wymagany dokładnie jeden skrypt photo-parallax.js')
+photos=re.findall(r'src="(assets/photos/[^" ]+)"', (R/'assets/js/photo-parallax.js').read_text())
+if len(set(photos)) != 9:
+    E.append('photo-parallax.js: wymagane 9 zdjęć')
+for photo in photos:
+    p=R/photo
+    if p.suffix != '.jpg' or not p.is_file() or not p.read_bytes().startswith(b'\xff\xd8\xff'):
+        E.append(photo+': brak oryginalnego JPG')
+if (R/'assets/photos/test-placeholder.txt').exists():
+    E.append('pozostał przypadkowy plik testowy')
+
 print('\n'.join('WARN '+x for x in W))
 print('\n'.join('ERROR '+x for x in E))
 print('errors',len(E),'warnings',len(W))
