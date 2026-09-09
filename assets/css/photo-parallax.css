@@ -11,7 +11,7 @@ img,svg,video,canvas{max-width:100%}
 .photo-parallax-content{position:relative;z-index:2;min-height:inherit;display:flex;align-items:flex-end;padding-top:80px;padding-bottom:70px;color:#fff}
 .photo-parallax-copy{max-width:650px;padding:26px 30px;border:1px solid rgba(255,255,255,.32);border-radius:26px;background:rgba(58,31,57,.24);box-shadow:0 20px 70px rgba(39,20,43,.19);backdrop-filter:blur(10px)}
 .photo-parallax-copy .eyebrow{color:#f6dbe7}.photo-parallax-copy h2{font-size:clamp(2.25rem,4.7vw,4.7rem);margin-bottom:12px}.photo-parallax-copy p:last-child{margin-bottom:0;color:rgba(255,255,255,.9)}
-.photo-parallax.home-garden{--photo-position:50% 43%}.photo-parallax.about-gallery{--photo-position:50% 0%}
+.photo-parallax.home-garden{--photo-position:50% 43%}.photo-parallax.about-gallery{--photo-position:50% 50%}
 .photo-parallax.about-gallery .photo-parallax-media{inset:0 0 auto;height:160%;transform:translate3d(0,var(--photo-shift,0px),0)}
 
 .photo-story{padding:95px 0;background:linear-gradient(180deg,#fffafd,#f9edf3)}
