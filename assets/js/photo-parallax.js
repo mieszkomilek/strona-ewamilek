@@ -59,8 +59,8 @@
     const content=document.querySelector('.subpage-content');
     if(hero){
       hero.insertAdjacentHTML('afterend',`
-        <section class="photo-parallax about-gallery" id="about-photo-parallax" aria-label="Ewa Miłek z mężem Czesławem na wystawie">
-          <img class="photo-parallax-media" data-photo-parallax="strong" src="assets/photos/ewa-milek-wystawa-malarstwo.jpg" loading="eager" fetchpriority="high" decoding="async" alt="Ewa Miłek z mężem Czesławem na wystawie przy swoich obrazach">
+        <section class="photo-parallax about-gallery" id="about-photo-parallax" aria-label="Ewa Miłek przy sztaludze">
+          <img class="photo-parallax-media" data-photo-parallax="strong" src="assets/photos/ewa-milek-pracownia-sztaluga.jpg" loading="eager" fetchpriority="high" decoding="async" alt="Ewa Miłek siedzi przy sztaludze w pracowni">
           </section>
         <section class="about-photo-intro" aria-label="Moja droga"><div class="container"><div class="about-photo-intro-copy"><p class="eyebrow">Moja droga</p><h2>Tworzę, uczę i pokazuję sztukę, która wyrasta z doświadczenia.</h2><p>Pracownia, warsztaty i wystawy są różnymi odsłonami tej samej potrzeby — tworzenia w zgodzie ze sobą.</p></div></div>
         </section>`);

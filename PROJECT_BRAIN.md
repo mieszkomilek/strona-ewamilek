@@ -245,7 +245,7 @@ Przy rozpoczęciu nowej sesji:
 - Incydent testowy 1.44 pozostaje w historii z czytelnym opisem; kolejna wersja usuwa plik testowy, bez cofania numerów i przepisywania tagów.
 - Pierwsze zdjęcie „O mnie” ma mocną paralaksę (również na telefonie), kadr wyrównany do góry i nieruchomy wariant dla `prefers-reduced-motion`. Dynamicznie dodane zdjęcia rejestrujemy we własnym obserwatorze ujawniania, po wstawieniu do DOM.
 - Build dodaje numer wersji do adresów CSS i JS zdjęć, aby po wdrożeniu przeglądarka pobierała aktualną paralaksę i poprawki galerii.
-- Zdjęcie Ewy z mężem Czesławem na „O mnie” pozostaje bez tekstu i przyciemnienia. Cały blok „Moja droga” jest pod zdjęciem; wysoki kadr i mocna paralaksa eksponują obie osoby.
+- Na „O mnie” używamy zdjęcia, na którym jest wyłącznie Ewa; zdjęcie z Czesławem i obrazami zostało usunięte z sekcji oraz repozytorium. Cały blok „Moja droga” pozostaje pod zdjęciem.
 - Nie dotykamy PayPal przy tych zmianach.
 
 ---
