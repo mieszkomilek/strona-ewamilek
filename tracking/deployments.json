@@ -4,10 +4,10 @@
     {
       "id": "cost-tracking-001",
       "description": "Rejestr modeli, tokenów i kosztów wdrożeń oraz zasady projektu",
-      "source_commit": null,
-      "version": null,
-      "workflow_url": null,
-      "deployment_status": "prepared",
+      "source_commit": "80d04e0196178882e2d384ea331063775ab8af00",
+      "version": "1.58",
+      "workflow_url": "https://github.com/mieszkomilek/strona-ewamilek/actions/runs/34473425022",
+      "deployment_status": "success",
       "usage": [
         {
           "model": "GPT-6 (dokładny identyfikator niedostępny)",
@@ -27,10 +27,10 @@
     {
       "id": "coloring-pages-001",
       "description": "Pięć kolorowanek, podstrona i menu; plan 91 zdjęć przed publikacją",
-      "source_commit": null,
-      "version": null,
-      "workflow_url": null,
-      "deployment_status": "prepared",
+      "source_commit": "fc454b621158d88f2f63191723b2142403d51aac",
+      "version": "1.59",
+      "workflow_url": "https://github.com/mieszkomilek/strona-ewamilek/actions/runs/34475262120",
+      "deployment_status": "success",
       "usage": [
         {
           "model": "GPT-6 (dokładny identyfikator niedostępny)",
@@ -65,7 +65,7 @@
       "approved_budget_tokens": 65000,
       "actual_tokens": null,
       "actual_usd": null,
-      "status": "planned"
+      "status": "coloring_published_photo_plan_ready"
     }
   ]
 }
