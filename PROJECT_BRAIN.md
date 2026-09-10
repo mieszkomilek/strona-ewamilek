@@ -236,6 +236,9 @@ Przy rozpoczęciu nowej sesji:
 
 ## 14. Ostatnie ustalenia
 
+- Od wdrożenia rejestru kosztów obowiązuje tracking modeli, tokenów i USD dla zmian w main. Każda zmiana otrzymuje Deployment-ID i wpis w tracking/deployments.json. Zasady pomiaru i raportowania: DEPLOYMENT_COSTS.md; obowiązki agentów: AGENTS.md. Nieznane wartości mają null; budżety i ekwiwalent API pozostają oddzielone od rzeczywistego użycia i rachunku. Statystyki: python3 scripts/deployment_costs.py.
+- Zaakceptowano budżet roboczy 65 000 tokenów dla kolorowanek i 91 zdjęć. Przed wdrożeniem zdjęć przedstawiamy tabelę nazw i rozmieszczenia. Budżet nie jest pomiarem zużycia.
+
 - Wszystkie bramki dostępu przechodzą na `YYYYMMDD`.
 - Branding nagłówka: **Ewa Miłek — Sztuka, która prowadzi do wnętrza**.
 - Desktopowy header ma dynamiczne płowo-różowe tło z motywami sztuki, motyli, aniołów i numerologii; symbole mają być większe i bardziej kontrastowe niż w pierwszej wersji, ale nadal subtelne i premium.

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "deployments": [
+    {
+      "id": "cost-tracking-001",
+      "description": "Rejestr modeli, tokenów i kosztów wdrożeń oraz zasady projektu",
+      "source_commit": null,
+      "version": null,
+      "workflow_url": null,
+      "deployment_status": "prepared",
+      "usage": [
+        {
+          "model": "GPT-6 (dokładny identyfikator niedostępny)",
+          "model_source": "Instrukcja środowiska bieżącej sesji",
+          "scope": "Przygotowanie rejestru kosztów",
+          "input_tokens": null,
+          "cached_input_tokens": null,
+          "output_tokens": null,
+          "actual_usd": null,
+          "estimated_api_usd": null,
+          "usage_source": null,
+          "pricing_source": null,
+          "note": "Brak udostępnionego pomiaru tokenów i rozliczenia dla tego wdrożenia."
+        }
+      ]
+    }
+  ],
+  "planned_work": [
+    {
+      "id": "coloring-and-91-photos",
+      "description": "5 kolorowanek i analiza oraz rozmieszczenie 91 zdjęć",
+      "estimated_tokens_min": 35000,
+      "estimated_tokens_max": 65000,
+      "approved_budget_tokens": 65000,
+      "actual_tokens": null,
+      "actual_usd": null,
+      "status": "planned"
+    }
+  ]
+}

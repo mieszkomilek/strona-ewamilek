@@ -2,6 +2,8 @@
 
 Statyczna, responsywna strona przygotowana pod GitHub Pages.
 
+Projekt prowadzi historię modeli AI, zużycia tokenów i kosztów USD przypisanych do wdrożeń na main. Zasady: [DEPLOYMENT_COSTS.md](DEPLOYMENT_COSTS.md), dane: [tracking/deployments.json](tracking/deployments.json), instrukcje dla agentów: [AGENTS.md](AGENTS.md). Brak pomiaru jest oznaczany jawnie; szacunki nie są rachunkiem.
+
 ## Najpierw przeczytaj — Second Brain projektu
 
 Przy wejściu do projektu w nowym czacie AI albo po dłuższej przerwie zacznij od:
