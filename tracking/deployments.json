@@ -58,10 +58,10 @@
     {
       "id": "photos-84-001",
       "description": "84 oryginalne zdjęcia: Twórczość, O mnie i Mandala; 7 pominiętych zgodnie z decyzją użytkownika",
-      "source_commit": null,
-      "version": null,
-      "workflow_url": null,
-      "deployment_status": "prepared",
+      "source_commit": "dd9ed18d8ca00e5767ba58a5f98011507f3ecede",
+      "version": "1.60",
+      "workflow_url": "https://github.com/mieszkomilek/strona-ewamilek/actions/runs/34506650921",
+      "deployment_status": "success",
       "usage": [
         {
           "model": "GPT-6 (dokładny identyfikator niedostępny)",
@@ -86,7 +86,7 @@
       "approved_budget_tokens": 65000,
       "actual_tokens": null,
       "actual_usd": null,
-      "status": "photos_implementation"
+      "status": "completed_84_published_7_excluded"
     }
   ]
 }
