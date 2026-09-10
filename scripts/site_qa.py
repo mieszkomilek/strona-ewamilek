@@ -1,5 +1,5 @@
 from pathlib import Path
-import json,re,sys
+import json,re,sys,hashlib
 from urllib.parse import urlsplit
 
 R=Path(__file__).resolve().parents[1]
@@ -79,8 +79,21 @@ gallery=R/'tworczosc.html'
 if gallery.exists():
     gallery_html=gallery.read_text(encoding='utf-8')
     count=len(re.findall(r'class="art-gallery-item"', gallery_html))
-    if count != 17:
-        E.append(f'tworczosc.html: galeria zawiera {count} zdjęć zamiast 17')
+    library=json.loads((R/'data/photo-library.json').read_text(encoding='utf-8'))
+    for excluded in library['excluded_ids']:
+        if list((R/'assets/photos/ewa-milek').glob(f'{excluded:03}-*')):
+            E.append(f'W repo znajduje się pominięte zdjęcie {excluded}')
+    if count != 17 + len(library['photos']):
+        E.append(f'tworczosc.html: niepełna galeria ({count} zdjęć)')
+    for photo in library['photos']:
+        original=R/photo['proposed_path']
+        if not original.exists() or hashlib.sha256(original.read_bytes()).hexdigest() != photo['sha256']:
+            E.append(f'Brak oryginału lub zmienione bajty zdjęcia {photo["id"]}')
+        if photo['id'] in library['excluded_ids']:
+            E.append(f'Galeria zawiera pominięte zdjęcie {photo["id"]}')
+        for label, filename in [('Twórczość','tworczosc.html'), ('O mnie','o-mnie.html'), ('Mandala','mandala.html')]:
+            if label in photo['pages'] and f'href="{photo["proposed_path"]}"' not in (R/filename).read_text(encoding='utf-8'):
+                E.append(f'{filename}: brak zatwierdzonego zdjęcia {photo["id"]}')
     if gallery_html.count('data-gallery-schema') != 1 or '"@type":"ImageGallery"' not in gallery_html:
         E.append('tworczosc.html: brak pojedynczych danych SEO galerii')
 

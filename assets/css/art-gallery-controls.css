@@ -4,5 +4,9 @@
 .art-gallery-filters button:focus-visible,.art-gallery-dialog button:focus-visible{outline:3px solid #9d6fd1;outline-offset:3px}
 .art-gallery-status{margin-left:auto;color:var(--muted);font-size:.86rem}
 .art-gallery-item[hidden]{display:none}
+.art-gallery-caption{display:block;padding:12px 16px;color:#4e367e;font-size:.9rem;line-height:1.5}
+.photo-story{margin:3rem 0;clear:both}
+.photo-story .art-gallery{columns:2}
+@media(max-width:560px){.photo-story .art-gallery{columns:1}}
 @media(max-width:560px){.art-gallery-status{width:100%;margin-left:0}}
 @media(prefers-reduced-motion:reduce){.art-gallery-item,.art-gallery-filters button{transition:none}}

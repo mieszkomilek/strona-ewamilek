@@ -267,3 +267,10 @@ Przy rozpoczęciu nowej sesji:
 
 - Kolorowanki: kolorowanki.html, pięć PNG w assets/kolorowanki/, pobieranie i druk pojedynczego wzoru A4. Wzory wygenerowano AI dla strony, nie są reprodukcjami obrazów Ewy.
 - Plan 91 zdjęć: PHOTO_PLACEMENT_PLAN.md. Nie publikować zdjęć przed przedstawieniem planu użytkownikowi; kadry muzealne wymagają rozstrzygnięcia zgodnie z wcześniejszym ograniczeniem publikacji cudzych obrazów.
+
+## Wdrożenie 84 zdjęć z archiwum
+
+- Użytkownik zatwierdził pominięcie zdjęć 003, 029, 039, 041, 048, 087, 090 i publikację pozostałych 84. Pominiętych plików nie dodajemy do repo.
+- Oryginalne JPG bez rekompresji: assets/photos/ewa-milek/. Manifest data/photo-library.json zawiera nazwy, kategorie, podstrony i SHA-256. Każdy plik jest wspólny dla wszystkich podstron.
+- Twórczość: 84 nowe zdjęcia oraz wcześniejsze 17, filtry według jawnych kategorii. O mnie: 16 zdjęć w czterech grupach między tekstami. Mandala: 9 zdjęć obrazów i procesu tworzenia. Zdjęcia rodzinne mają oddzielną kategorię.
+- Plan PHOTO_PLACEMENT_PLAN.md zachowuje informację o wszystkich 91 pozycjach i siedmiu pominięciach. Weryfikacja galerii obejmuje cały zatwierdzony manifest.

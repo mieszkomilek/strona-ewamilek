@@ -32,4 +32,6 @@ Aktualny deployment jest realizowany przez GitHub Actions (`.github/workflows/pa
 
 ## Media
 
-Wszystkie media używane przez stronę znajdują się lokalnie w katalogu `assets/`. Strona nie powinna zależeć od zasobów starego Shopify.
+Zdjęcia są przechowywane w repozytorium. Nowy zestaw 84 oryginalnych JPG znajduje się w `assets/photos/ewa-milek/`, a wcześniejsze 17 w `facebook-zdjecia-galeria-sztuki-ewa-milek/`. Strona nie powinna zależeć od zasobów starego Shopify.
+
+`data/photo-library.json` opisuje nazwy, kategorie, miejsca użycia i sumy SHA-256 nowego zestawu. Twórczość pokazuje wszystkie 101 zdjęć; wybrane 16 wzbogaca O mnie, a 9 dział Mandala. Podstrony korzystają z tych samych plików bez rekompresji. Siedem zdjęć muzealnych pominięto zgodnie z decyzją użytkownika; pełny plan zawiera `PHOTO_PLACEMENT_PLAN.md`.
