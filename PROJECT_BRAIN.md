@@ -253,6 +253,7 @@ Przy rozpoczęciu nowej sesji:
 - QA sprawdza lokalne `src` i `href`, komplet 17 zdjęć galerii oraz dotychczasowe krytyczne zasoby.
 - Skrypty numerologii i e-booków są usuwane podczas buildu ze stron, które nie zawierają odpowiednich modułów.
 - Audyt jakości 2026-09-10 usunął nieużywane WebP, zastępcze SVG, pusty `script.js` i zakończone automaty migracyjne. Utrzymujemy tylko workflow wersjonowania i Pages. JPG użytkownika pozostają bez rekompresji. Raport: `QUALITY_REVIEW.md`.
+- Rejestracja domeny `ewamilek.pl` pozostaje w OVH. Autorytatywny DNS i zarządzanie strefą domeny są przenoszone do Cloudflare; w Cloudflare utworzono pełną strefę w statusie `pending` z nameserverami `alice.ns.cloudflare.com` i `nile.ns.cloudflare.com`. W OVH przyjęto ich ustawienie, a stare serwery `dns110.ovh.net` i `ns110.ovh.net` są w trakcie usuwania. Nie przenosimy rejestracji domeny do Cloudflare.
 - Ochrona PDF pozostaje obecnie bez zmian. Docelowa realna ochrona wymaga autoryzacji po stronie serwera lub podpisywanych czasowo adresów; GitHub Pages nie zapewnia poufności pliku.
 
 ---
