@@ -251,3 +251,5 @@ Przy rozpoczęciu nowej sesji:
 ---
 
 **Ten plik jest częścią architektury projektu, a nie jednorazową notatką. Aktualizuj go razem z projektem.**
+
+- Galeria „Twórczość” zawiera 17 JPG dostarczonych przez użytkownika w `facebook-zdjecia-galeria-sztuki-ewa-milek/`, bez rekompresji. Zdjęcia pokazujemy w pełnych proporcjach, z odnośnikami do pełnego rozmiaru.
