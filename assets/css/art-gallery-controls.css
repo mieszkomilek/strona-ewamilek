@@ -1,0 +1,8 @@
+.art-gallery-filters{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:28px 0 8px}
+.art-gallery-filters button{border:1px solid rgba(101,65,184,.2);border-radius:999px;padding:10px 18px;background:#fff;color:#4e367e;font:700 .86rem/1 system-ui,sans-serif;cursor:pointer}
+.art-gallery-filters button.active{background:#5e3ca0;color:#fff}
+.art-gallery-filters button:focus-visible,.art-gallery-dialog button:focus-visible{outline:3px solid #9d6fd1;outline-offset:3px}
+.art-gallery-status{margin-left:auto;color:var(--muted);font-size:.86rem}
+.art-gallery-item[hidden]{display:none}
+@media(max-width:560px){.art-gallery-status{width:100%;margin-left:0}}
+@media(prefers-reduced-motion:reduce){.art-gallery-item,.art-gallery-filters button{transition:none}}

@@ -247,11 +247,14 @@ Przy rozpoczęciu nowej sesji:
 - Build dodaje numer wersji do adresów CSS i JS zdjęć, aby po wdrożeniu przeglądarka pobierała aktualną paralaksę i poprawki galerii.
 - Na „O mnie” używamy zdjęcia, na którym jest wyłącznie Ewa; zdjęcie z Czesławem i obrazami zostało usunięte z sekcji oraz repozytorium. Cały blok „Moja droga” pozostaje pod zdjęciem.
 - Nie dotykamy PayPal przy tych zmianach.
+- Galeria „Twórczość” zawiera 17 JPG dostarczonych przez użytkownika w `facebook-zdjecia-galeria-sztuki-ewa-milek/`, bez rekompresji. Zdjęcia pokazujemy w pełnych proporcjach, z dostępnym podglądem, nawigacją klawiaturą oraz filtrem „Obrazy” / „Pracownia i wystawy”.
+- „Twórczość” jest publiczną stroną indeksowaną i znajduje się w sitemapie.
+- Wspólne menu i stopka są utrzymywane w `templates/`, a build osadza je we wszystkich stronach. Pozycja „Kontakt” wygląda tak samo jak pozostałe pozycje menu.
+- QA sprawdza lokalne `src` i `href`, komplet 17 zdjęć galerii oraz dotychczasowe krytyczne zasoby.
+- Skrypty numerologii i e-booków są usuwane podczas buildu ze stron, które nie zawierają odpowiednich modułów.
+- Audyt jakości 2026-09-10 usunął nieużywane WebP, zastępcze SVG, pusty `script.js` i zakończone automaty migracyjne. Utrzymujemy tylko workflow wersjonowania i Pages. JPG użytkownika pozostają bez rekompresji. Raport: `QUALITY_REVIEW.md`.
+- Ochrona PDF pozostaje obecnie bez zmian. Docelowa realna ochrona wymaga autoryzacji po stronie serwera lub podpisywanych czasowo adresów; GitHub Pages nie zapewnia poufności pliku.
 
 ---
 
 **Ten plik jest częścią architektury projektu, a nie jednorazową notatką. Aktualizuj go razem z projektem.**
-
-- Galeria „Twórczość” zawiera 17 JPG dostarczonych przez użytkownika w `facebook-zdjecia-galeria-sztuki-ewa-milek/`, bez rekompresji. Zdjęcia pokazujemy w pełnych proporcjach, z odnośnikami do pełnego rozmiaru.
-
-- Audyt jakości 2026-09-10: usunięto nieużywane WebP, zastępcze SVG, pusty `script.js` i zakończone automaty migracyjne. Utrzymujemy tylko workflow wersjonowania i Pages. JPG użytkownika pozostają bez rekompresji. Propozycje dalszych usprawnień: `QUALITY_REVIEW.md`.

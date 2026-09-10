@@ -66,6 +66,8 @@ if (R/'assets/photos/test-placeholder.txt').exists():
 
 for p in R.glob('*.html'):
     s=p.read_text(encoding='utf-8')
+    if s.count('class="skip-link"') != 1 or 'id="main-content"' not in s:
+        E.append(f'{p.name}: brak dostępnego przejścia do głównej treści')
     for ref in re.findall(r'\b(?:src|href)="([^"]+)"', s):
         u=urlsplit(ref)
         if not u.path or u.scheme or u.path.startswith(('/', '#')):
@@ -75,9 +77,12 @@ for p in R.glob('*.html'):
 
 gallery=R/'tworczosc.html'
 if gallery.exists():
-    count=len(re.findall(r'class="art-gallery-item"', gallery.read_text(encoding='utf-8')))
+    gallery_html=gallery.read_text(encoding='utf-8')
+    count=len(re.findall(r'class="art-gallery-item"', gallery_html))
     if count != 17:
         E.append(f'tworczosc.html: galeria zawiera {count} zdjęć zamiast 17')
+    if gallery_html.count('data-gallery-schema') != 1 or '"@type":"ImageGallery"' not in gallery_html:
+        E.append('tworczosc.html: brak pojedynczych danych SEO galerii')
 
 print('\n'.join('WARN '+x for x in W))
 print('\n'.join('ERROR '+x for x in E))

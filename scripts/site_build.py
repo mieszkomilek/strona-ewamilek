@@ -31,6 +31,9 @@ for p in R.glob('*.html'):
         markup=(R/'templates'/f'{part}.html').read_text()
         s=s.replace(f'<!-- site:{part} -->',markup)
         s=re.sub(rf'<{part}\b.*?</{part}>',lambda m: markup,s,flags=re.S)
+    s=re.sub(r'<a class="skip-link"[^>]*>.*?</a>','',s,count=1)
+    s=re.sub(r'(<body\b[^>]*>)',r'\1<a class="skip-link" href="#main-content">Przejdź do treści</a>',s,count=1)
+    s=re.sub(r'<main\b(?![^>]*\bid=)', '<main id="main-content"', s, count=1)
     for module, marker in (('numerology.js','id="wibracja-imienia-nazwiska"'),('ebooks.js','id="ebook-open"')):
         if marker not in s:
             s=re.sub(r'<script src="assets/js/'+re.escape(module)+r'(?:\?[^" ]*)?"></script>','',s)
@@ -62,6 +65,18 @@ for p in R.glob('*.html'):
     if p.name in ('index.html','o-mnie.html'):
         s=re.sub(r'<script src="assets/js/photo-parallax\.js(?:\?[^"]*)?"></script>','',s)
         s=ensure_script(s,f'assets/js/photo-parallax.js?v={VERSION}')
+
+    if p.name=='tworczosc.html':
+        s=ensure_css(s,'assets/css/art-gallery-controls.css')
+        s=re.sub(r'<script type="application/ld\+json" data-gallery-schema>.*?</script>','',s,flags=re.S)
+        images=[]
+        for tag in re.findall(r'<img\b[^>]+>',s,re.I):
+            src=re.search(r'\bsrc="(facebook-zdjecia-galeria-sztuki-ewa-milek/[^"]+)"',tag)
+            alt=re.search(r'\balt="([^"]+)"',tag)
+            if src:
+                images.append({'@type':'ImageObject','contentUrl':base+src.group(1),'caption':alt.group(1) if alt else BRAND_NAME})
+        schema=json.dumps({'@context':'https://schema.org','@type':'ImageGallery','name':'Twórczość Ewy Miłek','url':url(p.name),'image':images},ensure_ascii=False,separators=(',',':'))
+        s=s.replace('</head>',f'<script type="application/ld+json" data-gallery-schema>{schema}</script>\n</head>',1)
 
     # Admin and Oferta 2026 receive their specialist modules and knowledge links.
     if p.name in ('admin.html','oferta-2026.html'):
