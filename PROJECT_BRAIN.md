@@ -262,3 +262,8 @@ Przy rozpoczęciu nowej sesji:
 ---
 
 **Ten plik jest częścią architektury projektu, a nie jednorazową notatką. Aktualizuj go razem z projektem.**
+
+## Kolorowanki i nowe zdjęcia
+
+- Kolorowanki: kolorowanki.html, pięć PNG w assets/kolorowanki/, pobieranie i druk pojedynczego wzoru A4. Wzory wygenerowano AI dla strony, nie są reprodukcjami obrazów Ewy.
+- Plan 91 zdjęć: PHOTO_PLACEMENT_PLAN.md. Nie publikować zdjęć przed przedstawieniem planu użytkownikowi; kadry muzealne wymagają rozstrzygnięcia zgodnie z wcześniejszym ograniczeniem publikacji cudzych obrazów.
