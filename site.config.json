@@ -1,1 +1,30 @@
-{"siteName":"EwaMiłek","legalName":"Ewa Miłek","baseUrl":"https://ewamilek.pl/","language":"pl-PL","locale":"pl_PL","themeColor":"#f8e9ef","email":"milekewa@o2.pl","social":{"facebook":"https://www.facebook.com/milekewa","instagram":"https://www.instagram.com/ewamilek.art"},"defaultImage":"assets/ewa-milek-vedic-art.jpg","indexablePages":["index.html","vedic-art.html","mandala.html","anioly.html","numerologia.html","jedwab-malowany.html","o-mnie.html","kontakt.html","ebooki.html"],"privateOrPreviewPages":["admin.html","oferta-2026.html","tworczosc.html"]}
+{
+  "siteName": "EwaMiłek",
+  "legalName": "Ewa Miłek",
+  "baseUrl": "https://ewamilek.pl/",
+  "language": "pl-PL",
+  "locale": "pl_PL",
+  "themeColor": "#f8e9ef",
+  "email": "milekewa@o2.pl",
+  "social": {
+    "facebook": "https://www.facebook.com/milekewa",
+    "instagram": "https://www.instagram.com/ewamilek.art"
+  },
+  "defaultImage": "assets/ewa-milek-vedic-art.jpg",
+  "indexablePages": [
+    "index.html",
+    "vedic-art.html",
+    "mandala.html",
+    "anioly.html",
+    "numerologia.html",
+    "jedwab-malowany.html",
+    "o-mnie.html",
+    "kontakt.html",
+    "ebooki.html",
+    "tworczosc.html"
+  ],
+  "privateOrPreviewPages": [
+    "admin.html",
+    "oferta-2026.html"
+  ]
+}

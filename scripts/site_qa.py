@@ -1,5 +1,6 @@
 from pathlib import Path
 import json,re,sys
+from urllib.parse import urlsplit
 
 R=Path(__file__).resolve().parents[1]
 c=json.loads((R/'site.config.json').read_text(encoding='utf-8'))
@@ -62,6 +63,21 @@ for photo in photos:
         E.append(photo+': brak oryginalnego JPG')
 if (R/'assets/photos/test-placeholder.txt').exists():
     E.append('pozostał przypadkowy plik testowy')
+
+for p in R.glob('*.html'):
+    s=p.read_text(encoding='utf-8')
+    for ref in re.findall(r'\b(?:src|href)="([^"]+)"', s):
+        u=urlsplit(ref)
+        if not u.path or u.scheme or u.path.startswith(('/', '#')):
+            continue
+        if not (R/u.path).exists() and not ref.startswith(('mailto:', 'javascript:')):
+            E.append(f'{p.name}: brak lokalnego zasobu {ref}')
+
+gallery=R/'tworczosc.html'
+if gallery.exists():
+    count=len(re.findall(r'class="art-gallery-item"', gallery.read_text(encoding='utf-8')))
+    if count != 17:
+        E.append(f'tworczosc.html: galeria zawiera {count} zdjęć zamiast 17')
 
 print('\n'.join('WARN '+x for x in W))
 print('\n'.join('ERROR '+x for x in E))

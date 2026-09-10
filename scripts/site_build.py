@@ -27,6 +27,15 @@ def ensure_css(s,href):
 for p in R.glob('*.html'):
     s=p.read_text(encoding='utf-8').replace('https://mieszkomilek.github.io/strona-ewamilek/',base)
 
+    for part in ('header', 'footer'):
+        markup=(R/'templates'/f'{part}.html').read_text()
+        s=s.replace(f'<!-- site:{part} -->',markup)
+        s=re.sub(rf'<{part}\b.*?</{part}>',lambda m: markup,s,flags=re.S)
+    for module, marker in (('numerology.js','id="wibracja-imienia-nazwiska"'),('ebooks.js','id="ebook-open"')):
+        if marker not in s:
+            s=re.sub(r'<script src="assets/js/'+re.escape(module)+r'(?:\?[^" ]*)?"></script>','',s)
+    s=ensure_css(s,'assets/css/navigation.css')
+
     if 'manifest.webmanifest' not in s:
         s=s.replace('</head>','<link href="manifest.webmanifest" rel="manifest"/>\n</head>',1)
 
