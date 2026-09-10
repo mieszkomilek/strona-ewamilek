@@ -1,0 +1,50 @@
+{
+  "method": "built-in image_gen",
+  "successful_generations": 10,
+  "successful_revisions": 2,
+  "failed_limit_attempts": 1,
+  "prompts": [
+    {
+      "slug": "harmonii",
+      "prompt": "Create one finished Polish printable mandala coloring page, portrait A4 proportions, crisp black outlines on pure white with large empty enclosed spaces to color. Refined radial symmetry, an intricate but readable 8-fold floral rosette weaving eight balanced interlocking petal rings, theme HARMONY. Central mandala fully visible with generous white margins, no gray shading, no color inside mandala. Only the small outer corner decorations have very pale lavender and powder pink watercolor flowers, matching an elegant Polish artist website. Flat printable artwork, no mockup. Top centered elegant dark plum serif title exactly \"Mandala harmonii\". Bottom centered text exactly \"Ewa Miłek • ewamilek.pl\"; below it small legible text \"Kolorowanka przygotowana z pomocą AI\". Ensure accurate Polish letters and keep all lettering outside the coloring mandala. High resolution.",
+      "revision": "Edit this printable coloring page: shrink ONLY the entire black mandala to fit completely within the page with at least 8% white blank space to BOTH left and right edges. Currently side tips touch/cross edges. Reconstruct complete outer tips, keep radial symmetry. Keep title, footer, pale floral corners and all existing text unchanged, same portrait canvas. All black outlines, pure white empty fields, no gray fill."
+    },
+    {
+      "slug": "szczescia",
+      "prompt": "Use case: illustration-story. One finished Polish mandala coloring page, A4 portrait. Subject: HAPPINESS, a joyful radial circle of four-leaf clovers, small daisies and rounded sun rays, unique central eight-petal flower. Black clean outlines, pure white empty enclosed coloring areas, no gray shading or filled areas. Entire circular mandala occupies only 78% of page width, with visible 11% white margin on EACH SIDE, never cropped. Pale lavender and powder pink watercolor floral decorations ONLY in tiny outer page corners, elegant artist stationery. Top dark plum serif heading exactly \"Mandala szczęścia\". Footer exactly \"Ewa Miłek • ewamilek.pl\" and smaller \"Kolorowanka przygotowana z pomocą AI\". Keep typography separate from circle. Flat artwork ready to print, no photograph or mockup. High resolution."
+    },
+    {
+      "slug": "dobrobytu",
+      "prompt": "Create a finished printable Polish mandala coloring page, A4 portrait. Theme ABUNDANCE AND PROSPERITY: radial botanical mandala of wheat ears, pomegranates, grapes and elegant leaves around a seed rosette, harmonious circles, moderately detailed enclosed shapes for coloring. Pure black outlines and WHITE uncolored interiors, no grayscale shading. Complete mandala with 10% blank left and right margins, no clipping. Delicate pastel lavender/powder pink floral watercolor corners only, rest white. Elegant dark plum serif top title exactly \"Mandala dobrobytu\". Footer exactly \"Ewa Miłek • ewamilek.pl\", below \"Kolorowanka przygotowana z pomocą AI\". Typography separate from circle. Flat printable illustration, no mockup, no promises or other text. High resolution."
+    },
+    {
+      "slug": "milosci",
+      "prompt": "One finished Polish mandala coloring page, A4 portrait white page. LOVE theme: eightfold radial mandala of paired hearts, rose blossoms and soft ribbon loops, central rose enclosed by eight hearts. Clean black outlines, enclosed empty WHITE coloring fields, no grayscale shading. Entire round ornament centered, fully visible, diameter about 80% page width, generous white margin on both sides. Pale powder pink and lavender watercolor flowers in outer corners only. Top elegant dark plum serif title exactly \"Mandala miłości\". Footer exactly \"Ewa Miłek • ewamilek.pl\" and below smaller \"Kolorowanka przygotowana z pomocą AI\". Accurate Polish typography separate from ornament. Flat printable illustration, no mockup, high resolution."
+    },
+    {
+      "slug": "spelnienia",
+      "prompt": "Finished Polish mandala coloring sheet, A4 portrait white background. Theme FULFILLMENT: a radial mandala of fully opened lotus blossoms and small stars arranged around a central eight-point star, nested petal bands symbolizing reaching completion. Clear black contour lines, empty white enclosed regions suitable for colored pencils, no shaded regions. Whole circular pattern inside generous side margins and separate from lettering. Pale pink and lavender watercolor floral corner flourishes only. Dark plum elegant serif title exactly \"Mandala spełnienia\". Footer exactly \"Ewa Miłek • ewamilek.pl\", smaller second line \"Kolorowanka przygotowana z pomocą AI\". Flat printable artwork, no mockup, high resolution."
+    },
+    {
+      "slug": "zdrowia",
+      "prompt": "Finished Polish mandala coloring sheet, A4 portrait. Theme HEALTH as a gentle botanical symbol: circular radial mandala of fresh ginkgo leaves, chamomile blossoms and water drops surrounding a budding plant rosette, no medical claims or symbols. Crisp black contour lines, pure white enclosed coloring spaces, no gray shading. Fully visible ornament with white side margins, elegant pale lavender and powder pink watercolor flowers only in page corners. Top dark plum serif text exactly \"Mandala zdrowia\". Bottom exactly \"Ewa Miłek • ewamilek.pl\", smaller below \"Kolorowanka przygotowana z pomocą AI\". Flat printable art, no mockup, all text outside the mandala. High resolution."
+    },
+    {
+      "slug": "rownowagi",
+      "prompt": "Finished Polish mandala coloring sheet, A4 portrait white page. BALANCE theme: exact radial geometric mandala with alternating smooth teardrop shapes and angular diamonds, paired leaf shapes, equal concentric rings around a symmetrical circular eight-petal center. All shapes clean black outlines with WHITE empty coloring spaces; no filled black masses or grayscale. Entire round design fully inside the page, visible side margins. Elegant pale lavender/powder pink watercolor floral accents only in the four outside corners. Top dark plum serif title exactly \"Mandala równowagi\". Footer exactly \"Ewa Miłek • ewamilek.pl\" and smaller \"Kolorowanka przygotowana z pomocą AI\". Text separate from mandala. Flat printable art, high resolution, no mockup."
+    },
+    {
+      "slug": "pieniedzy",
+      "prompt": "Finished Polish mandala coloring page A4 portrait. MONEY theme as decorative symbolism: radial ornament built from coin-shaped circles with small stars engraved inside, laurel leaf wreaths and eight faceted jewel shapes around a central circular sun emblem. No real currency notes, no monetary promises, no extra words or numbers. Black crisp linework, all regions WHITE and uncolored, no gray fills. Entire circular mandala fits within the page with white side margins. Pale lavender and powder pink floral watercolor corners matching elegant artist stationery. Top plum serif title exactly \"Mandala pieniędzy\". Footer exactly \"Ewa Miłek • ewamilek.pl\", beneath smaller \"Kolorowanka przygotowana z pomocą AI\". Typography outside ornament. Flat print-ready artwork, high resolution.",
+      "revision": "Revise only the size of the central black outlined mandala: reduce its diameter by 15 percent, keep centered, so the complete left and right outer pointed petals are clearly visible with blank white margins. Reconstruct any clipped tips symmetrically. Keep all text, pale floral corner ornaments and page dimensions unchanged. Do not fill any coloring fields; retain pure white inside and crisp black lines."
+    },
+    {
+      "slug": "przebaczenia",
+      "prompt": "Finished Polish mandala coloring sheet A4 portrait. FORGIVENESS theme: graceful eightfold radial wreath of olive branches, open petal shapes and paired small dove outlines around a simple central blossom. Birds recognizable with two wings and one head each, balanced clean design, moderate detail. All mandala black outlines with white uncolored interiors, no gray shading. Complete circular mandala no more than 80% page width with clear blank margins on both sides. Subtle powder pink and lavender watercolor flower corners, white background. Dark plum serif heading exactly \"Mandala przebaczenia\". Footer exactly \"Ewa Miłek • ewamilek.pl\" and smaller \"Kolorowanka przygotowana z pomocą AI\". No other words, no mockup. Flat high-resolution print artwork."
+    },
+    {
+      "slug": "wdziecznosci",
+      "prompt": "Finished Polish printable mandala coloring page, A4 portrait white canvas. GRATITUDE theme: intricate but readable circular wreath of open daisies, small heart-shaped leaves and gently radiating petals around a central sunflower, warm welcoming botanical motif. Clean black outlines, all mandala interiors left WHITE for pencils, no gray shadows. Fully contained mandala with generous white margins on left and right. Decorative pastel lavender and powder pink watercolor flowers ONLY in corners. Top dark plum serif title exactly \"Mandala wdzięczności\". Footer exactly \"Ewa Miłek • ewamilek.pl\", beneath it small legible \"Kolorowanka przygotowana z pomocą AI\". All typography separate from circle. Flat high-resolution printable art, no mockup."
+    }
+  ]
+}

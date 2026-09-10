@@ -274,3 +274,9 @@ Przy rozpoczęciu nowej sesji:
 - Oryginalne JPG bez rekompresji: assets/photos/ewa-milek/. Manifest data/photo-library.json zawiera nazwy, kategorie, podstrony i SHA-256. Każdy plik jest wspólny dla wszystkich podstron.
 - Twórczość: 84 nowe zdjęcia oraz wcześniejsze 17, filtry według jawnych kategorii. O mnie: 16 zdjęć w czterech grupach między tekstami. Mandala: 9 zdjęć obrazów i procesu tworzenia. Zdjęcia rodzinne mają oddzielną kategorię.
 - Plan PHOTO_PLACEMENT_PLAN.md zachowuje informację o wszystkich 91 pozycjach i siedmiu pominięciach. Weryfikacja galerii obejmuje cały zatwierdzony manifest.
+
+## Kolorowanki tematyczne i identyfikatory zdjęć
+
+- Dział Kolorowanki zawiera 15 wzorów: wcześniejsze 5 i 10 nowych (harmonia, szczęście, dobrobyt, miłość, spełnienie, zdrowie, równowaga, pieniądze, przebaczenie, wdzięczność). Wbudowany image_gen; PNG do pobrania i druk pojedynczej karty A4, podpis ewamilek.pl. Prompty: assets/kolorowanki/prompts-10.json. Opisy symboliki są propozycją zabawy kolorami.
+- Stałe identyfikatory zdjęć image_id_NNN: rejestr assets/js/photo-ids.js i dokument PHOTO_IDS.md. Podgląd pokazuje ID z przyciskiem kopiowania; obejmuje galerie Twórczość, O mnie, Mandala oraz wcześniejszą dolną galerię O mnie. Ten sam plik zachowuje ID między podstronami.
+- Nigdy nie renumerować ani nie używać ponownie usuniętego ID. Przy zleceniu usunięcia po ID znaleźć wszystkie odwołania we wszystkich stronach. Nie usuwać zdjęć bez wskazania użytkownika.

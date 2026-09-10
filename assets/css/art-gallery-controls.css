@@ -4,6 +4,12 @@
 .art-gallery-filters button:focus-visible,.art-gallery-dialog button:focus-visible{outline:3px solid #9d6fd1;outline-offset:3px}
 .art-gallery-status{margin-left:auto;color:var(--muted);font-size:.86rem}
 .art-gallery-item[hidden]{display:none}
+.art-gallery-dialog .photo-id-details{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;padding:14px 8px 0;color:#fff}
+.art-gallery-dialog .photo-id-details code{font:600 1rem/1.5 ui-monospace,monospace;user-select:all}
+.art-gallery-dialog .photo-id-copy{position:static;transform:none;width:auto;height:auto;font:600 .85rem/1.4 system-ui;padding:9px 16px}
+.art-gallery-dialog img{max-height:calc(82dvh - 64px)}
+.about-photo-grid.art-gallery{columns:auto}
+.about-photo-grid .art-gallery-item{margin:0;border-radius:inherit}
 .art-gallery-caption{display:block;padding:12px 16px;color:#4e367e;font-size:.9rem;line-height:1.5}
 .photo-story{margin:3rem 0;clear:both}
 .photo-story .art-gallery{columns:2}

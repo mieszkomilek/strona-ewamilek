@@ -35,3 +35,7 @@ Aktualny deployment jest realizowany przez GitHub Actions (`.github/workflows/pa
 Zdjęcia są przechowywane w repozytorium. Nowy zestaw 84 oryginalnych JPG znajduje się w `assets/photos/ewa-milek/`, a wcześniejsze 17 w `facebook-zdjecia-galeria-sztuki-ewa-milek/`. Strona nie powinna zależeć od zasobów starego Shopify.
 
 `data/photo-library.json` opisuje nazwy, kategorie, miejsca użycia i sumy SHA-256 nowego zestawu. Twórczość pokazuje wszystkie 101 zdjęć; wybrane 16 wzbogaca O mnie, a 9 dział Mandala. Podstrony korzystają z tych samych plików bez rekompresji. Siedem zdjęć muzealnych pominięto zgodnie z decyzją użytkownika; pełny plan zawiera `PHOTO_PLACEMENT_PLAN.md`.
+
+## Kolorowanki i wybór zdjęć do zmian
+
+15 kolorowanek z opisami, PNG i drukiem A4 znajduje się w dziale Kolorowanki. Zdjęcia w podglądzie galerii mają stałe identyfikatory i przycisk „Kopiuj ID”; do zlecenia usunięcia wystarczy podać np. image_id_023. Rejestr i zasady: PHOTO_IDS.md.

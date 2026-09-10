@@ -8,3 +8,4 @@
 - Uwzględniaj osobno generowanie obrazów, narzędzia i ponowne próby. Nie sumuj ponownie tych samych liczników sesji.
 - Po publikacji sprawdź commit, version.txt, tag i workflow Pages. Uzupełnij dane wdrożenia, kiedy są dostępne; sam commit nie oznacza udanego deployu.
 - Aktualizuj opis projektu i second brain przy trwałych ustaleniach. Zachowuj istniejące zmiany użytkownika.
+- Identyfikatory image_id_NNN w assets/js/photo-ids.js są trwałe. Nie renumeruj ich po zmianie kolejności, nie używaj ponownie wycofanych ID. Przy usunięciu po ID sprawdź wszystkie miejsca użycia. Zasady i mapa: PHOTO_IDS.md.

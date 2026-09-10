@@ -97,6 +97,26 @@ if gallery.exists():
     if gallery_html.count('data-gallery-schema') != 1 or '"@type":"ImageGallery"' not in gallery_html:
         E.append('tworczosc.html: brak pojedynczych danych SEO galerii')
 
+# Stable identifiers must never point to different image bytes.
+registry_text=(R/'assets/js/photo-ids.js').read_text(encoding='utf-8')
+registry=json.loads(registry_text.split('window.EWA_PHOTO_IDS = ',1)[1].strip().removesuffix(';'))
+id_hashes={}
+for path, photo_id in registry.items():
+    if not re.fullmatch(r'image_id_\d{3,}', photo_id) or not (R/path).is_file():
+        E.append(f'Nieprawidłowy identyfikator zdjęcia: {photo_id}, {path}')
+        continue
+    digest=hashlib.sha256((R/path).read_bytes()).hexdigest()
+    if photo_id in id_hashes and id_hashes[photo_id] != digest:
+        E.append(f'Identyfikator {photo_id} wskazuje różne zdjęcia')
+    id_hashes[photo_id]=digest
+for photo in library['photos']:
+    if registry.get(photo['proposed_path']) != photo.get('photo_id'):
+        E.append(f'Niezgodność rejestru ID zdjęcia {photo["id"]}')
+coloring=(R/'kolorowanki.html').read_text(encoding='utf-8')
+for path in (R/'assets/kolorowanki').glob('mandala-*.png'):
+    if f'href="{path.relative_to(R).as_posix()}"' not in coloring:
+        E.append(f'Brak pobierania kolorowanki {path.name}')
+
 print('\n'.join('WARN '+x for x in W))
 print('\n'.join('ERROR '+x for x in E))
 print('errors',len(E),'warnings',len(W))
