@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.60 | `dd9ed18d8ca00e5767ba58a5f98011507f3ecede` | 2026-09-10 17:11:02 | Dodaj 84 zdjęcia do Twórczości, O mnie i Mandali |
 | 1.59 | `fc454b621158d88f2f63191723b2142403d51aac` | 2026-09-10 12:10:40 | Dodaj pięć kolorowanek mandali i plan rozmieszczenia 91 zdjęć |
 | 1.58 | `80d04e0196178882e2d384ea331063775ab8af00` | 2026-09-10 11:50:20 | Dodaj rejestr modeli, tokenów i kosztów wdrożeń |
 | 1.57 | `07f7ef51f86f3a04aff40fe5b28c2a898064447e` | 2026-09-10 08:47:56 | Document Cloudflare DNS management |
