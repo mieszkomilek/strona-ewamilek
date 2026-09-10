@@ -27,7 +27,6 @@ def ensure_css(s,href):
 for p in R.glob('*.html'):
     s=p.read_text(encoding='utf-8').replace('https://mieszkomilek.github.io/strona-ewamilek/',base)
 
-    # Keep the primary contact action near the top of the compact navigation.\n    contact_anchor = '<a class="nav-cta" href="kontakt.html">Kontakt</a>'\n    s = s.replace(contact_anchor, '', 1)\n    s = s.replace('<nav aria-label="Główna nawigacja" class="nav-links" id="menu">',\n                  '<nav aria-label="Główna nawigacja" class="nav-links" id="menu">' + contact_anchor, 1)\n
     if 'manifest.webmanifest' not in s:
         s=s.replace('</head>','<link href="manifest.webmanifest" rel="manifest"/>\n</head>',1)
 

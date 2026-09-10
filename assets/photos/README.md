@@ -1,3 +1,3 @@
 # Zdjęcia Ewy Miłek
 
-Ten katalog przechowuje zoptymalizowane fotografie używane na stronie. Nazwy plików są opisowe, a preferowany format publikacyjny to WebP. Oryginały wysokiej rozdzielczości nie są potrzebne w repo, jeśli zoptymalizowana wersja zachowuje odpowiednią jakość.
+Publikujemy dostarczone JPG bez rekompresji. Mapowanie zdjęć utrzymuje `assets/js/photo-parallax.js`. Galeria Twórczości znajduje się w katalogu `facebook-zdjecia-galeria-sztuki-ewa-milek/` w głównym katalogu repozytorium.

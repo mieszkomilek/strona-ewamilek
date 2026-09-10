@@ -253,3 +253,5 @@ Przy rozpoczęciu nowej sesji:
 **Ten plik jest częścią architektury projektu, a nie jednorazową notatką. Aktualizuj go razem z projektem.**
 
 - Galeria „Twórczość” zawiera 17 JPG dostarczonych przez użytkownika w `facebook-zdjecia-galeria-sztuki-ewa-milek/`, bez rekompresji. Zdjęcia pokazujemy w pełnych proporcjach, z odnośnikami do pełnego rozmiaru.
+
+- Audyt jakości 2026-09-10: usunięto nieużywane WebP, zastępcze SVG, pusty `script.js` i zakończone automaty migracyjne. Utrzymujemy tylko workflow wersjonowania i Pages. JPG użytkownika pozostają bez rekompresji. Propozycje dalszych usprawnień: `QUALITY_REVIEW.md`.
