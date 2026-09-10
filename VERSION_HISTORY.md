@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.57 | `07f7ef51f86f3a04aff40fe5b28c2a898064447e` | 2026-09-10 08:47:56 | Document Cloudflare DNS management |
 | 1.56 | `d8fdce839e3aec736c90d425a3d32f238981e39c` | 2026-09-10 06:43:07 | Ulepsz dostępność, filtrowanie i SEO galerii |
 | 1.55 | `ff51b1e476a48b421a1a3e2ee1bebcc057550679` | 2026-09-10 01:23:58 | Wdroż usprawnienia jakości i galerii strony |
 | 1.54 | `ef90dd8ae15820ba813a702eaa4729e5ade3c71e` | 2026-09-10 01:17:51 | Usuń 21 zbędnych plików i dodaj audyt jakości strony |
