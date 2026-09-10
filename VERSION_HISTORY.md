@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.54 | `ef90dd8ae15820ba813a702eaa4729e5ade3c71e` | 2026-09-10 01:17:51 | Usuń 21 zbędnych plików i dodaj audyt jakości strony |
 | 1.53 | `037e1744c969a9782e476c8581ab0d621e5a11f2` | 2026-09-10 01:10:55 | Dodaj galerię 17 zdjęć Ewy Miłek do Twórczości |
 | 1.52 | `395f6e7ea64c68dedff9efeb82f56668b23de07e` | 2026-09-09 21:36:04 | Center O mnie photo and surface Contact in menu |
 | 1.51 | `48bd4a958400e1ed744cb04a91681d19713b764d` | 2026-09-09 21:25:13 | Zaktualizuj QA po usunięciu zdjęcia z niedozwolonym tłem |
