@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.64 | `eb954cc69cb0b82c5ad6ecc85873811bc4d17ed6` | 2026-09-11 09:52:01 | Dodaj przeglądarkę zdjęć po image_id w Adminie |
 | 1.63 | `dbf864140d3979c1ecf16c36cbf1698f1df0520d` | 2026-09-11 08:56:54 | Dodaj odnośnik Facebook i oznaczenia kolorowanek |
 | 1.62 | `ad66f7f1b4e67735946c0323e024489923ac2e0e` | 2026-09-11 08:45:55 | Dodaj 14 mandali zamówionych przez klientów z unikalnymi ID |
 | 1.61 | `3116067bf58330a29e29555ff2976ca052d841fb` | 2026-09-10 22:18:04 | Dodaj 10 kolorowanek oraz stałe identyfikatory zdjęć |
