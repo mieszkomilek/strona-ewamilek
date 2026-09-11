@@ -16,3 +16,8 @@
 @media(max-width:560px){.photo-story .art-gallery{columns:1}}
 @media(max-width:560px){.art-gallery-status{width:100%;margin-left:0}}
 @media(prefers-reduced-motion:reduce){.art-gallery-item,.art-gallery-filters button{transition:none}}
+
+#mandale-klientow-heading{font-size:clamp(1.6rem,3vw,2.4rem);line-height:1.2}
+#mandale-zamowione-przez-klientow .art-gallery{columns:3}
+@media(max-width:900px){#mandale-zamowione-przez-klientow .art-gallery{columns:2}}
+@media(max-width:560px){#mandale-zamowione-przez-klientow .art-gallery{columns:1}}

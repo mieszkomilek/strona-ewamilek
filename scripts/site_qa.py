@@ -112,7 +112,17 @@ for path, photo_id in registry.items():
 for photo in library['photos']:
     if registry.get(photo['proposed_path']) != photo.get('photo_id'):
         E.append(f'Niezgodność rejestru ID zdjęcia {photo["id"]}')
+client_mandalas=json.loads((R/'data/mandale-klientow.json').read_text(encoding='utf-8'))
+mandala_html=(R/'mandala.html').read_text(encoding='utf-8')
 coloring=(R/'kolorowanki.html').read_text(encoding='utf-8')
+for photo in client_mandalas['photos']:
+    path=photo['path']
+    if not (R/path).is_file() or hashlib.sha256((R/path).read_bytes()).hexdigest() != photo['sha256']:
+        E.append(f'Mandale klientów: brak oryginału lub zmienione bajty {path}')
+    if registry.get(path) != photo['photo_id'] or f'href="{path}"' not in mandala_html:
+        E.append(f'Mandale klientów: brak zdjęcia lub niezgodne ID {path}')
+    if photo.get('allow_coloring_derivatives') is not False or path in coloring:
+        E.append(f'Mandale klientów nie mogą być kolorowankami: {path}')
 for path in (R/'assets/kolorowanki').glob('mandala-*.png'):
     if f'href="{path.relative_to(R).as_posix()}"' not in coloring:
         E.append(f'Brak pobierania kolorowanki {path.name}')

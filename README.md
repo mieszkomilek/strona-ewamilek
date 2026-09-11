@@ -39,3 +39,5 @@ Zdjęcia są przechowywane w repozytorium. Nowy zestaw 84 oryginalnych JPG znajd
 ## Kolorowanki i wybór zdjęć do zmian
 
 15 kolorowanek z opisami, PNG i drukiem A4 znajduje się w dziale Kolorowanki. Zdjęcia w podglądzie galerii mają stałe identyfikatory i przycisk „Kopiuj ID”; do zlecenia usunięcia wystarczy podać np. image_id_023. Rejestr i zasady: PHOTO_IDS.md.
+
+Dział Mandala ma też osobną galerię „Mandale zamówione przez klientów”: 14 oryginalnych JPG w assets/photos/mandale-klientow/, ID image_id_209–image_id_222. Manifest: data/mandale-klientow.json. Te prace nie są przeznaczone do kolorowanek.

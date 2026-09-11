@@ -113,3 +113,17 @@ Po otwarciu podglądu zdjęcia widoczny jest identyfikator i przycisk kopiowania
 | `image_id_206` | `assets/photos/ewa-milek-vedic-art-ogrod.jpg` |
 | `image_id_207` | `assets/photos/ewa-milek-wystawa-spotkanie.jpg` |
 | `image_id_208` | `assets/photos/ewa-milek-wystawa-wspomnienie.jpg` |
+| `image_id_209` | `assets/photos/mandale-klientow/ewa-milek-mandala-01-rozana.jpg` |
+| `image_id_210` | `assets/photos/mandale-klientow/ewa-milek-mandala-02-partnerska.jpg` |
+| `image_id_211` | `assets/photos/mandale-klientow/ewa-milek-mandala-03-fioletowo-zielona.jpg` |
+| `image_id_212` | `assets/photos/mandale-klientow/ewa-milek-mandala-04-ze-zlotym-kwiatem.jpg` |
+| `image_id_213` | `assets/photos/mandale-klientow/ewa-milek-mandala-05-blekitna.jpg` |
+| `image_id_214` | `assets/photos/mandale-klientow/ewa-milek-mandala-06-z-lotosem.jpg` |
+| `image_id_215` | `assets/photos/mandale-klientow/ewa-milek-mandala-07-zielona.jpg` |
+| `image_id_216` | `assets/photos/mandale-klientow/ewa-milek-mandala-08-sloneczna.jpg` |
+| `image_id_217` | `assets/photos/mandale-klientow/ewa-milek-mandala-09-z-motylem.jpg` |
+| `image_id_218` | `assets/photos/mandale-klientow/ewa-milek-mandala-10-rozowo-fioletowa.jpg` |
+| `image_id_219` | `assets/photos/mandale-klientow/ewa-milek-mandala-11-ze-schodami.jpg` |
+| `image_id_220` | `assets/photos/mandale-klientow/ewa-milek-mandala-12-z-gwiazda.jpg` |
+| `image_id_221` | `assets/photos/mandale-klientow/ewa-milek-mandala-13-zloto-biala.jpg` |
+| `image_id_222` | `assets/photos/mandale-klientow/ewa-milek-mandala-14-teczowa.jpg` |

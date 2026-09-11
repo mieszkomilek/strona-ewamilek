@@ -280,3 +280,9 @@ Przy rozpoczęciu nowej sesji:
 - Dział Kolorowanki zawiera 15 wzorów: wcześniejsze 5 i 10 nowych (harmonia, szczęście, dobrobyt, miłość, spełnienie, zdrowie, równowaga, pieniądze, przebaczenie, wdzięczność). Wbudowany image_gen; PNG do pobrania i druk pojedynczej karty A4, podpis ewamilek.pl. Prompty: assets/kolorowanki/prompts-10.json. Opisy symboliki są propozycją zabawy kolorami.
 - Stałe identyfikatory zdjęć image_id_NNN: rejestr assets/js/photo-ids.js i dokument PHOTO_IDS.md. Podgląd pokazuje ID z przyciskiem kopiowania; obejmuje galerie Twórczość, O mnie, Mandala oraz wcześniejszą dolną galerię O mnie. Ten sam plik zachowuje ID między podstronami.
 - Nigdy nie renumerować ani nie używać ponownie usuniętego ID. Przy zleceniu usunięcia po ID znaleźć wszystkie odwołania we wszystkich stronach. Nie usuwać zdjęć bez wskazania użytkownika.
+
+## Mandale zamówione przez klientów
+
+- 14 oryginalnych JPG z archiwum użytkownika w assets/photos/mandale-klientow/, bez rekompresji. Osobna podkategoria w mandala.html: „Mandale zamówione przez klientów”.
+- Ewa potwierdziła autorstwo i wykonanie tych mandali na zamówienie w ostatnich latach. Nie używać tych prac jako kolorowanek ani do tworzenia kolorowanek.
+- ID image_id_209–image_id_222 są stałe; podpisy opisują wygląd, nie są nadanymi przez Ewę tytułami obrazów. Mapa źródeł, SHA-256 i ograniczenie wykorzystania: data/mandale-klientow.json.
