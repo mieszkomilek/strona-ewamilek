@@ -286,3 +286,8 @@ Przy rozpoczęciu nowej sesji:
 - 14 oryginalnych JPG z archiwum użytkownika w assets/photos/mandale-klientow/, bez rekompresji. Osobna podkategoria w mandala.html: „Mandale zamówione przez klientów”.
 - Ewa potwierdziła autorstwo i wykonanie tych mandali na zamówienie w ostatnich latach. Nie używać tych prac jako kolorowanek ani do tworzenia kolorowanek.
 - ID image_id_209–image_id_222 są stałe; podpisy opisują wygląd, nie są nadanymi przez Ewę tytułami obrazów. Mapa źródeł, SHA-256 i ograniczenie wykorzystania: data/mandale-klientow.json.
+
+## Kolejne materiały kolorowanek
+
+- Dodano zajawkę do albumu mandali na Facebooku, aby kierować odwiedzających do pełnej galerii.
+- Istniejące 15 wzorów należą do tagu „kolorowanki Ewy z AI”. Trzy planowane opracowania z obrazów Ewy otrzymają osobny tag „kolorowanki z obrazów Ewy”; nie wolno używać mandali klientów jako kolorowanek bez osobnej decyzji.
