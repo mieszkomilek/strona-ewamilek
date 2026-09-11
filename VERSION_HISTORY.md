@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.64 | `b1ceb9da78462a5c7e73f5fbe6722eb520a14253` | 2026-09-11 10:02:29 | Odtwórz pełne drzewo repo i zachowaj przeglądarkę zdjęć Admin |
 | 1.63 | `dbf864140d3979c1ecf16c36cbf1698f1df0520d` | 2026-09-11 08:56:54 | Dodaj odnośnik Facebook i oznaczenia kolorowanek |
 | 1.61 | `3116067bf58330a29e29555ff2976ca052d841fb` | 2026-09-10 22:18:04 | Dodaj 10 kolorowanek oraz stałe identyfikatory zdjęć |
 | 1.60 | `dd9ed18d8ca00e5767ba58a5f98011507f3ecede` | 2026-09-10 17:11:02 | Dodaj 84 zdjęcia do Twórczości, O mnie i Mandali |
