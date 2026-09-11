@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.63 | `f1619689dec2f6853263793cfeeabc1eae73d68a` | 2026-09-11 09:56:37 | Napraw publikację i zachowaj przeglądarkę zdjęć Admin |
 | 1.62 | `ad66f7f1b4e67735946c0323e024489923ac2e0e` | 2026-09-11 08:45:55 | Dodaj 14 mandali zamówionych przez klientów z unikalnymi ID |
 | 1.61 | `3116067bf58330a29e29555ff2976ca052d841fb` | 2026-09-10 22:18:04 | Dodaj 10 kolorowanek oraz stałe identyfikatory zdjęć |
 | 1.60 | `dd9ed18d8ca00e5767ba58a5f98011507f3ecede` | 2026-09-10 17:11:02 | Dodaj 84 zdjęcia do Twórczości, O mnie i Mandali |
