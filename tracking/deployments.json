@@ -152,6 +152,27 @@
         }
       ],
       "verification": "Build i deploy success; publiczna wersja 1.65; tag zgodny; 30/30 URL zdjęć zwraca 404. Tokeny i USD nieudostępnione."
+    },
+    {
+      "id": "photo-removal-4-admin-history-20260915",
+      "description": "Usunięcie zdjęć 025, 040, 086 i 207 oraz dodanie opisowej historii zmian w Adminie",
+      "source_commit": null,
+      "version": null,
+      "workflow_url": null,
+      "deployment_status": "prepared",
+      "usage": [
+        {
+          "model": "GPT-5 (dokładny identyfikator niedostępny)",
+          "model_source": "Instrukcja środowiska",
+          "scope": "Usunięcie zdjęć, historia zmian Admin, dokumentacja, QA i wdrożenie",
+          "input_tokens": null,
+          "cached_input_tokens": null,
+          "output_tokens": null,
+          "actual_usd": null,
+          "estimated_api_usd": null,
+          "usage_source": null
+        }
+      ]
     }
   ],
   "planned_work": [

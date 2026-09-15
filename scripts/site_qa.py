@@ -55,8 +55,8 @@ for n in ('index.html', 'o-mnie.html'):
     if s.count(f'<script src="assets/js/photo-parallax.js?v={(R / "version.txt").read_text().strip()}"></script>') != 1:
         E.append(n+': wymagany dokładnie jeden skrypt photo-parallax.js')
 photos=re.findall(r'src="(assets/photos/[^" ]+)"', (R/'assets/js/photo-parallax.js').read_text())
-if len(set(photos)) != 8:
-    E.append('photo-parallax.js: wymagane 8 zdjęć opublikowanych w galerii')
+if len(set(photos)) != 7:
+    E.append('photo-parallax.js: wymagane 7 zdjęć opublikowanych w galerii')
 for photo in photos:
     p=R/photo
     if p.suffix != '.jpg' or not p.is_file() or not p.read_bytes().startswith(b'\xff\xd8\xff'):
@@ -143,6 +143,11 @@ for folder in ('assets/photos','facebook-zdjecia-galeria-sztuki-ewa-milek'):
 for name in ('admin.html','PROJECT_BRAIN.md','scripts/site_qa.py','tracking/deployments.json','assets/js/admin-photo-browser.js'):
     if len((R/name).read_text(encoding='utf-8')) < 100:
         E.append('Uszkodzony lub pusty plik: '+name)
+if 'id="admin-change-history"' not in (R/'admin.html').read_text() or 'assets/js/admin-change-history.js' not in (R/'admin.html').read_text():
+    E.append('Admin: brak opisowej historii zmian')
+history=json.loads((R/'data/admin-change-history.json').read_text())
+if not history.get('versions') or history['versions'][0].get('version') != '1.66':
+    E.append('Admin: historia zmian nie zawiera bieżącej wersji 1.66')
 
 print('\n'.join('WARN '+x for x in W))
 print('\n'.join('ERROR '+x for x in E))

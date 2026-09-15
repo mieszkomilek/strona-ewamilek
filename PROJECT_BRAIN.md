@@ -307,3 +307,9 @@ Starsza dolna galeria O mnie pozostaje; 14 mandali klientów pozostaje. Pusta se
 Odtworzono osiem uszkodzonych plików (9 bajtów niepoprawnej zawartości UTF-8): Admin, Mandala, Kolorowanki, second brain, QA, tracking, CSS galerii i skrypt przeglądarki Admin. Dokumenty i strony odzyskano z ostatnich poprawnych wersji w historii; przeglądarkę ID odtworzono w istniejącej bramce Admin. Przywrócono utracone wiersze VERSION_HISTORY (w tym 1.62 i starsze), zachowując obecne 1.63/1.64. Nie cofamy numeru 1.64 ani tagów. QA kontroluje wycofane ID, identyczne kopie JPG i integralność plików tekstowych.
 
 Rejestr kosztów odzyskany z historii nie pozwala odtworzyć brakujących pomiarów wcześniejszych prób; brak danych nie oznacza zerowego kosztu.
+
+## Historia zmian w panelu Admin
+
+- Od wersji 1.66 panel Admin zawiera opisową historię ostatnich zmian, zasilaną przez `data/admin-change-history.json` i wyświetlaną przez `assets/js/admin-change-history.js`.
+- Każde kolejne wdrożenie zmieniające stronę musi dodać na początku rejestru zrozumiały dla użytkownika wpis: numer wersji, datę, krótki tytuł i opis faktycznej zmiany.
+- W wersji 1.66 usunięto ze wszystkich miejsc i bieżącego repo zdjęcia `image_id_025`, `image_id_040`, `image_id_086` i `image_id_207`. ID pozostają trwale wycofane.

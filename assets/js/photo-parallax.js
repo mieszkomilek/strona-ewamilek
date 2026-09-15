@@ -74,7 +74,6 @@
             <figure class="about-photo-card reveal"><img src="assets/photos/ewa-milek-mandala-wystawa.jpg" loading="lazy" decoding="async" alt="Ewa Miłek przy czerwonej mandali na wystawie"></figure>
             <figure class="about-photo-card reveal"><img src="assets/photos/ewa-milek-galeria-prace.jpg" loading="lazy" decoding="async" alt="Ewa Miłek prezentuje własne obrazy w galerii"></figure>
             <figure class="about-photo-card reveal"><img src="assets/photos/ewa-milek-galeria-instalacja.jpg" loading="lazy" decoding="async" alt="Ewa Miłek przy ekspozycji obrazów w galerii"></figure>
-            <figure class="about-photo-card reveal"><img src="assets/photos/ewa-milek-wystawa-spotkanie.jpg" loading="lazy" decoding="async" alt="Ewa Miłek podczas spotkania na wystawie"></figure>
             <figure class="about-photo-card reveal"><img src="assets/photos/ewa-milek-wystawa-wspomnienie.jpg" loading="lazy" decoding="async" alt="Ewa Miłek na wystawie z bliską osobą, w otoczeniu obrazów"></figure>
           </div>
         </div></section>`));

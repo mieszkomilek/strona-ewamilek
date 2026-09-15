@@ -258,22 +258,6 @@
       "photo_id": "image_id_024"
     },
     {
-      "id": 25,
-      "original": "att.GZewuRuzhvz5eyvI96WOImTEwdMFdfXIBxrbq56lZGs.JPG",
-      "preview": "025.jpg",
-      "proposed_path": "assets/photos/ewa-milek/025-wspolne-zdjecie-rodzinne.jpg",
-      "category": "Rodzinne wspomnienia",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "1997b0b91bb386fcf97b2bc8f7a58e2264c4c1d30575f5c8071adbab9ea5646b",
-      "caption": "Wspólne zdjęcie rodzinne",
-      "width": 1024,
-      "height": 768,
-      "photo_id": "image_id_025"
-    },
-    {
       "id": 26,
       "original": "att.jNEwPrDUkXZ-SgYi9r_XfuEDQi4bl5BwPG1wLHhpGUQ.JPG",
       "preview": "026.jpg",
@@ -403,22 +387,6 @@
       "width": 367,
       "height": 489,
       "photo_id": "image_id_036"
-    },
-    {
-      "id": 40,
-      "original": "att.ljU3QyMARYc1P5i1FGT_ap89nAX-RdZkEhkMIgP-QPQ.JPG",
-      "preview": "040.jpg",
-      "proposed_path": "assets/photos/ewa-milek/040-wspolny-portret.jpg",
-      "category": "Rodzinne wspomnienia",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "9635374323004587353f98b51464ff6a9f3d9c05fe45d66412190c2203fe40f4",
-      "caption": "Wspólny portret",
-      "width": 768,
-      "height": 1024,
-      "photo_id": "image_id_040"
     },
     {
       "id": 42,
@@ -902,22 +870,6 @@
       "width": 464,
       "height": 824,
       "photo_id": "image_id_085"
-    },
-    {
-      "id": 86,
-      "original": "att.XP17Fe5nY0kXrTg_jindAYiDVgJVPndMxqgozN4WX5s.JPG",
-      "preview": "086.jpg",
-      "proposed_path": "assets/photos/ewa-milek/086-kwiaty-na-ogrodowym-stole.jpg",
-      "category": "Codzienne inspiracje",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "5cfd7b15ee67634917ad383f8e29dd0188835602553e774cc6a828ccde165f9b",
-      "caption": "Kwiaty na ogrodowym stole",
-      "width": 1948,
-      "height": 2015,
-      "photo_id": "image_id_086"
     },
     {
       "id": 88,

@@ -1,0 +1,16 @@
+{
+  "versions": [
+    {
+      "version": "1.66",
+      "date": "2026-09-15",
+      "title": "Usunięcie czterech zdjęć i historia zmian w Adminie",
+      "description": "Usunięto zdjęcia image_id_025, image_id_040, image_id_086 i image_id_207 ze wszystkich miejsc na stronie oraz z bieżących plików repozytorium. Dodano ten opisowy rejestr zmian w panelu Admin."
+    },
+    {
+      "version": "1.65",
+      "date": "2026-09-15",
+      "title": "Usunięcie 30 zdjęć i naprawa publikacji",
+      "description": "Usunięto 30 zdjęć wskazanych przez Ewę ze wszystkich galerii i aktywnego rejestru ID. Naprawiono także uszkodzone pliki, które blokowały publikację strony."
+    }
+  ]
+}

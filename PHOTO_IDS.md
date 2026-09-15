@@ -18,7 +18,6 @@
 | `image_id_021` | `assets/photos/ewa-milek/021-spotkanie-z-ksiazka-drugi-kadr.jpg` |
 | `image_id_022` | `assets/photos/ewa-milek/022-spotkanie-w-ksiegarni.jpg` |
 | `image_id_024` | `assets/photos/ewa-milek/024-na-wystawie-portretow.jpg` |
-| `image_id_025` | `assets/photos/ewa-milek/025-wspolne-zdjecie-rodzinne.jpg` |
 | `image_id_026` | `assets/photos/ewa-milek/026-praca-nad-duzym-obrazem.jpg` |
 | `image_id_028` | `assets/photos/ewa-milek/028-z-obrazem-nad-jeziorem.jpg` |
 | `image_id_030` | `assets/photos/ewa-milek/030-malowanie-kwiatow-na-tarasie.jpg` |
@@ -27,7 +26,6 @@
 | `image_id_033` | `assets/photos/ewa-milek/033-przy-duzym-obrazie.jpg` |
 | `image_id_034` | `assets/photos/ewa-milek/034-malowanie-portretu.jpg` |
 | `image_id_036` | `assets/photos/ewa-milek/036-praca-nad-ikonami.jpg` |
-| `image_id_040` | `assets/photos/ewa-milek/040-wspolny-portret.jpg` |
 | `image_id_042` | `assets/photos/ewa-milek/042-malowanie-zielonych-kwiatow.jpg` |
 | `image_id_045` | `assets/photos/ewa-milek/045-prezentacja-prac-w-galerii.jpg` |
 | `image_id_046` | `assets/photos/ewa-milek/046-przy-obrazie-w-pracowni.jpg` |
@@ -58,7 +56,6 @@
 | `image_id_083` | `assets/photos/ewa-milek/083-akwarelowy-portret-i-farby.jpg` |
 | `image_id_084` | `assets/photos/ewa-milek/084-owoce-rozy-i-pastele.jpg` |
 | `image_id_085` | `assets/photos/ewa-milek/085-obraz-wsrod-roslin.jpg` |
-| `image_id_086` | `assets/photos/ewa-milek/086-kwiaty-na-ogrodowym-stole.jpg` |
 | `image_id_088` | `assets/photos/ewa-milek/088-kolekcja-mandali-pelny-kadr.jpg` |
 | `image_id_103` | `facebook-zdjecia-galeria-sztuki-ewa-milek/130705978_1278743102493659_361798827645380497_n.jpg` |
 | `image_id_104` | `facebook-zdjecia-galeria-sztuki-ewa-milek/132412221_1285354998499136_8074254824696091361_n.jpg` |
@@ -80,7 +77,6 @@
 | `image_id_204` | `assets/photos/ewa-milek-mandala-wystawa.jpg` |
 | `image_id_205` | `assets/photos/ewa-milek-pracownia-sztaluga.jpg` |
 | `image_id_206` | `assets/photos/ewa-milek-vedic-art-ogrod.jpg` |
-| `image_id_207` | `assets/photos/ewa-milek-wystawa-spotkanie.jpg` |
 | `image_id_208` | `assets/photos/ewa-milek-wystawa-wspomnienie.jpg` |
 | `image_id_209` | `assets/photos/mandale-klientow/ewa-milek-mandala-01-rozana.jpg` |
 | `image_id_210` | `assets/photos/mandale-klientow/ewa-milek-mandala-02-partnerska.jpg` |
@@ -102,3 +98,5 @@
 image_id_002, image_id_004, image_id_009, image_id_010, image_id_014, image_id_015, image_id_016, image_id_023, image_id_027, image_id_035, image_id_037, image_id_038, image_id_043, image_id_044, image_id_049, image_id_050, image_id_051, image_id_053, image_id_054, image_id_057, image_id_060, image_id_062, image_id_063, image_id_064, image_id_065, image_id_089, image_id_091, image_id_101, image_id_102, image_id_116
 
 Nie używać ponownie. Mapa archiwalna: `data/retired-photo-ids.json`. Pliki usunięto z bieżącego repo; historia Git pozostaje.
+
+Wycofane dodatkowo w wersji 1.66: `image_id_025`, `image_id_040`, `image_id_086`, `image_id_207`. Nie używać ponownie.

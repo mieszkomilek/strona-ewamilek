@@ -43,6 +43,11 @@
       "sha256": "7c435bd19565d5881719042ebcdc814f393c3a285fd1fc352eb8d866d83a5095"
     },
     {
+      "photo_id": "image_id_025",
+      "path": "assets/photos/ewa-milek/025-wspolne-zdjecie-rodzinne.jpg",
+      "sha256": "1997b0b91bb386fcf97b2bc8f7a58e2264c4c1d30575f5c8071adbab9ea5646b"
+    },
+    {
       "photo_id": "image_id_027",
       "path": "assets/photos/ewa-milek/027-szkicowanie-w-ogrodzie.jpg",
       "sha256": "8ea03e7f2578e4585ea763e86d1e5908fa1ba7254e73b6b06d421e6b6683dccb"
@@ -61,6 +66,11 @@
       "photo_id": "image_id_038",
       "path": "assets/photos/ewa-milek/038-portret-na-tle-obrazu.jpg",
       "sha256": "efb61f9fb255e4934e2562b7de9d5752b4350372a4596ae298363a99e7a02973"
+    },
+    {
+      "photo_id": "image_id_040",
+      "path": "assets/photos/ewa-milek/040-wspolny-portret.jpg",
+      "sha256": "9635374323004587353f98b51464ff6a9f3d9c05fe45d66412190c2203fe40f4"
     },
     {
       "photo_id": "image_id_043",
@@ -128,6 +138,11 @@
       "sha256": "8aa8bf5853f14f9de3ba5cb0f35ec81b5953307d6ccf32ef80c9c5dde2ecc9c0"
     },
     {
+      "photo_id": "image_id_086",
+      "path": "assets/photos/ewa-milek/086-kwiaty-na-ogrodowym-stole.jpg",
+      "sha256": "5cfd7b15ee67634917ad383f8e29dd0188835602553e774cc6a828ccde165f9b"
+    },
+    {
       "photo_id": "image_id_089",
       "path": "assets/photos/ewa-milek/089-portret-na-tarasie.jpg",
       "sha256": "6b85ec64b7bad800c65b4bd37a5a6613aa349d32053dbf73e27833a47aa5466b"
@@ -151,6 +166,11 @@
       "photo_id": "image_id_116",
       "path": "facebook-zdjecia-galeria-sztuki-ewa-milek/670884455_1575125804618303_7208467634815178106_n.jpg",
       "sha256": "66107e033a88a4f14675755460c3453b6b376cd8ba00f55b15b887c2f55055b1"
+    },
+    {
+      "photo_id": "image_id_207",
+      "path": "assets/photos/ewa-milek-wystawa-spotkanie.jpg",
+      "sha256": "2745417e86a785469dcd9ed3b69879781c8943c84415c1d1ca0363980777031f"
     }
   ]
 }
