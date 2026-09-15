@@ -1,0 +1,156 @@
+{
+  "date": "2026-09-15",
+  "reason": "Usunięte na prośbę Ewy, zatwierdzone przez użytkownika. ID nigdy nie używać ponownie.",
+  "photos": [
+    {
+      "photo_id": "image_id_002",
+      "path": "assets/photos/ewa-milek/002-portret-w-ogrodzie.jpg",
+      "sha256": "dfcb75c2d05c9ab4142b9174f4ddd03bbd3ae3ac7e7992aaa4b35be21f9a4fbc"
+    },
+    {
+      "photo_id": "image_id_004",
+      "path": "assets/photos/ewa-milek/004-prezentacja-akwareli.jpg",
+      "sha256": "382be2c24dc2e8f71942ea9ffa707461c0e46d90ad6463d686a2d922d5470a85"
+    },
+    {
+      "photo_id": "image_id_009",
+      "path": "assets/photos/ewa-milek/009-portret-w-plenerze.jpg",
+      "sha256": "13bd6ed21658d9ed9b841b6c03b1f190345a410cd62fcbdb58cbcfb0a343c21c"
+    },
+    {
+      "photo_id": "image_id_010",
+      "path": "assets/photos/ewa-milek/010-portret-w-pracowni.jpg",
+      "sha256": "747ef6bf214c2e6a695d6b3da47ea35ec2366545379ff67fb04f3e6b132b8c9e"
+    },
+    {
+      "photo_id": "image_id_014",
+      "path": "assets/photos/ewa-milek/014-szkicownik-na-tarasie.jpg",
+      "sha256": "fd9ed45ac7988859eae5b6c0c8b78c4f1ecf395c7cbb4f6348ecac40b5135ae3"
+    },
+    {
+      "photo_id": "image_id_015",
+      "path": "assets/photos/ewa-milek/015-obraz-nad-jeziorem.jpg",
+      "sha256": "9b606bf5695ea09445333c1f1eefe2dcfa23c1127755c4c936ec8f5e1eda2bcd"
+    },
+    {
+      "photo_id": "image_id_016",
+      "path": "assets/photos/ewa-milek/016-malowanie-mandali-na-tkaninie.jpg",
+      "sha256": "49bab26ca5cffb9801ffc90723639be1f58e4cced4348a97a87def448b902144"
+    },
+    {
+      "photo_id": "image_id_023",
+      "path": "assets/photos/ewa-milek/023-portret-z-rozami.jpg",
+      "sha256": "7c435bd19565d5881719042ebcdc814f393c3a285fd1fc352eb8d866d83a5095"
+    },
+    {
+      "photo_id": "image_id_027",
+      "path": "assets/photos/ewa-milek/027-szkicowanie-w-ogrodzie.jpg",
+      "sha256": "8ea03e7f2578e4585ea763e86d1e5908fa1ba7254e73b6b06d421e6b6683dccb"
+    },
+    {
+      "photo_id": "image_id_035",
+      "path": "assets/photos/ewa-milek/035-portret-z-motywem-slonca.jpg",
+      "sha256": "e861a7077030617f1c7d84eb20ada90a3fd2b9a520fde0f6effab0dbdfe4de83"
+    },
+    {
+      "photo_id": "image_id_037",
+      "path": "assets/photos/ewa-milek/037-prezentacja-kolorowego-obrazu.jpg",
+      "sha256": "eff36fe48101856410d0910c19255e4af5f759e1fbb0b6b938d0460e1f075634"
+    },
+    {
+      "photo_id": "image_id_038",
+      "path": "assets/photos/ewa-milek/038-portret-na-tle-obrazu.jpg",
+      "sha256": "efb61f9fb255e4934e2562b7de9d5752b4350372a4596ae298363a99e7a02973"
+    },
+    {
+      "photo_id": "image_id_043",
+      "path": "assets/photos/ewa-milek/043-rower-o-zachodzie-slonca.jpg",
+      "sha256": "66ad7fa22bb5c9d19b452bd533541d0b11f88523dc7b84aa8ef28bfb852394a9"
+    },
+    {
+      "photo_id": "image_id_044",
+      "path": "assets/photos/ewa-milek/044-obraz-w-ogrodzie.jpg",
+      "sha256": "264d542021a9bb63f2564aba763c1b3a9b8662176d64ccea0c7963a9a9b3d834"
+    },
+    {
+      "photo_id": "image_id_049",
+      "path": "assets/photos/ewa-milek/049-rodzinne-wspomnienie.jpg",
+      "sha256": "71154b73f16630b969ea3728864e1f8688953031fdb1ddffc9c48006d69ac07a"
+    },
+    {
+      "photo_id": "image_id_050",
+      "path": "assets/photos/ewa-milek/050-wspolny-portret-drugi-kadr.jpg",
+      "sha256": "b2d69e6b9804453497d764df7006a0e8cfda2f8b5a0b83a601979a56393f47b3"
+    },
+    {
+      "photo_id": "image_id_051",
+      "path": "assets/photos/ewa-milek/051-malowanie-portretu-w-plenerze.jpg",
+      "sha256": "a7f5a8f00b2ed5b301eaeed19326f5213d6f1754949ed9c0d23ca9aa34a5f9d2"
+    },
+    {
+      "photo_id": "image_id_053",
+      "path": "assets/photos/ewa-milek/053-prezentacja-pracy-w-ogrodzie.jpg",
+      "sha256": "2e5e0d71c9f19b3bf8f55fb3504b8529fb5f36ce83e4a17dc1e786f8b96b7b65"
+    },
+    {
+      "photo_id": "image_id_054",
+      "path": "assets/photos/ewa-milek/054-kolekcja-kolorowych-mandali.jpg",
+      "sha256": "ecc8d3acb8e7ab1d2089fa43060e7e2fb385696cb19d425ac10e0a76704c354c"
+    },
+    {
+      "photo_id": "image_id_057",
+      "path": "assets/photos/ewa-milek/057-portret-z-kwiatami-na-lawce.jpg",
+      "sha256": "118103b2d5adfe01f7ae5043513e83d89a0626697fbca0dd692a3a713a5c4630"
+    },
+    {
+      "photo_id": "image_id_060",
+      "path": "assets/photos/ewa-milek/060-ciasto-i-kwiaty.jpg",
+      "sha256": "964511d1a044e93784fdc0dfabca60334edb76f678ec7275c00398ba9842b014"
+    },
+    {
+      "photo_id": "image_id_062",
+      "path": "assets/photos/ewa-milek/062-portret-na-ogrodowej-lawce.jpg",
+      "sha256": "f5c36cee7e8143e9a13baa19cd2e6046cb6ee851cf9ab0d2cdd1a1e5c3cc462a"
+    },
+    {
+      "photo_id": "image_id_063",
+      "path": "assets/photos/ewa-milek/063-portret-na-lawce-drugi-kadr.jpg",
+      "sha256": "51e3180a5a0aae87b5d3166219cea83cd441cc409d5487f5042bb4b96ab821e0"
+    },
+    {
+      "photo_id": "image_id_064",
+      "path": "assets/photos/ewa-milek/064-prezentacja-ksiazki-przy-mandalach.jpg",
+      "sha256": "d4ad51baaccdd5aff4c1574d052460d92fcdf29d3fbae2b8066ea3b8babc3c1d"
+    },
+    {
+      "photo_id": "image_id_065",
+      "path": "assets/photos/ewa-milek/065-wsrod-kwitnacych-roz.jpg",
+      "sha256": "8aa8bf5853f14f9de3ba5cb0f35ec81b5953307d6ccf32ef80c9c5dde2ecc9c0"
+    },
+    {
+      "photo_id": "image_id_089",
+      "path": "assets/photos/ewa-milek/089-portret-na-tarasie.jpg",
+      "sha256": "6b85ec64b7bad800c65b4bd37a5a6613aa349d32053dbf73e27833a47aa5466b"
+    },
+    {
+      "photo_id": "image_id_091",
+      "path": "assets/photos/ewa-milek/091-archiwalne-zdjecie-dzieciece.jpg",
+      "sha256": "ca16b10ada7b0742a6fc12be5ce7b9e7b3ac6e6004750f68f6c86af8cd7d4be9"
+    },
+    {
+      "photo_id": "image_id_101",
+      "path": "facebook-zdjecia-galeria-sztuki-ewa-milek/102649486_1126183117749659_2254821821394190336_n.jpg",
+      "sha256": "8d1a066f10f1da53faf2a5134bbead197ab79f8c4595a50721eba00b591ae16a"
+    },
+    {
+      "photo_id": "image_id_102",
+      "path": "facebook-zdjecia-galeria-sztuki-ewa-milek/118539775_1191067297927907_732404558579823610_n.jpg",
+      "sha256": "86ec0940617c4a56bcb4d577a7c34054c10ad896739c0c7aec98377b440a6ed1"
+    },
+    {
+      "photo_id": "image_id_116",
+      "path": "facebook-zdjecia-galeria-sztuki-ewa-milek/670884455_1575125804618303_7208467634815178106_n.jpg",
+      "sha256": "66107e033a88a4f14675755460c3453b6b376cd8ba00f55b15b887c2f55055b1"
+    }
+  ]
+}

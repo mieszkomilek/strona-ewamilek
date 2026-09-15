@@ -95,3 +95,8 @@ Użytkownik zatwierdził publikację 84 zdjęć i pominięcie 003, 029, 039, 041
 | 089 | `assets/photos/ewa-milek/089-portret-na-tarasie.jpg` | Ewa — życie i inspiracje | Twórczość; O mnie | zatwierdzone do publikacji |
 | 090 | `assets/photos/ewa-milek/090-wizyta-w-muzeum-obraz-postaci.jpg` | Inspiracje — muzea | Twórczość — osobna kategoria, po potwierdzeniu publikacji cudzych prac | pominięte na życzenie użytkownika |
 | 091 | `assets/photos/ewa-milek/091-archiwalne-zdjecie-dzieciece.jpg` | Rodzinne wspomnienia | Twórczość | zatwierdzone do publikacji |
+
+
+## Aktualizacja 2026-09-15
+
+Plan powyżej jest historyczny. 27 zdjęć archiwum wycofano na prośbę Ewy; aktualne publikacje określa `data/photo-library.json`, a wycofane identyfikatory `data/retired-photo-ids.json`. Pozostaje 57 zdjęć z archiwum.

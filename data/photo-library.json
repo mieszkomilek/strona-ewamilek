@@ -27,39 +27,6 @@
       "photo_id": "image_id_001"
     },
     {
-      "id": 2,
-      "original": "att.38t1wtBcmrQUK5F09N3QO70646x-eZKqpLNb4h-aT7w.JPG",
-      "preview": "002.jpg",
-      "proposed_path": "assets/photos/ewa-milek/002-portret-w-ogrodzie.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość",
-        "O mnie"
-      ],
-      "status": "approved",
-      "sha256": "dfcb75c2d05c9ab4142b9174f4ddd03bbd3ae3ac7e7992aaa4b35be21f9a4fbc",
-      "caption": "Portret w ogrodzie",
-      "width": 1536,
-      "height": 2048,
-      "photo_id": "image_id_002"
-    },
-    {
-      "id": 4,
-      "original": "att.OCviwk3C6PcZQuqf-nB0YcDkbZCtZGPWhqLZItVHCoU.JPG",
-      "preview": "004.jpg",
-      "proposed_path": "assets/photos/ewa-milek/004-prezentacja-akwareli.jpg",
-      "category": "Wystawy",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "382be2c24dc2e8f71942ea9ffa707461c0e46d90ad6463d686a2d922d5470a85",
-      "caption": "Prezentacja akwareli",
-      "width": 476,
-      "height": 1024,
-      "photo_id": "image_id_004"
-    },
-    {
       "id": 5,
       "original": "att.iEJgXmCxlvzYV3QuoPNdORTa4Kn_XNoLJlr1hajPEms.JPG",
       "preview": "005.jpg",
@@ -126,39 +93,6 @@
       "photo_id": "image_id_008"
     },
     {
-      "id": 9,
-      "original": "att.E71u0hZY2e2bhBtsA7HxkDRaQQzWL8vbWMvPsKNDwhw.JPG",
-      "preview": "009.jpg",
-      "proposed_path": "assets/photos/ewa-milek/009-portret-w-plenerze.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość",
-        "O mnie"
-      ],
-      "status": "approved",
-      "sha256": "13bd6ed21658d9ed9b841b6c03b1f190345a410cd62fcbdb58cbcfb0a343c21c",
-      "caption": "Portret w plenerze",
-      "width": 1536,
-      "height": 2048,
-      "photo_id": "image_id_009"
-    },
-    {
-      "id": 10,
-      "original": "att.dH72vyFMLmppXWs9pH6jXsI2ZUU3n_Z_sE8-axMrjJ4.JPG",
-      "preview": "010.jpg",
-      "proposed_path": "assets/photos/ewa-milek/010-portret-w-pracowni.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "747ef6bf214c2e6a695d6b3da47ea35ec2366545379ff67fb04f3e6b132b8c9e",
-      "caption": "Portret w pracowni",
-      "width": 540,
-      "height": 960,
-      "photo_id": "image_id_010"
-    },
-    {
       "id": 11,
       "original": "att.OHuJckJ5ShV8sF7leDu2kgJ1wubRBJlgEZBdR5Fdb44.JPG",
       "preview": "011.jpg",
@@ -208,55 +142,6 @@
       "width": 640,
       "height": 928,
       "photo_id": "image_id_013"
-    },
-    {
-      "id": 14,
-      "original": "att._Z7UWseYiFnq5bbAyLeMTx7POVx8u09jSOysQLUTWuM.JPG",
-      "preview": "014.jpg",
-      "proposed_path": "assets/photos/ewa-milek/014-szkicownik-na-tarasie.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "fd9ed45ac7988859eae5b6c0c8b78c4f1ecf395c7cbb4f6348ecac40b5135ae3",
-      "caption": "Szkicownik na tarasie",
-      "width": 720,
-      "height": 960,
-      "photo_id": "image_id_014"
-    },
-    {
-      "id": 15,
-      "original": "att.m2Br9WleoJRFMzwfHu_i3PojwRJ3VcTJNuyPXh7aK80.JPG",
-      "preview": "015.jpg",
-      "proposed_path": "assets/photos/ewa-milek/015-obraz-nad-jeziorem.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "9b606bf5695ea09445333c1f1eefe2dcfa23c1127755c4c936ec8f5e1eda2bcd",
-      "caption": "Obraz nad jeziorem",
-      "width": 960,
-      "height": 720,
-      "photo_id": "image_id_015"
-    },
-    {
-      "id": 16,
-      "original": "att.SbqybKXP-5gB_8kHI2Ob4fWOTM7UNIqXqH3vRIuQIUQ.JPG",
-      "preview": "016.jpg",
-      "proposed_path": "assets/photos/ewa-milek/016-malowanie-mandali-na-tkaninie.jpg",
-      "category": "Mandale",
-      "pages": [
-        "Twórczość",
-        "Mandala"
-      ],
-      "status": "approved",
-      "sha256": "49bab26ca5cffb9801ffc90723639be1f58e4cced4348a97a87def448b902144",
-      "caption": "Malowanie mandali na tkaninie",
-      "width": 720,
-      "height": 960,
-      "photo_id": "image_id_016"
     },
     {
       "id": 17,
@@ -357,23 +242,6 @@
       "photo_id": "image_id_022"
     },
     {
-      "id": 23,
-      "original": "att.fENb0ZVl1YgXGQQuvNyBTzk8Oihf0fw1LrjYZtg6UJU.JPG",
-      "preview": "023.jpg",
-      "proposed_path": "assets/photos/ewa-milek/023-portret-z-rozami.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość",
-        "O mnie"
-      ],
-      "status": "approved",
-      "sha256": "7c435bd19565d5881719042ebcdc814f393c3a285fd1fc352eb8d866d83a5095",
-      "caption": "Portret z różami",
-      "width": 1536,
-      "height": 1536,
-      "photo_id": "image_id_023"
-    },
-    {
       "id": 24,
       "original": "att.xpIluxxvnTE9TTCpMUXzdbDQNoXVWozNUZ3eOtMlwmE.JPG",
       "preview": "024.jpg",
@@ -421,22 +289,6 @@
       "width": 720,
       "height": 960,
       "photo_id": "image_id_026"
-    },
-    {
-      "id": 27,
-      "original": "att.jqA-fyV45Fhep2PobR5ZCPobpyVOc7awbUIea2aD3Ms.JPG",
-      "preview": "027.jpg",
-      "proposed_path": "assets/photos/ewa-milek/027-szkicowanie-w-ogrodzie.jpg",
-      "category": "Pracownia i proces",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "8ea03e7f2578e4585ea763e86d1e5908fa1ba7254e73b6b06d421e6b6683dccb",
-      "caption": "Szkicowanie w ogrodzie",
-      "width": 538,
-      "height": 869,
-      "photo_id": "image_id_027"
     },
     {
       "id": 28,
@@ -537,22 +389,6 @@
       "photo_id": "image_id_034"
     },
     {
-      "id": 35,
-      "original": "att.6GGnB3AwYX8cfYTrIK2pCj_SuaUg_eD27_qw29_k3oM.JPG",
-      "preview": "035.jpg",
-      "proposed_path": "assets/photos/ewa-milek/035-portret-z-motywem-slonca.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "e861a7077030617f1c7d84eb20ada90a3fd2b9a520fde0f6effab0dbdfe4de83",
-      "caption": "Portret z motywem słońca",
-      "width": 768,
-      "height": 1024,
-      "photo_id": "image_id_035"
-    },
-    {
       "id": 36,
       "original": "att.-h9xeOQug4n6d949ErZRNMxtoFsOpvPYRSO2cyC_1QU.JPG",
       "preview": "036.jpg",
@@ -567,38 +403,6 @@
       "width": 367,
       "height": 489,
       "photo_id": "image_id_036"
-    },
-    {
-      "id": 37,
-      "original": "att.7_Nv5IEBhWQQ0JEMGSVeSvX3WeH7sLa5ONBGDh8HVjQ.JPG",
-      "preview": "037.jpg",
-      "proposed_path": "assets/photos/ewa-milek/037-prezentacja-kolorowego-obrazu.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "eff36fe48101856410d0910c19255e4af5f759e1fbb0b6b938d0460e1f075634",
-      "caption": "Prezentacja kolorowego obrazu",
-      "width": 768,
-      "height": 1024,
-      "photo_id": "image_id_037"
-    },
-    {
-      "id": 38,
-      "original": "att.77Yfn7JV5JNOJWK33p1XUrQ1A3KkWWrimDY6meegKXM.JPG",
-      "preview": "038.jpg",
-      "proposed_path": "assets/photos/ewa-milek/038-portret-na-tle-obrazu.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "efb61f9fb255e4934e2562b7de9d5752b4350372a4596ae298363a99e7a02973",
-      "caption": "Portret na tle obrazu",
-      "width": 1536,
-      "height": 2048,
-      "photo_id": "image_id_038"
     },
     {
       "id": 40,
@@ -631,39 +435,6 @@
       "width": 720,
       "height": 966,
       "photo_id": "image_id_042"
-    },
-    {
-      "id": 43,
-      "original": "att.Zq1_oiu1ydGbRSvVM1QdCxH4hSPce4SqjvKL-4UjlKk.JPG",
-      "preview": "043.jpg",
-      "proposed_path": "assets/photos/ewa-milek/043-rower-o-zachodzie-slonca.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość",
-        "O mnie"
-      ],
-      "status": "approved",
-      "sha256": "66ad7fa22bb5c9d19b452bd533541d0b11f88523dc7b84aa8ef28bfb852394a9",
-      "caption": "Rower o zachodzie słońca",
-      "width": 720,
-      "height": 960,
-      "photo_id": "image_id_043"
-    },
-    {
-      "id": 44,
-      "original": "att.Jk1UICGpu2PyVkq6djwbOpuGYhdtZMzqDHljqamz2DQ.JPG",
-      "preview": "044.jpg",
-      "proposed_path": "assets/photos/ewa-milek/044-obraz-w-ogrodzie.jpg",
-      "category": "Pracownia i proces",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "264d542021a9bb63f2564aba763c1b3a9b8662176d64ccea0c7963a9a9b3d834",
-      "caption": "Obraz w ogrodzie",
-      "width": 960,
-      "height": 720,
-      "photo_id": "image_id_044"
     },
     {
       "id": 45,
@@ -714,54 +485,6 @@
       "photo_id": "image_id_047"
     },
     {
-      "id": 49,
-      "original": "att.cRVLc_FmMLlp6jcohk4fhoiVMDH9sd3_ycSABtaawHo.JPG",
-      "preview": "049.jpg",
-      "proposed_path": "assets/photos/ewa-milek/049-rodzinne-wspomnienie.jpg",
-      "category": "Rodzinne wspomnienia",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "71154b73f16630b969ea3728864e1f8688953031fdb1ddffc9c48006d69ac07a",
-      "caption": "Rodzinne wspomnienie",
-      "width": 1024,
-      "height": 867,
-      "photo_id": "image_id_049"
-    },
-    {
-      "id": 50,
-      "original": "att.staea5gERTSX12TfcAag6M_aL4taC4OmAZeaVjk_R7M.JPG",
-      "preview": "050.jpg",
-      "proposed_path": "assets/photos/ewa-milek/050-wspolny-portret-drugi-kadr.jpg",
-      "category": "Rodzinne wspomnienia",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "b2d69e6b9804453497d764df7006a0e8cfda2f8b5a0b83a601979a56393f47b3",
-      "caption": "Wspólny portret — drugi kadr",
-      "width": 768,
-      "height": 1024,
-      "photo_id": "image_id_050"
-    },
-    {
-      "id": 51,
-      "original": "att.p_Wo8Asu1bMB6u7Rkyb1IT1vF1SUntnA0jypqjSl-dI.JPG",
-      "preview": "051.jpg",
-      "proposed_path": "assets/photos/ewa-milek/051-malowanie-portretu-w-plenerze.jpg",
-      "category": "Pracownia i proces",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "a7f5a8f00b2ed5b301eaeed19326f5213d6f1754949ed9c0d23ca9aa34a5f9d2",
-      "caption": "Malowanie portretu w plenerze",
-      "width": 1536,
-      "height": 2048,
-      "photo_id": "image_id_051"
-    },
-    {
       "id": 52,
       "original": "att.4J4AQDnS9L2Ky4al_dT4mxNkE_ucvz8jqewFk3TD9K0.JPG",
       "preview": "052.jpg",
@@ -776,40 +499,6 @@
       "width": 820,
       "height": 1024,
       "photo_id": "image_id_052"
-    },
-    {
-      "id": 53,
-      "original": "att.Ll4Nccnxmzv49V-zUEuFKftfNs6D5KF9weeG-Llre2U.JPG",
-      "preview": "053.jpg",
-      "proposed_path": "assets/photos/ewa-milek/053-prezentacja-pracy-w-ogrodzie.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "2e5e0d71c9f19b3bf8f55fb3504b8529fb5f36ce83e4a17dc1e786f8b96b7b65",
-      "caption": "Prezentacja pracy w ogrodzie",
-      "width": 604,
-      "height": 621,
-      "photo_id": "image_id_053"
-    },
-    {
-      "id": 54,
-      "original": "att.7MjTrLjnqx0gifpDBg5-L7OFaWyxnUJawQ4KdnBMNUw.JPG",
-      "preview": "054.jpg",
-      "proposed_path": "assets/photos/ewa-milek/054-kolekcja-kolorowych-mandali.jpg",
-      "category": "Mandale",
-      "pages": [
-        "Twórczość",
-        "Mandala",
-        "O mnie"
-      ],
-      "status": "approved",
-      "sha256": "ecc8d3acb8e7ab1d2089fa43060e7e2fb385696cb19d425ac10e0a76704c354c",
-      "caption": "Kolekcja kolorowych mandali",
-      "width": 720,
-      "height": 613,
-      "photo_id": "image_id_054"
     },
     {
       "id": 55,
@@ -842,22 +531,6 @@
       "width": 1680,
       "height": 2046,
       "photo_id": "image_id_056"
-    },
-    {
-      "id": 57,
-      "original": "att.EYEDstWt_gH3rlBDUT6D2JoGJml_vKDdaSo6cTpcRjA.JPG",
-      "preview": "057.jpg",
-      "proposed_path": "assets/photos/ewa-milek/057-portret-z-kwiatami-na-lawce.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "118103b2d5adfe01f7ae5043513e83d89a0626697fbca0dd692a3a713a5c4630",
-      "caption": "Portret z kwiatami na ławce",
-      "width": 1350,
-      "height": 1800,
-      "photo_id": "image_id_057"
     },
     {
       "id": 58,
@@ -893,22 +566,6 @@
       "photo_id": "image_id_059"
     },
     {
-      "id": 60,
-      "original": "att.lkUR0aBE6TeE_cDfq8pgM07bdvZ47HJ1wAOYuphCsBQ.JPG",
-      "preview": "060.jpg",
-      "proposed_path": "assets/photos/ewa-milek/060-ciasto-i-kwiaty.jpg",
-      "category": "Codzienne inspiracje",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "964511d1a044e93784fdc0dfabca60334edb76f678ec7275c00398ba9842b014",
-      "caption": "Ciasto i kwiaty",
-      "width": 768,
-      "height": 1024,
-      "photo_id": "image_id_060"
-    },
-    {
       "id": 61,
       "original": "att.EWgP0gZ9kSsmmvy2eq0Bv-zqcUzb69x94Y8Zsf1thik.JPG",
       "preview": "061.jpg",
@@ -923,72 +580,6 @@
       "width": 768,
       "height": 1024,
       "photo_id": "image_id_061"
-    },
-    {
-      "id": 62,
-      "original": "att.9cNs7n6BQ-mhO6oZzS5gRstu6FHPmrDSzdGh5cPMRio.JPG",
-      "preview": "062.jpg",
-      "proposed_path": "assets/photos/ewa-milek/062-portret-na-ogrodowej-lawce.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość",
-        "O mnie"
-      ],
-      "status": "approved",
-      "sha256": "f5c36cee7e8143e9a13baa19cd2e6046cb6ee851cf9ab0d2cdd1a1e5c3cc462a",
-      "caption": "Portret na ogrodowej ławce",
-      "width": 1536,
-      "height": 2048,
-      "photo_id": "image_id_062"
-    },
-    {
-      "id": 63,
-      "original": "att.UeMYCloKroe10xZiGc6oPNRBzECdVIf1BCu0uWq4IeA.JPG",
-      "preview": "063.jpg",
-      "proposed_path": "assets/photos/ewa-milek/063-portret-na-lawce-drugi-kadr.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "51e3180a5a0aae87b5d3166219cea83cd441cc409d5487f5042bb4b96ab821e0",
-      "caption": "Portret na ławce — drugi kadr",
-      "width": 1536,
-      "height": 2048,
-      "photo_id": "image_id_063"
-    },
-    {
-      "id": 64,
-      "original": "att.1K1RuqzN1a_0wVdNBSRg2S_N8p0_uuK4Bm6juLq8PB0.JPG",
-      "preview": "064.jpg",
-      "proposed_path": "assets/photos/ewa-milek/064-prezentacja-ksiazki-przy-mandalach.jpg",
-      "category": "Mandale",
-      "pages": [
-        "Twórczość",
-        "Mandala"
-      ],
-      "status": "approved",
-      "sha256": "d4ad51baaccdd5aff4c1574d052460d92fcdf29d3fbae2b8066ea3b8babc3c1d",
-      "caption": "Prezentacja książki przy mandalach",
-      "width": 528,
-      "height": 960,
-      "photo_id": "image_id_064"
-    },
-    {
-      "id": 65,
-      "original": "att.iqi_WFPxT53julyw817IG1lTMH1szzLvgMnF3eLsycA.JPG",
-      "preview": "065.jpg",
-      "proposed_path": "assets/photos/ewa-milek/065-wsrod-kwitnacych-roz.jpg",
-      "category": "Codzienne inspiracje",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "8aa8bf5853f14f9de3ba5cb0f35ec81b5953307d6ccf32ef80c9c5dde2ecc9c0",
-      "caption": "Wśród kwitnących róż",
-      "width": 768,
-      "height": 1024,
-      "photo_id": "image_id_065"
     },
     {
       "id": 66,
@@ -1344,39 +935,6 @@
       "width": 652,
       "height": 980,
       "photo_id": "image_id_088"
-    },
-    {
-      "id": 89,
-      "original": "att.a4XsZLe62ADGW0vTelpmE6o0nTIFPb9z4ngzpHqlRms.JPG",
-      "preview": "089.jpg",
-      "proposed_path": "assets/photos/ewa-milek/089-portret-na-tarasie.jpg",
-      "category": "Ewa — życie i inspiracje",
-      "pages": [
-        "Twórczość",
-        "O mnie"
-      ],
-      "status": "approved",
-      "sha256": "6b85ec64b7bad800c65b4bd37a5a6613aa349d32053dbf73e27833a47aa5466b",
-      "caption": "Portret na tarasie",
-      "width": 720,
-      "height": 960,
-      "photo_id": "image_id_089"
-    },
-    {
-      "id": 91,
-      "original": "att.yhaxCtp7B0Km_BK-XOe557OsbmAEdQ9o9shq-M19S-k.JPG",
-      "preview": "091.jpg",
-      "proposed_path": "assets/photos/ewa-milek/091-archiwalne-zdjecie-dzieciece.jpg",
-      "category": "Rodzinne wspomnienia",
-      "pages": [
-        "Twórczość"
-      ],
-      "status": "approved",
-      "sha256": "ca16b10ada7b0742a6fc12be5ce7b9e7b3ac6e6004750f68f6c86af8cd7d4be9",
-      "caption": "Archiwalne zdjęcie dziecięce",
-      "width": 585,
-      "height": 947,
-      "photo_id": "image_id_091"
     }
   ]
 }
