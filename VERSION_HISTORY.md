@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.65 | `2274f3aedf57779572fb352a985a9f8427633457` | 2026-09-15 12:21:46 | Usuń 30 zdjęć wskazanych przez Ewę i napraw uszkodzone pliki publikacji |
 | 1.64 | `b1ceb9da78462a5c7e73f5fbe6722eb520a14253` | 2026-09-11 10:02:29 | Odtwórz pełne drzewo repo i zachowaj przeglądarkę zdjęć Admin |
 | 1.63 | `dbf864140d3979c1ecf16c36cbf1698f1df0520d` | 2026-09-11 08:56:54 | Dodaj odnośnik Facebook i oznaczenia kolorowanek |
 | 1.62 | `ad66f7f1b4e67735946c0323e024489923ac2e0e` | 2026-09-11 08:45:55 | Dodaj 14 mandali zamówionych przez klientów z unikalnymi ID |
