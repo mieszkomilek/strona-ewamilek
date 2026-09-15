@@ -156,10 +156,10 @@
     {
       "id": "photo-removal-4-admin-history-20260915",
       "description": "Usunięcie zdjęć 025, 040, 086 i 207 oraz dodanie opisowej historii zmian w Adminie",
-      "source_commit": null,
-      "version": null,
-      "workflow_url": null,
-      "deployment_status": "prepared",
+      "source_commit": "9925688572896a265cf7e373360e0397e2d08d0f",
+      "version": "1.66",
+      "workflow_url": "https://github.com/mieszkomilek/strona-ewamilek/actions/runs/35013611735",
+      "deployment_status": "success",
       "usage": [
         {
           "model": "GPT-5 (dokładny identyfikator niedostępny)",
@@ -172,7 +172,8 @@
           "estimated_api_usd": null,
           "usage_source": null
         }
-      ]
+      ],
+      "verification": "Build i deploy Pages success; publiczna wersja 1.66; tag site-v1.66 zgodny; cztery usunięte URL zwracają 404; Admin wyświetla opis wersji 1.66. Tokeny i USD nieudostępnione."
     }
   ],
   "planned_work": [
