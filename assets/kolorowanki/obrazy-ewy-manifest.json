@@ -1,0 +1,35 @@
+{
+  "category": "kolorowanki z obrazów Ewy",
+  "images": [
+    {
+      "path": "assets/kolorowanki/kolorowanka-z-obrazu-ewy-sowy-i-roze.png",
+      "source_filename": "kolorowanka_z_obrazu_Ewy_1.jpeg",
+      "title": "Sowy i róże",
+      "sha256": "194b1f203d87a9aace12831154ed901c01ee551a635129d779e1d17f4eda952f",
+      "width": 1055,
+      "height": 1491,
+      "method": "Wbudowany image_gen, przekształcenie obrazu w kontury, trzy wyniki zaakceptowane przez użytkownika.",
+      "prompt_summary": "Pionowa karta A4; zachować motywy i kompozycję załączonego obrazu; czarne kontury i białe pola, bez kolorów i szarego cieniowania; podpis Ewa Miłek · ewamilek.pl."
+    },
+    {
+      "path": "assets/kolorowanki/kolorowanka-z-obrazu-ewy-umysl-i-ocean.png",
+      "source_filename": "kolorowanka_z_obrazu_Ewy_2.jpeg",
+      "title": "Umysł i ocean",
+      "sha256": "9b9c62cf5ebc2974e47bf3dfa3a52ec5ed969e39fe939f99e1afefcfdca772fe",
+      "width": 1054,
+      "height": 1492,
+      "method": "Wbudowany image_gen, przekształcenie obrazu w kontury, trzy wyniki zaakceptowane przez użytkownika.",
+      "prompt_summary": "Pionowa karta A4; zachować motywy i kompozycję załączonego obrazu; czarne kontury i białe pola, bez kolorów i szarego cieniowania; podpis Ewa Miłek · ewamilek.pl."
+    },
+    {
+      "path": "assets/kolorowanki/kolorowanka-z-obrazu-ewy-spirale-i-liscie.png",
+      "source_filename": "kolorowanka_z_obrazu_Ewy_3.jpeg",
+      "title": "Spirale i liście",
+      "sha256": "87eee96b69dd84a0dc3fdf0291e7377ed87ef91ca4c99edd7066779a10b6471e",
+      "width": 1055,
+      "height": 1491,
+      "method": "Wbudowany image_gen, przekształcenie obrazu w kontury, trzy wyniki zaakceptowane przez użytkownika.",
+      "prompt_summary": "Pionowa karta A4; zachować motywy i kompozycję załączonego obrazu; czarne kontury i białe pola, bez kolorów i szarego cieniowania; podpis Ewa Miłek · ewamilek.pl."
+    }
+  ]
+}

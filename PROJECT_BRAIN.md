@@ -313,3 +313,8 @@ Rejestr kosztów odzyskany z historii nie pozwala odtworzyć brakujących pomiar
 - Od wersji 1.66 panel Admin zawiera opisową historię ostatnich zmian, zasilaną przez `data/admin-change-history.json` i wyświetlaną przez `assets/js/admin-change-history.js`.
 - Każde kolejne wdrożenie zmieniające stronę musi dodać na początku rejestru zrozumiały dla użytkownika wpis: numer wersji, datę, krótki tytuł i opis faktycznej zmiany.
 - W wersji 1.66 usunięto ze wszystkich miejsc i bieżącego repo zdjęcia `image_id_025`, `image_id_040`, `image_id_086` i `image_id_207`. ID pozostają trwale wycofane.
+
+
+## Kolorowanki z obrazów Ewy — 1.67
+
+Dodano trzy zaakceptowane przez użytkownika konturowe opracowania załączonych obrazów: Sowy i róże, Umysł i ocean, Spirale i liście. To nazwy opisowe, nie potwierdzone tytuły oryginałów. Sekcja „Kolorowanki z obrazów Ewy” zawiera pobieranie PNG i druk pojedynczej karty A4, opisy oraz wskazówki kolorów i kredek. PNG zachowano bez rekompresji; podpis Ewa Miłek · ewamilek.pl jest w obrazie. Wcześniejsze 15 wzorów ma osobną sekcję „Kolorowanki Ewy z AI”. Pochodzenie i SHA-256: assets/kolorowanki/obrazy-ewy-manifest.json. Łącznie 18 kolorowanek.

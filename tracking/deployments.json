@@ -174,6 +174,50 @@
         }
       ],
       "verification": "Build i deploy Pages success; publiczna wersja 1.66; tag site-v1.66 zgodny; cztery usunięte URL zwracają 404; Admin wyświetla opis wersji 1.66. Tokeny i USD nieudostępnione."
+    },
+    {
+      "id": "colorings-from-ewa-3-20260915",
+      "description": "Trzy kolorowanki z obrazów Ewy, pobieranie i druk A4",
+      "source_commit": null,
+      "version": null,
+      "workflow_url": null,
+      "deployment_status": "prepared",
+      "usage": [
+        {
+          "model": "GPT-5 (dokładny identyfikator niedostępny)",
+          "model_source": "Instrukcja środowiska i wywołania narzędzia",
+          "scope": "Przygotowanie promptów i trzech zaakceptowanych obrazów w poprzedniej turze",
+          "input_tokens": null,
+          "cached_input_tokens": null,
+          "output_tokens": null,
+          "actual_usd": null,
+          "estimated_api_usd": null,
+          "usage_source": null
+        },
+        {
+          "model": "GPT-6 (dokładny identyfikator niedostępny)",
+          "model_source": "Instrukcja środowiska i wywołania narzędzia",
+          "scope": "Integracja, dokumentacja, testy i publikacja",
+          "input_tokens": null,
+          "cached_input_tokens": null,
+          "output_tokens": null,
+          "actual_usd": null,
+          "estimated_api_usd": null,
+          "usage_source": null
+        },
+        {
+          "model": "Wbudowany image_gen (identyfikator niedostępny)",
+          "model_source": "Instrukcja środowiska i wywołania narzędzia",
+          "scope": "Trzy wygenerowane kolorowanki",
+          "input_tokens": null,
+          "cached_input_tokens": null,
+          "output_tokens": null,
+          "actual_usd": null,
+          "estimated_api_usd": null,
+          "usage_source": null,
+          "images_generated": 3
+        }
+      ]
     }
   ],
   "planned_work": [

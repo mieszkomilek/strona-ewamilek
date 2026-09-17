@@ -146,8 +146,14 @@ for name in ('admin.html','PROJECT_BRAIN.md','scripts/site_qa.py','tracking/depl
 if 'id="admin-change-history"' not in (R/'admin.html').read_text() or 'assets/js/admin-change-history.js' not in (R/'admin.html').read_text():
     E.append('Admin: brak opisowej historii zmian')
 history=json.loads((R/'data/admin-change-history.json').read_text())
-if not history.get('versions') or history['versions'][0].get('version') != '1.66':
-    E.append('Admin: historia zmian nie zawiera bieżącej wersji 1.66')
+if not history.get('versions') or history['versions'][0].get('version') != (R/'version.txt').read_text().strip():
+    E.append('Admin: historia zmian nie jest zgodna z numerem wdrożenia')
+for item in json.loads((R/'assets/kolorowanki/obrazy-ewy-manifest.json').read_text())['images']:
+    asset=R/item['path']
+    if not asset.is_file() or hashlib.sha256(asset.read_bytes()).hexdigest() != item['sha256']:
+        E.append('Kolorowanki z obrazów Ewy: brak lub zmieniony plik '+item['path'])
+    if f'href="{item["path"]}"' not in coloring:
+        E.append('Brak pobierania: '+item['path'])
 
 print('\n'.join('WARN '+x for x in W))
 print('\n'.join('ERROR '+x for x in E))

@@ -1,6 +1,12 @@
 {
   "versions": [
     {
+      "version": "1.67",
+      "date": "2026-09-15",
+      "title": "Trzy kolorowanki z obrazów Ewy",
+      "description": "Dodano sekcję „Kolorowanki z obrazów Ewy”: Sowy i róże, Umysł i ocean oraz Spirale i liście. Każdy wzór ma pobieranie PNG, druk A4 i wskazówki kolorowania. Dotychczasowe 15 mandali znajduje się w sekcji „Kolorowanki Ewy z AI”."
+    },
+    {
       "version": "1.66",
       "date": "2026-09-15",
       "title": "Usunięcie czterech zdjęć i historia zmian w Adminie",

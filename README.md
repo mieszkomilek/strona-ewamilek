@@ -57,3 +57,8 @@ Starsza dolna galeria O mnie pozostaje; 14 mandali klientów pozostaje. Pusta se
 Odtworzono osiem uszkodzonych plików (9 bajtów niepoprawnej zawartości UTF-8): Admin, Mandala, Kolorowanki, second brain, QA, tracking, CSS galerii i skrypt przeglądarki Admin. Dokumenty i strony odzyskano z ostatnich poprawnych wersji w historii; przeglądarkę ID odtworzono w istniejącej bramce Admin. Przywrócono utracone wiersze VERSION_HISTORY (w tym 1.62 i starsze), zachowując obecne 1.63/1.64. Nie cofamy numeru 1.64 ani tagów. QA kontroluje wycofane ID, identyczne kopie JPG i integralność plików tekstowych.
 
 Rejestr kosztów odzyskany z historii nie pozwala odtworzyć brakujących pomiarów wcześniejszych prób; brak danych nie oznacza zerowego kosztu.
+
+
+## Kolorowanki z obrazów Ewy — 1.67
+
+Dodano trzy zaakceptowane przez użytkownika konturowe opracowania załączonych obrazów: Sowy i róże, Umysł i ocean, Spirale i liście. To nazwy opisowe, nie potwierdzone tytuły oryginałów. Sekcja „Kolorowanki z obrazów Ewy” zawiera pobieranie PNG i druk pojedynczej karty A4, opisy oraz wskazówki kolorów i kredek. PNG zachowano bez rekompresji; podpis Ewa Miłek · ewamilek.pl jest w obrazie. Wcześniejsze 15 wzorów ma osobną sekcję „Kolorowanki Ewy z AI”. Pochodzenie i SHA-256: assets/kolorowanki/obrazy-ewy-manifest.json. Łącznie 18 kolorowanek.
