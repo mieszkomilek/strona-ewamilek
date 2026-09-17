@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.67 | `70c41b55a754cadba26c58e83e933c0666659677` | 2026-09-17 12:11:28 | Dodaj kolorowanki z obrazow Ewy |
 | 1.66 | `9925688572896a265cf7e373360e0397e2d08d0f` | 2026-09-15 19:26:07 | Usuń zdjęcia 025, 040, 086 i 207 oraz dodaj historię zmian w Adminie |
 | 1.65 | `2274f3aedf57779572fb352a985a9f8427633457` | 2026-09-15 12:21:46 | Usuń 30 zdjęć wskazanych przez Ewę i napraw uszkodzone pliki publikacji |
 | 1.64 | `b1ceb9da78462a5c7e73f5fbe6722eb520a14253` | 2026-09-11 10:02:29 | Odtwórz pełne drzewo repo i zachowaj przeglądarkę zdjęć Admin |
