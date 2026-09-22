@@ -56,6 +56,13 @@
   const copy = document.createElement('button');
   copy.type = 'button'; copy.className = 'photo-id-copy'; copy.textContent = 'Kopiuj ID';
   details.append(identifier, copy); dialog.append(details);
+  const original = gallery.classList.contains('certificate-gallery') ? document.createElement('a') : null;
+  if (original) {
+    original.textContent = 'Otwórz oryginał';
+    original.target = '_blank'; original.rel = 'noopener';
+    original.style.cssText = 'color:white;text-underline-offset:4px';
+    details.append(original);
+  }
   copy.addEventListener('click', async () => {
     try { await navigator.clipboard.writeText(identifier.textContent); copy.textContent = 'Skopiowano'; }
     catch {
@@ -68,6 +75,7 @@
     index = (next + items.length) % items.length;
     while (items[index].hidden) index = (index + direction + items.length) % items.length;
     image.src = items[index].href;
+    if (original) original.href = items[index].href;
     image.alt = items[index].querySelector('img')?.alt || '';
     const path = new URL(image.src).pathname.replace(/^\//, '');
     identifier.textContent = window.EWA_PHOTO_IDS?.[path] || 'Identyfikator niedostępny';

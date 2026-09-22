@@ -88,5 +88,22 @@ window.EWA_PHOTO_IDS = {
   "assets/photos/mandale-klientow/ewa-milek-mandala-11-ze-schodami.jpg": "image_id_219",
   "assets/photos/mandale-klientow/ewa-milek-mandala-12-z-gwiazda.jpg": "image_id_220",
   "assets/photos/mandale-klientow/ewa-milek-mandala-13-zloto-biala.jpg": "image_id_221",
-  "assets/photos/mandale-klientow/ewa-milek-mandala-14-teczowa.jpg": "image_id_222"
+  "assets/photos/mandale-klientow/ewa-milek-mandala-14-teczowa.jpg": "image_id_222",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-223.jpeg": "image_id_223",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-224.jpeg": "image_id_224",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-225.jpeg": "image_id_225",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-226.jpeg": "image_id_226",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-227.jpeg": "image_id_227",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-228.jpeg": "image_id_228",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-229.jpeg": "image_id_229",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-230.jpeg": "image_id_230",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-231.jpeg": "image_id_231",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-232.jpeg": "image_id_232",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-233.jpeg": "image_id_233",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-234.jpeg": "image_id_234",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-235.jpeg": "image_id_235",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-236.jpeg": "image_id_236",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-237.jpeg": "image_id_237",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-238.jpeg": "image_id_238",
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-239.jpeg": "image_id_239"
 };

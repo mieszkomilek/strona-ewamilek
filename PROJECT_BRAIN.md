@@ -346,3 +346,7 @@ Rozpoczęto lokalne przygotowanie pełnej wersji EN według mechanizmu z repozyt
 - Użytkownik zaakceptował lokalny podgląd pełnej wersji angielskiej i zlecił zapisanie oraz publikację zmian na zdalne `main`.
 - Publikacja ma zachować wcześniejsze wydanie 1.67 (kolorowanki z obrazów Ewy) i utworzyć kolejne wydanie 1.68 z pełną wersją EN.
 - Po pushu należy potwierdzić identyfikator commitu na remote oraz osobno wynik automatycznego wdrożenia Pages; sam push nie jest potwierdzeniem publikacji strony.
+
+## Dyplomy i certyfikaty — 2026-09-22
+
+W „O mnie” dodano podkategorię „Moje Dyplomy i Certyfikaty” z kotwicą `#moje-dyplomy-i-certyfikaty` i skrótem u góry strony. Ścianka zawiera 17 oryginalnych JPEG z archiwum użytkownika, bez rekompresji, z pełnymi kadrami, opisowymi podpisami i wspólnym podglądem galerii. Stałe ID: image_id_223–image_id_239; działają również w przeglądarce Admin. Mapa pochodzenia i SHA-256: `data/certificates.json`. Galeria i podpisy mają wersję PL/EN. Planowane wdrożenie: 1.70; status publikacji w tracking/deployments.json.

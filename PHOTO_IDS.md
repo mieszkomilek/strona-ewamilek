@@ -100,3 +100,27 @@ image_id_002, image_id_004, image_id_009, image_id_010, image_id_014, image_id_0
 Nie używać ponownie. Mapa archiwalna: `data/retired-photo-ids.json`. Pliki usunięto z bieżącego repo; historia Git pozostaje.
 
 Wycofane dodatkowo w wersji 1.66: `image_id_025`, `image_id_040`, `image_id_086`, `image_id_207`. Nie używać ponownie.
+
+## Dyplomy i certyfikaty Ewy Miłek
+
+Oryginały z `Certyfikaty.zip`, bez rekompresji. Pełna mapa nazw źródłowych i SHA-256: `data/certificates.json`.
+
+| ID | Dokument | Plik |
+|---|---|---|
+| `image_id_223` | Vedic Art — dyplom nauczyciela | `assets/photos/certyfikaty/ewa-milek-certyfikat-223.jpeg` |
+| `image_id_224` | Policealna Szkoła Sztuk Pięknych — dyplom ukończenia | `assets/photos/certyfikaty/ewa-milek-certyfikat-224.jpeg` |
+| `image_id_225` | Vedic Art — dyplom nauczyciela ekstra kompetencyjnego | `assets/photos/certyfikaty/ewa-milek-certyfikat-225.jpeg` |
+| `image_id_226` | Studium Psychologii Psychotronicznej — dyplom | `assets/photos/certyfikaty/ewa-milek-certyfikat-226.jpeg` |
+| `image_id_227` | Numerologia — kurs samodoskonalenia | `assets/photos/certyfikaty/ewa-milek-certyfikat-227.jpeg` |
+| `image_id_228` | Runy i ich zastosowanie | `assets/photos/certyfikaty/ewa-milek-certyfikat-228.jpeg` |
+| `image_id_229` | Szkoła Rozwoju Osobistego dla Kobiet — I moduł | `assets/photos/certyfikaty/ewa-milek-certyfikat-229.jpeg` |
+| `image_id_230` | Pranic Healing — certyfikat uczestnictwa | `assets/photos/certyfikaty/ewa-milek-certyfikat-230.jpeg` |
+| `image_id_231` | Neurolingwistyczne programowanie — szkolenie | `assets/photos/certyfikaty/ewa-milek-certyfikat-231.jpeg` |
+| `image_id_232` | Trening interpersonalny | `assets/photos/certyfikaty/ewa-milek-certyfikat-232.jpeg` |
+| `image_id_233` | Szkoła Regresingu — druga klasa | `assets/photos/certyfikaty/ewa-milek-certyfikat-233.jpeg` |
+| `image_id_234` | Szkoła Regresingu — cykl sesji indywidualnych | `assets/photos/certyfikaty/ewa-milek-certyfikat-234.jpeg` |
+| `image_id_235` | Reiki — pierwszy stopień | `assets/photos/certyfikaty/ewa-milek-certyfikat-235.jpeg` |
+| `image_id_236` | Metoda Silvy — kurs podstawowy | `assets/photos/certyfikaty/ewa-milek-certyfikat-236.jpeg` |
+| `image_id_237` | Warsztaty Anielskie dla Początkujących | `assets/photos/certyfikaty/ewa-milek-certyfikat-237.jpeg` |
+| `image_id_238` | Soul Body Fusion — certyfikat | `assets/photos/certyfikaty/ewa-milek-certyfikat-238.jpeg` |
+| `image_id_239` | Access Bars — certyfikat ukończenia | `assets/photos/certyfikaty/ewa-milek-certyfikat-239.jpeg` |

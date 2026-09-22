@@ -240,6 +240,29 @@
         }
       ],
       "verification": "Lokalna wersja 1.68 przeszła build i QA (0 błędów, 0 ostrzeżeń), testy przeglądarkowe oraz testy interakcji. Użytkownik zatwierdził publikację 2026-09-22. Status remote i Pages zostanie zapisany po weryfikacji; szczegóły w EN_TRANSLATION_AUDIT.md."
+    },
+    {
+      "id": "certificates-20260922-001",
+      "description": "17 dyplomów i certyfikatów w O mnie; stałe ID 223–239",
+      "source_commit": null,
+      "version": null,
+      "workflow_url": null,
+      "deployment_status": "prepared",
+      "usage": [
+        {
+          "model": "GPT-6 (dokładny identyfikator niedostępny)",
+          "model_source": "Instrukcja środowiska bieżącej sesji",
+          "scope": "Dodanie zdjęć, galerii PL/EN, rejestru ID, weryfikacja i publikacja",
+          "input_tokens": null,
+          "cached_input_tokens": null,
+          "output_tokens": null,
+          "actual_usd": null,
+          "estimated_api_usd": null,
+          "usage_source": null,
+          "pricing_source": null,
+          "note": "Brak pomiaru tokenów i kosztów. Bez generowania obrazów."
+        }
+      ]
     }
   ],
   "planned_work": [

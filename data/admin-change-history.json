@@ -1,6 +1,12 @@
 {
   "versions": [
     {
+      "version": "1.70",
+      "date": "2026-09-22",
+      "title": "Moje Dyplomy i Certyfikaty w sekcji O mnie",
+      "description": "Dodano ściankę 17 dyplomów i certyfikatów z pełnymi zdjęciami, podpisami i stałymi ID image_id_223–image_id_239. Skrót na górze O mnie prowadzi bezpośrednio do galerii. Podgląd umożliwia przeglądanie strzałkami, kopiowanie ID i otwarcie oryginału."
+    },
+    {
       "version": "1.69",
       "date": "2026-09-21",
       "title": "Pełna wersja angielska strony",
