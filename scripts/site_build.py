@@ -65,13 +65,13 @@ for p in R.glob('*.html'):
 
     # Common shell and layout guard. photo-parallax.css also prevents any page
     # from becoming horizontally draggable because of decorative/off-canvas UI.
-    s=re.sub(r'<link\s+href="assets/css/photo-parallax\.css(?:\?[^"]*)?"\s+rel="stylesheet"\s*/?>','',s)
+    s=re.sub(r'\s*<link\s+href="assets/css/photo-parallax\.css(?:\?[^"]*)?"\s+rel="stylesheet"\s*/?>\s*','\n',s)
     s=ensure_css(s,f'assets/css/photo-parallax.css?v={VERSION}')
     s=ensure_script(s,'assets/js/site-shell.js')
 
     # Photo storytelling is only needed on the homepage and O mnie.
     if p.name in ('index.html','o-mnie.html'):
-        s=re.sub(r'<script src="assets/js/photo-parallax\.js(?:\?[^"]*)?"></script>','',s)
+        s=re.sub(r'\s*<script src="assets/js/photo-parallax\.js(?:\?[^"]*)?"></script>\s*','\n',s)
         s=ensure_script(s,f'assets/js/photo-parallax.js?v={VERSION}')
 
     if p.name=='tworczosc.html':
