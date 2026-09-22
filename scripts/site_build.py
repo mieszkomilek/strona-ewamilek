@@ -15,13 +15,21 @@ def url(n):
 def ensure_script(s,src):
     marker=f'<script src="{src}"></script>'
     if marker not in s:
+        # A preceding normalisation may have removed a script but left its
+        # surrounding whitespace. Keep repeated builds byte-stable.
+        s=re.sub(r'\n[ \t]*(?:\n[ \t]*)+(?=</body>)','\n',s)
         s=s.replace('</body>',marker+'\n</body>',1)
+        s=re.sub(r'\n[ \t]*(?:\n[ \t]*)+(?='+re.escape(marker)+r')','\n',s)
     return s
 
 def ensure_css(s,href):
     marker=f'<link href="{href}" rel="stylesheet"/>'
     if marker not in s:
+        # A preceding normalisation may have removed a stylesheet but left
+        # blank lines behind. Keep repeated builds byte-stable.
+        s=re.sub(r'\n[ \t]*(?:\n[ \t]*)+(?=</head>)','\n',s)
         s=s.replace('</head>',marker+'\n</head>',1)
+        s=re.sub(r'\n[ \t]*(?:\n[ \t]*)+(?='+re.escape(marker)+r')','\n',s)
     return s
 
 for p in R.glob('*.html'):
