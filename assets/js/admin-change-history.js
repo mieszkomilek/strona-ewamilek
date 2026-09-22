@@ -2,7 +2,7 @@
   const list = document.querySelector('#admin-change-history-list');
   if (!list) return;
 
-  fetch('data/admin-change-history.json', { cache: 'no-store' })
+  fetch('/data/admin-change-history.json', { cache: 'no-store' })
     .then(response => {
       if (!response.ok) throw new Error('Nie udało się pobrać historii zmian.');
       return response.json();

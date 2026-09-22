@@ -10,3 +10,6 @@
 - Aktualizuj opis projektu i second brain przy trwałych ustaleniach. Zachowuj istniejące zmiany użytkownika.
 - Identyfikatory image_id_NNN w assets/js/photo-ids.js są trwałe. Nie renumeruj ich po zmianie kolejności, nie używaj ponownie wycofanych ID. Przy usunięciu po ID sprawdź wszystkie miejsca użycia. Zasady i mapa: PHOTO_IDS.md.
 - Przy każdym wdrożeniu zmieniającym stronę dodaj opisowy wpis do `data/admin-change-history.json`, aby historię wersji można było przeczytać w panelu Admin.
+- Strona jest dwujęzyczna: każda zmiana tekstu lub interakcji wymaga odpowiednika PL i EN. Polski HTML jest źródłem; `en/` generuje `python3 scripts/site_build.py` z pełnych fraz w `data/i18n/en.json`.
+- Nie edytuj ręcznie plików `en/` ani wygenerowanego `assets/js/english.js`. Teksty dynamiczne obsługuje `scripts/english-runtime.js`; nigdy nie tłumacz kodu przez globalne zamiany słów.
+- Przed potwierdzeniem kompletności EN sprawdź wszystkie 13 stron, galerie, formularze i PL→EN→PL. Brakujące tłumaczenia muszą blokować build. Dokumenty PDF i napisy wewnątrz oryginalnych obrazów są osobnymi materiałami, nie tekstem HTML.

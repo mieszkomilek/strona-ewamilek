@@ -36,6 +36,12 @@ jobs:
           hundredths = int(major) * 100 + int(minor[:2].ljust(2, '0')) + 1
           new_version = f'{hundredths // 100}.{hundredths % 100:02d}'
           p.write_text(new_version + '\n', encoding='utf-8')
+          # Keep the latest descriptive changelog aligned with the release number.
+          import json
+          history_path = Path('data/admin-change-history.json')
+          history = json.loads(history_path.read_text(encoding='utf-8'))
+          history['versions'][0]['version'] = new_version
+          history_path.write_text(json.dumps(history, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
           source_commit = subprocess.check_output(['git','rev-parse','HEAD'], text=True).strip()
           subject = subprocess.check_output(['git','log','-1','--pretty=%s'], text=True).strip()
@@ -58,7 +64,7 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add version.txt VERSION_HISTORY.md
+          git add version.txt VERSION_HISTORY.md data/admin-change-history.json
           git commit -m "Bump site version" || exit 0
           NEW_VERSION=$(tr -d '\n' < version.txt)
           git tag -f "site-v${NEW_VERSION}"

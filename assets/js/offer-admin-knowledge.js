@@ -29,6 +29,7 @@
   const vedicLinks=[VEDIC,VEDIC_TERMS,VEDIC_ONLINE,VEDIC_STORY];
 
   function linksForTitle(title){
+    title=window.EwaOriginalText?.(title)||title;
     const t=(title||'').toLowerCase();
     if(t.includes('vedic')) return vedicLinks;
     if(t.includes('e-book')||t.includes('ebook')||t.includes('pdf')||t.includes('kurs z numerologii')) return digitalLinks;

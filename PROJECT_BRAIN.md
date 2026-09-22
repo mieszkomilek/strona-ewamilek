@@ -318,3 +318,31 @@ Rejestr kosztów odzyskany z historii nie pozwala odtworzyć brakujących pomiar
 ## Kolorowanki z obrazów Ewy — 1.67
 
 Dodano trzy zaakceptowane przez użytkownika konturowe opracowania załączonych obrazów: Sowy i róże, Umysł i ocean, Spirale i liście. To nazwy opisowe, nie potwierdzone tytuły oryginałów. Sekcja „Kolorowanki z obrazów Ewy” zawiera pobieranie PNG i druk pojedynczej karty A4, opisy oraz wskazówki kolorów i kredek. PNG zachowano bez rekompresji; podpis Ewa Miłek · ewamilek.pl jest w obrazie. Wcześniejsze 15 wzorów ma osobną sekcję „Kolorowanki Ewy z AI”. Pochodzenie i SHA-256: assets/kolorowanki/obrazy-ewy-manifest.json. Łącznie 18 kolorowanek.
+
+
+## Przygotowanie wersji angielskiej — 2026-09-17
+Rozpoczęto lokalne przygotowanie pełnej wersji EN według mechanizmu z repozytorium MikeMilekFitness: osobne strony w katalogu `/en/`, wspólny przełącznik języka `assets/js/language.js` oraz linki PL/EN w nagłówku. Wygenerowano lokalne kopie wszystkich podstron jako szkic do dalszej pełnej translacji treści. Każda przyszła zmiana wymaga odpowiednika PL i EN oraz aktualizacji obu wersji przed publikacją.
+
+## Audyt EN — 2026-09-21 (w toku)
+- Wersja EN nie jest jeszcze gotowa do publikacji: istnieją mieszane zdania PL/EN oraz teksty generowane przez JS.
+- Wycofano uszkodzenia inline JavaScript i CSS w kopiach EN, odtwarzając kod z polskich źródeł; poprawiono względne ścieżki zasobów.
+- Nie tłumaczyć kodu globalnymi zamianami słów. Docelowo używać pełnych fraz i osobno lokalizować interfejs dynamiczny.
+- Wszystkie przyszłe zmiany treści wymagają PL i EN oraz weryfikacji obu wersji. Nie deklarować kompletności na podstawie samej obecności 13 plików.
+- Próba użycia zewnętrznego Google Translate została odrzucona przed uruchomieniem; wymaga świadomej zgody użytkownika na wysłanie tekstów strony.
+- Nie wykonano push ani wdrożenia. Dokładne tokeny i koszt USD tej pracy nie są dostępne.
+
+## Wersja EN — wykonane lokalnie 2026-09-21
+- Zastąpiono niekompletne kopie EN generowaniem wszystkich 13 stron z polskiego źródła i słownika pełnych fraz `data/i18n/en.json`. Tłumaczenia przygotował asystent bez zewnętrznej usługi tłumaczenia.
+- Build odrzuca nowe statyczne teksty bez tłumaczenia. Dynamiczne galerie, opisy oferty, komunikaty i wyniki kalkulatorów, Admin oraz historia zmian są lokalizowane przez `scripts/english-runtime.js`. Nie modyfikować kodu przez globalne zamiany słów.
+- Przełącznik PL/EN jest częścią układu nagłówka i zachowuje bieżącą podstronę, query oraz hash. Pierwsza wizyta pokazuje wybór języka, zapisywany w localStorage.
+- Poprawiono ścieżki zdjęć, PDF, version.txt i historii zmian dla `/en/`. Identyfikatory i pliki fotografii pozostają wspólne. Oryginalne PDF i tekst w rastrach nie stanowią nowych tłumaczeń dokumentów.
+- Wersja lokalna 1.68. Aktualizacja workflow synchronizuje numer ostatniego wpisu Admin podczas automatycznego bumpa, aby uniknąć istniejącego konfliktu version.txt / historii. Nie wykonano push ani deployu; numer lokalny nie potwierdza publikacji.
+- Miejsce pracy: `colorings-from-ewa-release` w katalogu projektu Codex. Podgląd: http://127.0.0.1:8767/en/index.html. Zmiany nie zostały przeniesione do Development/Projects/Private/EwaMilek-Strona.
+- Wcześniejsze notatki o niegotowości EN opisują stan sprzed tej korekty. Wynik i zakres końcowej weryfikacji: EN_TRANSLATION_AUDIT.md.
+- Dokładne tokeny i USD pozostają nieznane; zapisano null, bez pozornego pomiaru.
+
+## Akceptacja publikacji EN — 2026-09-22
+
+- Użytkownik zaakceptował lokalny podgląd pełnej wersji angielskiej i zlecił zapisanie oraz publikację zmian na zdalne `main`.
+- Publikacja ma zachować wcześniejsze wydanie 1.67 (kolorowanki z obrazów Ewy) i utworzyć kolejne wydanie 1.68 z pełną wersją EN.
+- Po pushu należy potwierdzić identyfikator commitu na remote oraz osobno wynik automatycznego wdrożenia Pages; sam push nie jest potwierdzeniem publikacji strony.

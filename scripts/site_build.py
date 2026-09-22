@@ -112,3 +112,10 @@ for p in R.glob('*.html'):
 d=date.today().isoformat()
 rows='\n'.join(f'  <url>\n    <loc>{url(n)}</loc>\n    <lastmod>{d}</lastmod>\n  </url>' for n in c['indexablePages'] if (R/n).exists())
 (R/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+rows+'\n</urlset>\n',encoding='utf-8')
+
+# English pages are rebuilt after the shared Polish shell is complete.
+from i18n import build_english
+build_english()
+english_rows='\n'.join(f'  <url><loc>{base}en/{"" if n=="index.html" else n}</loc><lastmod>{d}</lastmod></url>' for n in c['indexablePages'])
+p=R/'sitemap.xml'
+p.write_text(p.read_text().replace('</urlset>',english_rows+'\n</urlset>'))

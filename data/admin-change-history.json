@@ -1,6 +1,12 @@
 {
   "versions": [
     {
+      "version": "1.68",
+      "date": "2026-09-21",
+      "title": "Pełna wersja angielska strony",
+      "description": "Dodano angielskie treści wszystkich 13 podstron, galerie, ofertę i komunikaty panelu Admin. Przełącznik PL/EN jest dostępny w nagłówku; wybór języka jest zapamiętywany. Poprawiono ścieżki wspólnych zdjęć i historii zmian. Wersja przygotowana lokalnie do przeglądu."
+    },
+    {
       "version": "1.67",
       "date": "2026-09-15",
       "title": "Trzy kolorowanki z obrazów Ewy",

@@ -62,3 +62,10 @@ Rejestr kosztów odzyskany z historii nie pozwala odtworzyć brakujących pomiar
 ## Kolorowanki z obrazów Ewy — 1.67
 
 Dodano trzy zaakceptowane przez użytkownika konturowe opracowania załączonych obrazów: Sowy i róże, Umysł i ocean, Spirale i liście. To nazwy opisowe, nie potwierdzone tytuły oryginałów. Sekcja „Kolorowanki z obrazów Ewy” zawiera pobieranie PNG i druk pojedynczej karty A4, opisy oraz wskazówki kolorów i kredek. PNG zachowano bez rekompresji; podpis Ewa Miłek · ewamilek.pl jest w obrazie. Wcześniejsze 15 wzorów ma osobną sekcję „Kolorowanki Ewy z AI”. Pochodzenie i SHA-256: assets/kolorowanki/obrazy-ewy-manifest.json. Łącznie 18 kolorowanek.
+
+## Wersja angielska
+Wersja EN jest przygotowywana w katalogu `en/` z przełącznikiem `assets/js/language.js`. Zmiany treści należy wprowadzać równolegle w PL i EN.
+
+Angielskie strony generuje `python3 scripts/site_build.py` po przygotowaniu polskich szablonów. Tłumaczenia są zapisane lokalnie w `data/i18n/en.json`; build nie używa usług tłumaczeniowych. Brak pełnej frazy dla nowego tekstu przerywa generowanie. Komunikaty dynamiczne tłumaczy `scripts/english-runtime.js`, z którego powstaje `assets/js/english.js`.
+
+Weryfikacja: `python3 scripts/site_qa.py` oraz testy przeglądarkowe opisane w `EN_TRANSLATION_AUDIT.md`. PL/EN wskazuje tę samą podstronę, zachowuje fragment adresu i zapamiętuje wybór. Zdjęcia i pliki do pobrania są wspólne; treść oryginalnych PDF i podpisy w samych obrazach nie zostały zastąpione angielskimi plikami.

@@ -29,7 +29,7 @@
   };
   const showReader=()=>{
     hideModal();
-    frame.src='assets/ebooks/kurs-numerologii-ewa-milek.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH';
+    frame.src='/assets/ebooks/kurs-numerologii-ewa-milek.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH';
     reader.classList.add('is-open'); reader.setAttribute('aria-hidden','false');
     document.body.classList.add('ebook-reading');
   };

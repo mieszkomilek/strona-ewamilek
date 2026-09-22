@@ -54,11 +54,11 @@ for n in ('index.html', 'o-mnie.html'):
     s=(R/n).read_text(encoding='utf-8')
     if s.count(f'<script src="assets/js/photo-parallax.js?v={(R / "version.txt").read_text().strip()}"></script>') != 1:
         E.append(n+': wymagany dokładnie jeden skrypt photo-parallax.js')
-photos=re.findall(r'src="(assets/photos/[^" ]+)"', (R/'assets/js/photo-parallax.js').read_text())
+photos=re.findall(r'src="(/?assets/photos/[^" ]+)"', (R/'assets/js/photo-parallax.js').read_text())
 if len(set(photos)) != 7:
     E.append('photo-parallax.js: wymagane 7 zdjęć opublikowanych w galerii')
 for photo in photos:
-    p=R/photo
+    p=R/photo.lstrip("/")
     if p.suffix != '.jpg' or not p.is_file() or not p.read_bytes().startswith(b'\xff\xd8\xff'):
         E.append(photo+': brak oryginalnego JPG')
 if (R/'assets/photos/test-placeholder.txt').exists():

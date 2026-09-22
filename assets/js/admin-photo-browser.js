@@ -17,12 +17,12 @@
     const label = document.createElement('p');
     label.textContent = id;
     const link = document.createElement('a');
-    link.href = path;
+    link.href = "/" + path;
     link.target = '_blank';
     link.rel = 'noopener';
     link.textContent = 'Otwórz oryginalne zdjęcie';
     const image = document.createElement('img');
-    image.src = path;
+    image.src = "/" + path;
     image.alt = 'Podgląd zdjęcia ' + id;
     image.style.cssText = 'display:block;max-width:100%;max-height:65vh;width:auto;height:auto;margin:1rem auto;object-fit:contain';
     result.append(label, image, link);
