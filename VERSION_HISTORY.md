@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.69 | `2619f0e0755569cd644c00b2dd7191be7e3bd8c2` | 2026-09-22 06:02:00 | Napraw idempotencję generatora stron |
 | 1.67 | `70c41b55a754cadba26c58e83e933c0666659677` | 2026-09-17 12:11:28 | Dodaj kolorowanki z obrazow Ewy |
 | 1.66 | `9925688572896a265cf7e373360e0397e2d08d0f` | 2026-09-15 19:26:07 | Usuń zdjęcia 025, 040, 086 i 207 oraz dodaj historię zmian w Adminie |
 | 1.65 | `2274f3aedf57779572fb352a985a9f8427633457` | 2026-09-15 12:21:46 | Usuń 30 zdjęć wskazanych przez Ewę i napraw uszkodzone pliki publikacji |
