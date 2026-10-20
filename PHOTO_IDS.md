@@ -124,3 +124,23 @@ Oryginały z `Certyfikaty.zip`, bez rekompresji. Pełna mapa nazw źródłowych 
 | `image_id_237` | Warsztaty Anielskie dla Początkujących | `assets/photos/certyfikaty/ewa-milek-certyfikat-237.jpeg` |
 | `image_id_238` | Soul Body Fusion — certyfikat | `assets/photos/certyfikaty/ewa-milek-certyfikat-238.jpeg` |
 | `image_id_239` | Access Bars — certyfikat ukończenia | `assets/photos/certyfikaty/ewa-milek-certyfikat-239.jpeg` |
+
+## Akwarele w Sklepie — 2026-10-20
+
+Kolejność i metadane kolekcji są zapisane w `data/sklep-akwarele.json`. Reprezentantem kolekcji jest `image_id_240` — „Mapa przeżyć”.
+
+| ID | Praca | Plik |
+|---|---|---|
+| `image_id_240` | Mapa przeżyć | `assets/photos/sklep/ewa-milek-akwarela-240-mapa-przezyc.jpg` |
+| `image_id_241` | Sentyment | `assets/photos/sklep/ewa-milek-akwarela-241-sentyment.jpg` |
+| `image_id_242` | Nieodwracalne | `assets/photos/sklep/ewa-milek-akwarela-242-nieodwracalne.jpg` |
+| `image_id_243` | Serce bije szybko | `assets/photos/sklep/ewa-milek-akwarela-243-serce-bije-szybko.jpg` |
+| `image_id_244` | Potrzeba zmian | `assets/photos/sklep/ewa-milek-akwarela-244-potrzeba-zmian.jpg` |
+| `image_id_245` | Nostalgia w sercu | `assets/photos/sklep/ewa-milek-akwarela-245-nostalgia-w-sercu.jpg` |
+| `image_id_246` | Jak przez mgłę | `assets/photos/sklep/ewa-milek-akwarela-246-jak-przez-mgle.jpg` |
+| `image_id_247` | Pani Oceanu | `assets/photos/sklep/ewa-milek-akwarela-247-pani-oceanu.jpg` |
+| `image_id_248` | Nowe możliwości | `assets/photos/sklep/ewa-milek-akwarela-248-nowe-mozliwosci.jpg` |
+| `image_id_249` | Uparcie słuchaj siebie | `assets/photos/sklep/ewa-milek-akwarela-249-uparcie-sluchaj-siebie.jpg` |
+| `image_id_250` | W zamyśleniu | `assets/photos/sklep/ewa-milek-akwarela-250-w-zamysleniu.jpg` |
+| `image_id_251` | Dzieciątko (pierwsza praca) | `assets/photos/sklep/ewa-milek-akwarela-251-dzieciatko.jpg` |
+| `image_id_252` | Dzieciątko (druga praca) | `assets/photos/sklep/ewa-milek-akwarela-252-dzieciatko.jpg` |

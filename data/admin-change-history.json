@@ -2,6 +2,12 @@
   "versions": [
     {
       "version": "1.70",
+      "date": "2026-10-20",
+      "title": "Sklep z trzynastoma akwarelami Ewy",
+      "description": "Dodano osobną podstronę Sklep z 13 oryginalnymi akwarelami, cenami i dostępnością oraz kategorię Sklep w galerii Twórczość bez cen. Praca „Mapa przeżyć” reprezentuje kolekcję. Obrazy otrzymały stałe ID image_id_240–image_id_252, pełną wersję PL/EN i kontrolę integralności."
+    },
+    {
+      "version": "1.70",
       "date": "2026-09-22",
       "title": "Moje Dyplomy i Certyfikaty w sekcji O mnie",
       "description": "Dodano ściankę 17 dyplomów i certyfikatów z pełnymi zdjęciami, podpisami i stałymi ID image_id_223–image_id_239. Skrót na górze O mnie prowadzi bezpośrednio do galerii. Podgląd umożliwia przeglądanie strzałkami, kopiowanie ID i otwarcie oryginału."

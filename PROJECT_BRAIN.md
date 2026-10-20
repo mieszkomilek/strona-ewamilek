@@ -44,7 +44,7 @@ Najważniejsze pliki:
 - `index.html` — strona główna,
 - `admin.html` — prywatny panel narzędzi Ewy,
 - `oferta-2026.html` — robocza oferta,
-- `numerologia.html`, `vedic-art.html`, `mandala.html`, `anioly.html`, `jedwab-malowany.html`, `o-mnie.html`, `ebooki.html`, `kontakt.html` — główne działy,
+- `numerologia.html`, `vedic-art.html`, `mandala.html`, `anioly.html`, `jedwab-malowany.html`, `o-mnie.html`, `ebooki.html`, `kontakt.html`, `tworczosc.html`, `kolorowanki.html`, `sklep.html` — główne działy,
 - `site.config.json` — wspólna konfiguracja domeny i nawigacji,
 - `data/catalog.json` — dane katalogowe niezależne od płatności,
 - `styles.css` — globalny styl,
@@ -238,6 +238,7 @@ Przy rozpoczęciu nowej sesji:
 
 - Od wdrożenia rejestru kosztów obowiązuje tracking modeli, tokenów i USD dla zmian w main. Każda zmiana otrzymuje Deployment-ID i wpis w tracking/deployments.json. Zasady pomiaru i raportowania: DEPLOYMENT_COSTS.md; obowiązki agentów: AGENTS.md. Nieznane wartości mają null; budżety i ekwiwalent API pozostają oddzielone od rzeczywistego użycia i rachunku. Statystyki: python3 scripts/deployment_costs.py.
 - Zaakceptowano budżet roboczy 65 000 tokenów dla kolorowanek i 91 zdjęć. Przed wdrożeniem zdjęć przedstawiamy tabelę nazw i rozmieszczenia. Budżet nie jest pomiarem zużycia.
+- Sklep zawiera 13 oryginalnych akwareli z 2026-10-20. Polski plik źródłowy danych to `data/sklep-akwarele.json`, a stałe identyfikatory prac to `image_id_240`–`image_id_252`. Reprezentantem kolekcji jest „Mapa przeżyć” (`image_id_240`). Ceny są prezentowane wyłącznie na podstronie `sklep.html`; w kategorii „Sklep” na stronie Twórczość pozostają tytuły, technika i rozmiar bez cen. Dwie ostatnie prace mają ten sam tytuł „Dzieciątko” i status „Niedostępny”.
 
 - Wszystkie bramki dostępu przechodzą na `YYYYMMDD`.
 - Branding nagłówka: **Ewa Miłek — Sztuka, która prowadzi do wnętrza**.

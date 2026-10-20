@@ -105,5 +105,18 @@ window.EWA_PHOTO_IDS = {
   "assets/photos/certyfikaty/ewa-milek-certyfikat-236.jpeg": "image_id_236",
   "assets/photos/certyfikaty/ewa-milek-certyfikat-237.jpeg": "image_id_237",
   "assets/photos/certyfikaty/ewa-milek-certyfikat-238.jpeg": "image_id_238",
-  "assets/photos/certyfikaty/ewa-milek-certyfikat-239.jpeg": "image_id_239"
+  "assets/photos/certyfikaty/ewa-milek-certyfikat-239.jpeg": "image_id_239",
+  "assets/photos/sklep/ewa-milek-akwarela-240-mapa-przezyc.jpg": "image_id_240",
+  "assets/photos/sklep/ewa-milek-akwarela-241-sentyment.jpg": "image_id_241",
+  "assets/photos/sklep/ewa-milek-akwarela-242-nieodwracalne.jpg": "image_id_242",
+  "assets/photos/sklep/ewa-milek-akwarela-243-serce-bije-szybko.jpg": "image_id_243",
+  "assets/photos/sklep/ewa-milek-akwarela-244-potrzeba-zmian.jpg": "image_id_244",
+  "assets/photos/sklep/ewa-milek-akwarela-245-nostalgia-w-sercu.jpg": "image_id_245",
+  "assets/photos/sklep/ewa-milek-akwarela-246-jak-przez-mgle.jpg": "image_id_246",
+  "assets/photos/sklep/ewa-milek-akwarela-247-pani-oceanu.jpg": "image_id_247",
+  "assets/photos/sklep/ewa-milek-akwarela-248-nowe-mozliwosci.jpg": "image_id_248",
+  "assets/photos/sklep/ewa-milek-akwarela-249-uparcie-sluchaj-siebie.jpg": "image_id_249",
+  "assets/photos/sklep/ewa-milek-akwarela-250-w-zamysleniu.jpg": "image_id_250",
+  "assets/photos/sklep/ewa-milek-akwarela-251-dzieciatko.jpg": "image_id_251",
+  "assets/photos/sklep/ewa-milek-akwarela-252-dzieciatko.jpg": "image_id_252"
 };

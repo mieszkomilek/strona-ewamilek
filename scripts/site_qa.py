@@ -83,7 +83,8 @@ if gallery.exists():
     for excluded in library['excluded_ids']:
         if list((R/'assets/photos/ewa-milek').glob(f'{excluded:03}-*')):
             E.append(f'W repo znajduje się pominięte zdjęcie {excluded}')
-    if count != len(list((R/'facebook-zdjecia-galeria-sztuki-ewa-milek').glob('*.jpg'))) + len(library['photos']):
+    shop=json.loads((R/'data/sklep-akwarele.json').read_text(encoding='utf-8'))
+    if count != len(list((R/'facebook-zdjecia-galeria-sztuki-ewa-milek').glob('*.jpg'))) + len(library['photos']) + len(shop['items']):
         E.append(f'tworczosc.html: niepełna galeria ({count} zdjęć)')
     for photo in library['photos']:
         original=R/photo['proposed_path']
@@ -112,6 +113,31 @@ for path, photo_id in registry.items():
 for photo in library['photos']:
     if registry.get(photo['proposed_path']) != photo.get('photo_id'):
         E.append(f'Niezgodność rejestru ID zdjęcia {photo["id"]}')
+
+# Shop collection: immutable bytes, permanent IDs, source order and price privacy.
+shop=json.loads((R/'data/sklep-akwarele.json').read_text(encoding='utf-8'))
+shop_html=(R/'sklep.html').read_text(encoding='utf-8')
+gallery_html=(R/'tworczosc.html').read_text(encoding='utf-8')
+if len(shop['items']) != 13 or shop.get('representative_photo_id') != 'image_id_240':
+    E.append('Sklep: wymagane 13 prac i reprezentant image_id_240')
+if gallery_html.find(shop['items'][0]['path']) < 0 or shop_html.find(shop['items'][0]['path']) < 0:
+    E.append('Sklep: brak reprezentanta Mapa przeżyć')
+for item in shop['items']:
+    asset=R/item['path']
+    if not asset.is_file() or hashlib.sha256(asset.read_bytes()).hexdigest() != item['sha256']:
+        E.append('Sklep: brak oryginału lub zmienione bajty '+item['photo_id'])
+    if registry.get(item['path']) != item['photo_id']:
+        E.append('Sklep: niezgodne stałe ID '+item['photo_id'])
+    if f'href="{item["path"]}"' not in gallery_html or f'href="{item["path"]}"' not in shop_html:
+        E.append('Sklep: brak pracy na jednej z wymaganych stron '+item['photo_id'])
+    if item['price_pln'] is not None and str(item['price_pln']) in gallery_html:
+        E.append('Twórczość nie może pokazywać ceny pracy '+item['photo_id'])
+if shop_html.count('class="shop-card"') != 13:
+    E.append('sklep.html: wymagane 13 kart prac')
+if shop_html.count('Niedostępny') != 2:
+    E.append('sklep.html: wymagane dwa statusy Niedostępny')
+if shop_html.count('data-shop-schema') != 1:
+    E.append('sklep.html: brak pojedynczych danych produktowych SEO')
 client_mandalas=json.loads((R/'data/mandale-klientow.json').read_text(encoding='utf-8'))
 mandala_html=(R/'mandala.html').read_text(encoding='utf-8')
 coloring=(R/'kolorowanki.html').read_text(encoding='utf-8')

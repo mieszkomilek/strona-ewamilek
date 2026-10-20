@@ -79,12 +79,42 @@ for p in R.glob('*.html'):
         s=re.sub(r'<script type="application/ld\+json" data-gallery-schema>.*?</script>','',s,flags=re.S)
         images=[]
         for tag in re.findall(r'<img\b[^>]+>',s,re.I):
-            src=re.search(r'\bsrc="(facebook-zdjecia-galeria-sztuki-ewa-milek/[^"]+)"',tag)
+            src=re.search(r'\bsrc="((?:facebook-zdjecia-galeria-sztuki-ewa-milek|assets/photos/sklep)/[^"]+)"',tag)
             alt=re.search(r'\balt="([^"]+)"',tag)
             if src:
                 images.append({'@type':'ImageObject','contentUrl':base+src.group(1),'caption':alt.group(1) if alt else BRAND_NAME})
         schema=json.dumps({'@context':'https://schema.org','@type':'ImageGallery','name':'Twórczość Ewy Miłek','url':url(p.name),'image':images},ensure_ascii=False,separators=(',',':'))
         s=s.replace('</head>',f'<script type="application/ld+json" data-gallery-schema>{schema}</script>\n</head>',1)
+
+    if p.name=='sklep.html':
+        s=re.sub(r'<script type="application/ld\+json" data-shop-schema>.*?</script>','',s,flags=re.S)
+        shop=json.loads((R/'data/sklep-akwarele.json').read_text(encoding='utf-8'))
+        products=[]
+        for item in shop['items']:
+            offer={
+                '@type':'Offer',
+                'priceCurrency':shop['currency'],
+                'availability':'https://schema.org/InStock' if item['availability']=='available' else 'https://schema.org/OutOfStock',
+                'url':url(p.name)
+            }
+            if item['price_pln'] is not None:
+                offer['price']=str(item['price_pln'])
+            products.append({
+                '@type':'ListItem',
+                'position':len(products)+1,
+                'item':{
+                    '@type':'Product',
+                    '@id':url(p.name)+'#'+item['photo_id'],
+                    'name':item['title'],
+                    'description':f"{item['medium']}, {item['size_cm']} cm",
+                    'image':base+item['path'],
+                    'sku':item['photo_id'],
+                    'brand':{'@type':'Brand','name':BRAND_NAME},
+                    'offers':offer
+                }
+            })
+        schema=json.dumps({'@context':'https://schema.org','@type':'ItemList','name':'Akwarele Ewy Miłek','itemListElement':products},ensure_ascii=False,separators=(',',':'))
+        s=s.replace('</head>',f'<script type="application/ld+json" data-shop-schema>{schema}</script>\n</head>',1)
 
     # Admin and Oferta 2026 receive their specialist modules and knowledge links.
     if p.name in ('admin.html','oferta-2026.html'):
@@ -114,6 +144,10 @@ for p in R.glob('*.html'):
             },ensure_ascii=False,separators=(',',':'))
             s=s.replace('</head>',f'<script type="application/ld+json">{j}</script>\n</head>',1)
 
+    # Keep generated shell edits byte-stable across repeated builds. Several
+    # optional module normalisations can otherwise leave accumulating blank
+    # lines around head/body boundaries.
+    s=re.sub(r'\n[ \t]*(?:\n[ \t]*){2,}', '\n\n', s)
     p.write_text(s,encoding='utf-8')
 
 (R/'robots.txt').write_text(f'User-agent: *\nAllow: /\n\nSitemap: {base}sitemap.xml\n',encoding='utf-8')

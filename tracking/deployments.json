@@ -273,6 +273,29 @@
         "certificate_count_pl": 17,
         "certificate_count_en": 17
       }
+    },
+    {
+      "id": "shop-watercolors-20261020-001",
+      "description": "13 oryginalnych akwareli w Sklepie i kategorii Twórczość; stałe ID 240–252",
+      "source_commit": null,
+      "version": null,
+      "workflow_url": null,
+      "deployment_status": "prepared",
+      "usage": [
+        {
+          "model": "GPT-5 (dokładny identyfikator niedostępny)",
+          "model_source": "Instrukcja środowiska bieżącej sesji",
+          "scope": "Przypisanie metadanych, integracja 13 zdjęć, Sklep PL/EN, galeria Twórczość, SEO, dokumentacja, testy i publikacja",
+          "input_tokens": null,
+          "cached_input_tokens": null,
+          "output_tokens": null,
+          "actual_usd": null,
+          "estimated_api_usd": null,
+          "usage_source": null,
+          "pricing_source": null,
+          "note": "Brak udostępnionego pomiaru tokenów i kosztów. Bez generowania obrazów."
+        }
+      ]
     }
   ],
   "planned_work": [
