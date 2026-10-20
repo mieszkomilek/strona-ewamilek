@@ -1,7 +1,7 @@
 {
   "versions": [
     {
-      "version": "1.71",
+      "version": "1.72",
       "date": "2026-10-20",
       "title": "Wyeksponowany Sklep na stronie głównej",
       "description": "Na początku strony głównej dodano dużą, kontrastową prezentację Sklepu z czterema akwarelami. Najmocniej wyeksponowano prace „Mapa przeżyć” (image_id_240) i „Sentyment” (image_id_241), a całość prowadzi bezpośrednio do kolekcji 13 obrazów. Ceny pozostają wyłącznie na stronie Sklepu."

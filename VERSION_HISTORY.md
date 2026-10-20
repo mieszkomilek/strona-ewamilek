@@ -4,6 +4,7 @@ Ten plik mapuje publiczny numer wersji strony na stan repozytorium, dzięki czem
 
 | Wersja | Commit | Data UTC | Opis zmian |
 |---|---|---|---|
+| 1.72 | `18865fea7236196b3d04af9be9c9416d7b96a580` | 2026-10-20 19:13:59 | Wyeksponuj sklep z obrazami na stronie głównej |
 | 1.71 | `83e6db5277f75408232ced05f18e0a7211f671cd` | 2026-10-20 19:04:34 | Dodaj sklep z trzynastoma akwarelami Ewy |
 | 1.70 | `9b8e43f69e017451e22843dede721d3361dae628` | 2026-09-22 06:42:00 | Dodaj galerię dyplomów i certyfikatów Ewy w O mnie |
 | 1.69 | `2619f0e0755569cd644c00b2dd7191be7e3bd8c2` | 2026-09-22 06:02:00 | Napraw idempotencję generatora stron |
