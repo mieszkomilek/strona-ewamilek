@@ -277,10 +277,10 @@
     {
       "id": "shop-watercolors-20261020-001",
       "description": "13 oryginalnych akwareli w Sklepie i kategorii Twórczość; stałe ID 240–252",
-      "source_commit": null,
-      "version": null,
-      "workflow_url": null,
-      "deployment_status": "prepared",
+      "source_commit": "83e6db5277f75408232ced05f18e0a7211f671cd",
+      "version": "1.71",
+      "workflow_url": "https://github.com/mieszkomilek/strona-ewamilek/actions/runs/39480336048",
+      "deployment_status": "success",
       "usage": [
         {
           "model": "GPT-5 (dokładny identyfikator niedostępny)",
@@ -295,7 +295,19 @@
           "pricing_source": null,
           "note": "Brak udostępnionego pomiaru tokenów i kosztów. Bez generowania obrazów."
         }
-      ]
+      ],
+      "version_commit": "853f12bf1a97fca1b372bdd7a642562d8d3371cb",
+      "tag": "site-v1.71",
+      "verification": {
+        "date": "2026-10-20",
+        "pages_build": "success",
+        "pages_deploy": "success",
+        "production_version": "1.71",
+        "shop_item_count_pl": 13,
+        "shop_item_count_en": 13,
+        "unavailable_item_count_pl": 2,
+        "unavailable_item_count_en": 2
+      }
     }
   ],
   "planned_work": [
