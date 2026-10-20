@@ -138,6 +138,18 @@ if shop_html.count('Niedostępny') != 2:
     E.append('sklep.html: wymagane dwa statusy Niedostępny')
 if shop_html.count('data-shop-schema') != 1:
     E.append('sklep.html: brak pojedynczych danych produktowych SEO')
+home_html=(R/'index.html').read_text(encoding='utf-8')
+home_showcase=re.search(r'<section[^>]*class="home-shop-showcase".*?</section>',home_html,re.S)
+if not home_showcase:
+    E.append('index.html: brak wyeksponowanej sekcji Sklepu')
+else:
+    showcase=home_showcase.group(0)
+    for photo_id in ('image_id_240','image_id_241','image_id_247','image_id_248'):
+        item=next((entry for entry in shop['items'] if entry['photo_id']==photo_id),None)
+        if not item or showcase.count(item['path']) != 1 or showcase.count(f'data-photo-id="{photo_id}"') != 1:
+            E.append('index.html: brak wyróżnionej pracy '+photo_id)
+    if re.search(r'\b(?:1200|1250|1300|1400|1450)\s*zł\b',showcase):
+        E.append('index.html: sekcja Sklepu nie może pokazywać cen')
 client_mandalas=json.loads((R/'data/mandale-klientow.json').read_text(encoding='utf-8'))
 mandala_html=(R/'mandala.html').read_text(encoding='utf-8')
 coloring=(R/'kolorowanki.html').read_text(encoding='utf-8')

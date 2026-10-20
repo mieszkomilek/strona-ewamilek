@@ -308,6 +308,29 @@
         "unavailable_item_count_pl": 2,
         "unavailable_item_count_en": 2
       }
+    },
+    {
+      "id": "homepage-shop-showcase-20261020-001",
+      "description": "Mocno wyeksponowana prezentacja Sklepu i czterech akwareli na początku strony głównej; główne prace ID 240–241",
+      "source_commit": null,
+      "version": null,
+      "workflow_url": null,
+      "deployment_status": "prepared",
+      "usage": [
+        {
+          "model": "GPT-5 (dokładny identyfikator niedostępny)",
+          "model_source": "Instrukcja środowiska bieżącej sesji",
+          "scope": "Projekt sekcji, implementacja strony głównej PL/EN, responsywność, dokumentacja, testy i publikacja",
+          "input_tokens": null,
+          "cached_input_tokens": null,
+          "output_tokens": null,
+          "actual_usd": null,
+          "estimated_api_usd": null,
+          "usage_source": null,
+          "pricing_source": null,
+          "note": "Brak udostępnionego pomiaru tokenów i kosztów. Bez generowania obrazów."
+        }
+      ]
     }
   ],
   "planned_work": [
