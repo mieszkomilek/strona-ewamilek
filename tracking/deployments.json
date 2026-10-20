@@ -312,10 +312,10 @@
     {
       "id": "homepage-shop-showcase-20261020-001",
       "description": "Mocno wyeksponowana prezentacja Sklepu i czterech akwareli na początku strony głównej; główne prace ID 240–241",
-      "source_commit": null,
-      "version": null,
-      "workflow_url": null,
-      "deployment_status": "prepared",
+      "source_commit": "18865fea7236196b3d04af9be9c9416d7b96a580",
+      "version": "1.72",
+      "workflow_url": "https://github.com/mieszkomilek/strona-ewamilek/actions/runs/39481704465",
+      "deployment_status": "success",
       "usage": [
         {
           "model": "GPT-5 (dokładny identyfikator niedostępny)",
@@ -330,7 +330,23 @@
           "pricing_source": null,
           "note": "Brak udostępnionego pomiaru tokenów i kosztów. Bez generowania obrazów."
         }
-      ]
+      ],
+      "version_commit": "8e38e3b41ee0ed27a910e6970d6bc2b4df16749b",
+      "tag": "site-v1.72",
+      "verification": {
+        "date": "2026-10-20",
+        "pages_build": "success",
+        "pages_deploy": "success",
+        "production_version": "1.72",
+        "homepage_shop_showcase_pl": true,
+        "homepage_shop_showcase_en": true,
+        "featured_photo_ids": [
+          "image_id_240",
+          "image_id_241",
+          "image_id_247",
+          "image_id_248"
+        ]
+      }
     }
   ],
   "planned_work": [
