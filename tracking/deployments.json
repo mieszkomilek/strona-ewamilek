@@ -351,10 +351,10 @@
     {
       "id": "shop-title-image-252-20261022-001",
       "description": "Korekta tytułu image_id_252 z Dzieciątko na Panienka w Sklepie, Twórczości, PL/EN i SEO",
-      "source_commit": null,
-      "version": null,
-      "workflow_url": null,
-      "deployment_status": "prepared",
+      "source_commit": "1c3a47666dc0c2abca9ae40c2267b4efd3bed1bf",
+      "version": "1.73",
+      "workflow_url": "https://github.com/mieszkomilek/strona-ewamilek/actions/runs/39781791688",
+      "deployment_status": "success",
       "usage": [
         {
           "model": "GPT-5 (dokładny identyfikator niedostępny)",
@@ -369,7 +369,18 @@
           "pricing_source": null,
           "note": "Brak udostępnionego pomiaru tokenów i kosztów. Bez generowania obrazów."
         }
-      ]
+      ],
+      "version_commit": "ae328d2ab1298a6520d051a07d25269eb7c46bed",
+      "tag": "site-v1.73",
+      "verification": {
+        "date": "2026-10-22",
+        "pages_build": "success",
+        "pages_deploy": "success",
+        "production_version": "1.73",
+        "image_id_251_title_pl": "Dzieciątko",
+        "image_id_252_title_pl": "Panienka",
+        "image_id_252_title_en": "Young Lady"
+      }
     }
   ],
   "planned_work": [
