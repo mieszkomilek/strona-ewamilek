@@ -120,6 +120,9 @@ shop_html=(R/'sklep.html').read_text(encoding='utf-8')
 gallery_html=(R/'tworczosc.html').read_text(encoding='utf-8')
 if len(shop['items']) != 13 or shop.get('representative_photo_id') != 'image_id_240':
     E.append('Sklep: wymagane 13 prac i reprezentant image_id_240')
+shop_titles={item['photo_id']:item['title'] for item in shop['items']}
+if shop_titles.get('image_id_251') != 'Dzieciątko' or shop_titles.get('image_id_252') != 'Panienka':
+    E.append('Sklep: nieprawidłowe tytuły prac image_id_251 lub image_id_252')
 if gallery_html.find(shop['items'][0]['path']) < 0 or shop_html.find(shop['items'][0]['path']) < 0:
     E.append('Sklep: brak reprezentanta Mapa przeżyć')
 for item in shop['items']:

@@ -2,6 +2,12 @@
   "versions": [
     {
       "version": "1.72",
+      "date": "2026-10-22",
+      "title": "Korekta tytułu obrazu image_id_252",
+      "description": "Poprawiono tytuł ostatniej akwareli w Sklepie i galerii Twórczość: image_id_252 ma tytuł „Panienka”, natomiast image_id_251 pozostaje pracą „Dzieciątko”. Zaktualizowano również wersję angielską i dane SEO."
+    },
+    {
+      "version": "1.72",
       "date": "2026-10-20",
       "title": "Wyeksponowany Sklep na stronie głównej",
       "description": "Na początku strony głównej dodano dużą, kontrastową prezentację Sklepu z czterema akwarelami. Najmocniej wyeksponowano prace „Mapa przeżyć” (image_id_240) i „Sentyment” (image_id_241), a całość prowadzi bezpośrednio do kolekcji 13 obrazów. Ceny pozostają wyłącznie na stronie Sklepu."

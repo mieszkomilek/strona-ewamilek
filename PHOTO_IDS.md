@@ -143,4 +143,4 @@ Kolejność i metadane kolekcji są zapisane w `data/sklep-akwarele.json`. Repre
 | `image_id_249` | Uparcie słuchaj siebie | `assets/photos/sklep/ewa-milek-akwarela-249-uparcie-sluchaj-siebie.jpg` |
 | `image_id_250` | W zamyśleniu | `assets/photos/sklep/ewa-milek-akwarela-250-w-zamysleniu.jpg` |
 | `image_id_251` | Dzieciątko (pierwsza praca) | `assets/photos/sklep/ewa-milek-akwarela-251-dzieciatko.jpg` |
-| `image_id_252` | Dzieciątko (druga praca) | `assets/photos/sklep/ewa-milek-akwarela-252-dzieciatko.jpg` |
+| `image_id_252` | Panienka | `assets/photos/sklep/ewa-milek-akwarela-252-dzieciatko.jpg` |

@@ -347,6 +347,29 @@
           "image_id_248"
         ]
       }
+    },
+    {
+      "id": "shop-title-image-252-20261022-001",
+      "description": "Korekta tytułu image_id_252 z Dzieciątko na Panienka w Sklepie, Twórczości, PL/EN i SEO",
+      "source_commit": null,
+      "version": null,
+      "workflow_url": null,
+      "deployment_status": "prepared",
+      "usage": [
+        {
+          "model": "GPT-5 (dokładny identyfikator niedostępny)",
+          "model_source": "Instrukcja środowiska bieżącej sesji",
+          "scope": "Korekta danych, treści PL/EN, SEO, dokumentacji, testy i publikacja",
+          "input_tokens": null,
+          "cached_input_tokens": null,
+          "output_tokens": null,
+          "actual_usd": null,
+          "estimated_api_usd": null,
+          "usage_source": null,
+          "pricing_source": null,
+          "note": "Brak udostępnionego pomiaru tokenów i kosztów. Bez generowania obrazów."
+        }
+      ]
     }
   ],
   "planned_work": [
