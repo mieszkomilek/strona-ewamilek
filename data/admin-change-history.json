@@ -1,7 +1,7 @@
 {
   "versions": [
     {
-      "version": "1.72",
+      "version": "1.73",
       "date": "2026-10-22",
       "title": "Korekta tytułu obrazu image_id_252",
       "description": "Poprawiono tytuł ostatniej akwareli w Sklepie i galerii Twórczość: image_id_252 ma tytuł „Panienka”, natomiast image_id_251 pozostaje pracą „Dzieciątko”. Zaktualizowano również wersję angielską i dane SEO."
